@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useRef} from "react";
 
 import { Sidebar } from "..";
 import CV from "../../assets/pdf/CV.pdf";
@@ -12,6 +12,8 @@ const Header = () => {
   const handleClick = () => {
     setOpen((open) => (open = !open));
   };
+
+  const menuRef = useRef<HTMLDivElement>(null);
 
   return (
     <nav className='bg-white dark:bg-gray-900 fixed w-full top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
@@ -73,7 +75,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <Sidebar open={open} handleClick={handleClick} />
+      <Sidebar open={open} handleClick={handleClick}   setOpen={ setOpen} menuRef={menuRef}/>
     </nav>
   );
 };

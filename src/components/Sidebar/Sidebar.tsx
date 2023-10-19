@@ -1,36 +1,74 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { NavBarLinks } from "../../data/NavbarLinks";
-import { useState } from "react";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
 
 // Props
 interface SidebarProps {
   open: boolean;
   handleClick: () => void;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  menuRef?: React.RefObject<HTMLDivElement>;
 }
 
-const Sidebar = ({ open, handleClick }: SidebarProps) => {
+const Sidebar = ({ open, handleClick, setOpen, menuRef }: SidebarProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
 
+  // to close navbar when pressed escape
+  useEffect(() => {
+    const close = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, [open, setOpen]);
+
+  // to close navbar when clicked outside
+  useEffect(() => {
+    const close = (e: MouseEvent) => {
+      if (!menuRef?.current?.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("mousedown", close);
+    return () => window.removeEventListener("mousedown", close);
+  }, [open, setOpen, menuRef]);
+
+  // to close navbar when resized 
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1024) {
+        setOpen(false);
+      }
+    });
+  }, [open, setOpen]);
+
+  const handleOpen = () => {
+    setOpen(false);
+  };
+
   return (
     <div
       className={`fixed bg-gray-500 h-screen  
             md:hidden flex flex-col gap-10 text-medium  p-7  duration-500
-            ${open ? "right-0" : "right-[-100%]"}`}
+            ${open ? "left-0" : "left-[-100%]"}`}
+      ref={menuRef}
     >
-      <div className='text-gray-100 text-xl'>
+      <div className='text-gray-100 text-xl' onClick={handleClick}>
         <div className='py-2 flex items-center rounded-md '>
           <Link to='/'>Menu</Link>
         </div>
 
         <hr className='my-2 text-gray-600' />
 
-        <div>
+        <div onClick={handleOpen}>
           {NavBarLinks.map((link) => (
             <Link
               to={link.to}
