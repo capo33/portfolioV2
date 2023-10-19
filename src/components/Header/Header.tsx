@@ -1,144 +1,80 @@
-import { Link } from "react-router-dom";
-import { NavBarLinks } from "../../data/NavbarLinks";
 import { useState } from "react";
 
-interface SidebarProps {
-  open: boolean;
-  handleClick: () => void;
-}
-// Sidebar navigation
-const Sidebar = ({ open, handleClick }: SidebarProps) => {
-  return (
-    <div
-      className={`fixed bg-gray-500 w-2/3 h-screen  
-            md:hidden flex flex-col gap-10 text-medium  p-7  duration-500
-            ${open ? "right-0" : "right-[-100%]"}`}
-    >
-      <div className='text-gray-100 text-xl'>
-        <div className='py-2 flex items-center rounded-md '>
-          <Link to='/'>
-            <span className='before:content-["<"] before:mr-2 after:content-["/>"] after:ml-2'>
-              Mo
-            </span>
-          </Link>
-        </div>
-
-        <hr className='my-2 text-gray-600' />
-
-        <div>
-          {NavBarLinks.map((link) => (
-            <Link
-              to={link.to}
-              className='p-2.5 mt-2 flex items-center rounded-md   duration-300 cursor-pointer  hover:bg-blue-600'
-              key={link.id}
-            >
-              <span>{link.icon}</span>
-              <span className='text-[15px] text-gray-200'>{link.text}</span>
-              <hr className='my-2 text-gray-600' />
-            </Link>
-          ))}
-
-          <hr className='my-4 text-gray-600' />
-          <div className='p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600'>
-            <i className='bi bi-envelope-fill'></i>
-            <span className='text-[15px] ml-4 text-gray-200'>Messages</span>
-          </div>
-
-          <div className='p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600'>
-            <i className='bi bi-chat-left-text-fill'></i>
-            <div
-              className='flex justify-between w-full items-center'
-              onClick={handleClick}
-            >
-              <span className='text-[15px] ml-4 text-gray-200'>Chatbox</span>
-              <span className='text-sm rotate-180' id='arrow'>
-                <i className='bi bi-chevron-down'></i>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { Sidebar } from "..";
+import CV from "../../assets/pdf/CV.pdf";
+import { NavBarLinks } from "../../data/NavbarLinks";
+import { Link } from "react-router-dom";
+import { BarsSVG, XCircledSVG } from "../../assets/svg/NavSVG";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
     setOpen((open) => (open = !open));
-    console.log("open toggle");
   };
 
   return (
-    <>
-      <nav className='bg-white dark:bg-gray-900 fixed w-full   top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
-        <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-          <div className='flex items-center'>
-            {open ? (
-              <button
-                type='button'
-                className=' md:hidden text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600'
-                onClick={() => setOpen(!open)}
-              >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth='1.5'
-                  stroke='currentColor'
-                  className='w-6 h-6  '
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M6 18L18 6M6 6l12 12'
-                  />
-                </svg>
-              </button>
-            ) : (
-              <button
-                type='button'
-                className=' md:hidden text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600'
-                onClick={() => setOpen(!open)}
-              >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth='1.5'
-                  stroke='currentColor'
-                  className='w-6 h-6  '
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5'
-                  />
-                </svg>
-              </button>
-            )}
+    <nav className='bg-white dark:bg-gray-900 fixed w-full top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
+      <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+        <Link to='/' className='flex items-center'>
+          <span className='before:content-["<"] before:text-green-600 before:mr-2 after:content-["/>"] after:text-green-600 after:ml-2 self-center  text-xl font-semibold whitespace-nowrap dark:text-white'>
+            Mo
+          </span>
+        </Link>
 
-            <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
-              Flowbite
-            </span>
-          </div>
-          <div className='hidden md:flex items-center space-x-3'>
-            {NavBarLinks.map((link, i) => (
-              <a
-                key={i}
-                href={link.to}
-                className='py-2 px-2 text-gray-500 hover:text-gray-600 font-semibold'
-              >
-                {link.text}
-              </a>
-            ))}
-          </div>
+        {/* Menu Icons */}
+        <div className='flex md:order-2'>
+          <a
+            download={true}
+            href={CV}
+            className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+          >
+            Download CV
+          </a>
+          {open ? (
+            <button
+              type='button'
+              className=' md:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
+              onClick={handleClick}
+            >
+              {XCircledSVG}
+            </button>
+          ) : (
+            <button
+              type='button'
+              className=' md:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
+              onClick={handleClick}
+            >
+              {BarsSVG}
+            </button>
+          )}
         </div>
 
-        <Sidebar open={open} handleClick={handleClick} />
-      </nav>
-    </>
+        {/* Desktop Menu */}
+        <div
+          className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
+          id='navbar-sticky'
+        >
+          <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+            <li className='hidden md:flex items-center space-x-3'>
+              {NavBarLinks.map((link) => (
+                <Link
+                  key={link.id}
+                  to={link.to}
+                  className='px-2 text-gray-500 hover:text-gray-600 font-semibold flex items-center space-x-2 cursor-pointer'
+                >
+                  {link.icon}
+                  {link.text}
+                </Link>
+              ))}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <Sidebar open={open} handleClick={handleClick} />
+    </nav>
   );
 };
 
