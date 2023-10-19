@@ -35,7 +35,7 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
   return (
     <div
       className={`fixed bg-gray-500 h-screen  
-            md:hidden flex flex-col gap-10 text-medium  p-7  duration-500
+            md:hidden flex flex-col gap-10 text-medium p-7 duration-500
             ${open ? "left-0" : "left-[-100%]"}`}
     >
       <div className='text-gray-100 text-xl'>
@@ -96,7 +96,7 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
             rel='noreferrer'
             className='text-gray-200 hover:text-gray-300 '
           >
-            {GitHubSVG}
+            {GitHubSVG('w-7 h-7')}
           </a>
           <a
             href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
