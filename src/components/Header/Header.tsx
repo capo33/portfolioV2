@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { NavBarLinks } from "../data/NavbarData/Index";
+import { NavBarLinks } from "../../data/NavbarLinks";
 import { useState } from "react";
 
 interface SidebarProps {

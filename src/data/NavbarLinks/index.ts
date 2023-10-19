@@ -3,33 +3,33 @@ import {
   ProjectsSVG,
   AboutSVG,
   ContactSVG,
-} from "../../../assets/svg/NavSVG";
+} from "../../assets/svg/NavSVG";
 import { NavLinkInterface } from "../../interfaces";
 
 export const NavBarLinks: NavLinkInterface[] = [
   {
+    id: 1,
     to: "/",
     text: "Home",
-    id: 1,
     icon: HomeSVG,
   },
   {
+    id: 3,
     to: "/projects",
     text: "Projects",
-    id: 3,
     icon: ProjectsSVG,
   },
   {
+    id: 2,
     to: "/about",
     text: "About",
-    id: 2,
     icon: AboutSVG,
   },
 
   {
+    id: 4,
     to: "/contact",
     text: "Contact",
-    id: 4,
     icon: ContactSVG,
   },
 ];
