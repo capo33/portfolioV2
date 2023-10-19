@@ -1,22 +1,46 @@
-import { useState , useRef} from "react";
+import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import { Sidebar } from "..";
 import CV from "../../assets/pdf/CV.pdf";
+import { useOutsideClick, useWindowResize, useWindowScroll } from "../../hooks";
 import { NavBarLinks } from "../../data/NavbarLinks";
-import { Link } from "react-router-dom";
 import { BarsSVG, XCircledSVG } from "../../assets/svg/NavSVG";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
-
-  const handleClick = () => {
-    setOpen((open) => (open = !open));
-  };
-
+  const [top, setTop] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
+  const handleClick = () => {
+    setOpen((open) => !open);
+    console.log("clicked");
+  };
+
+  // to close navbar when clicked outside
+  const ref = useOutsideClick(() => {
+    setOpen(false);
+  });
+
+  //  to handle navbar when resized
+  useWindowResize(() => {
+    if (window.innerWidth > 1024) {
+      setOpen(false);
+    }
+  });
+
+  // to handle navbar with shadow on scroll
+  useWindowScroll(() => {
+    window.scrollY > 10 ? setTop(false) : setTop(true);
+  });
+
   return (
-    <nav className='bg-white dark:bg-gray-900 fixed w-full top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
+    <nav
+      className={`text-gray-600 body-font sticky top-0 ${
+        !top && "sticky top-0 bg-zinc-100 shadow-md z-50"
+      }`}
+      ref={ref}
+    >
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
         <Link to='/' className='flex items-center'>
           <span className='before:content-["<"] before:text-green-600 before:mr-2 after:content-["/>"] after:text-green-600 after:ml-2 self-center  text-xl font-semibold whitespace-nowrap dark:text-white'>
@@ -75,7 +99,12 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <Sidebar open={open} handleClick={handleClick}   setOpen={ setOpen} menuRef={menuRef}/>
+      <Sidebar
+        open={open}
+        handleClick={handleClick}
+        setOpen={setOpen}
+        menuRef={menuRef}
+      />
     </nav>
   );
 };

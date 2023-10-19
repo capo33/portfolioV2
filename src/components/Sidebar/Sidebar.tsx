@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { NavBarLinks } from "../../data/NavbarLinks";
+import { useEscapeClick, useWindowResize } from "../../hooks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
 
 // Props
@@ -12,7 +13,7 @@ interface SidebarProps {
   menuRef?: React.RefObject<HTMLDivElement>;
 }
 
-const Sidebar = ({ open, handleClick, setOpen, menuRef }: SidebarProps) => {
+const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -20,55 +21,31 @@ const Sidebar = ({ open, handleClick, setOpen, menuRef }: SidebarProps) => {
   };
 
   // to close navbar when pressed escape
-  useEffect(() => {
-    const close = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setOpen(false);
-      }
-    };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, [open, setOpen]);
-
-  // to close navbar when clicked outside
-  useEffect(() => {
-    const close = (e: MouseEvent) => {
-      if (!menuRef?.current?.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    };
-    window.addEventListener("mousedown", close);
-    return () => window.removeEventListener("mousedown", close);
-  }, [open, setOpen, menuRef]);
-
-  // to close navbar when resized 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 1024) {
-        setOpen(false);
-      }
-    });
-  }, [open, setOpen]);
-
-  const handleOpen = () => {
+  useEscapeClick(() => {
     setOpen(false);
-  };
+  });
+
+  // to close navbar when resized
+  useWindowResize(() => {
+    if (window.innerWidth > 1024) {
+      setOpen(false);
+    }
+  });
 
   return (
     <div
       className={`fixed bg-gray-500 h-screen  
             md:hidden flex flex-col gap-10 text-medium  p-7  duration-500
             ${open ? "left-0" : "left-[-100%]"}`}
-      ref={menuRef}
     >
-      <div className='text-gray-100 text-xl' onClick={handleClick}>
+      <div className='text-gray-100 text-xl'>
         <div className='py-2 flex items-center rounded-md '>
           <Link to='/'>Menu</Link>
         </div>
 
         <hr className='my-2 text-gray-600' />
 
-        <div onClick={handleOpen}>
+        <div onClick={handleClick}>
           {NavBarLinks.map((link) => (
             <Link
               to={link.to}
