@@ -1,4 +1,4 @@
-import MySVG from "../../assets/6463428.jpg";
+import MySVG from "../../assets/coding.png";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
 
 const Home = () => {
@@ -26,7 +26,8 @@ const Home = () => {
               href='https://github.com/themesberg/landwind'
               className='inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800'
             >
-              {GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400")} Something else 
+              {GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400")}{" "}
+              Something else
             </a>
           </div>
         </div>
