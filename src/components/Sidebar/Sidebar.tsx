@@ -90,14 +90,16 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
 
         {/* Social icons */}
         <div className='flex items-center justify-evenly my-5'>
+          {/* Github */}
           <a
             href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
             target='_blank'
             rel='noreferrer'
             className='text-gray-200 hover:text-gray-300 '
           >
-            {GitHubSVG('w-7 h-7')}
+            {GitHubSVG("w-7 h-7")}
           </a>
+          {/* LinkedIn */}
           <a
             href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
             target='_blank'
