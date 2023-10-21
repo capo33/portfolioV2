@@ -41,7 +41,7 @@ const Header = () => {
       }`}
       ref={ref}
     >
-      <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+      <div className='container flex flex-wrap items-center justify-between mx-auto p-4'>
         <Link to='/' className='flex items-center'>
           <span className='before:content-["<"] before:text-green-600 before:mr-2 after:content-["/>"] after:text-green-600 after:ml-2 self-center  text-xl font-semibold whitespace-nowrap dark:text-white'>
             Mo
