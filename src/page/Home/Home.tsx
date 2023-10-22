@@ -1,5 +1,8 @@
-import { GitHubSVG, ReactSVG, ReduxSVG } from "../../assets/svg/NavSVG";
+
+import { Marquee } from "../../components";
+import { GitHubSVG } from "../../assets/svg/NavSVG";
 import MySVG from "../../assets/35496093_2211.w026.n002.2759B.p1.2759.svg";
+
 const Home = () => {
   return (
     <>
@@ -36,29 +39,10 @@ const Home = () => {
             <img src={MySVG} className='w-full mx-auto sm:w-10/12  lg:w-full' />
           </div>
         </div>
-
-        {/* <div className='max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16'>
-          <div className='grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400'>
-            <a href='#' className='flex items-center lg:justify-center'>
-              {ReactSVG}
-            </a>
-            <a href='#' className='flex items-center lg:justify-center hover:opacity-60'>
-             {ReduxSVG}
-            </a>
-            <a href='#' className='flex items-center lg:justify-center hover:opacity-60'>
-             {ReactSVG}
-            </a>
-            <a href='#' className='flex items-center lg:justify-center hover:opacity-60'>
-             {ReactSVG}
-            </a>
-            <a href='#' className='flex items-center lg:justify-center hover:opacity-60'>
-             {ReactSVG}
-            </a>
-            <a href='#' className='flex items-center lg:justify-center hover:opacity-60'>
-             {ReactSVG}
-            </a>
-          </div>
-        </div> */}
+        <div className='container mx-auto text-center'>
+          <h3 className='text-3xl font-bold'>Fully compatible with</h3>
+          <Marquee link='/contact' />
+        </div>
       </section>
     </>
   );
