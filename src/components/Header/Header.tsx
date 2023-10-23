@@ -53,14 +53,14 @@ const Header = () => {
           <a
             download={true}
             href={CV}
-            className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+            className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
           >
             Download CV
           </a>
           {open ? (
             <button
               type='button'
-              className=' md:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
+              className='lg:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
               onClick={handleClick}
             >
               {XCircledSVG}
@@ -68,7 +68,7 @@ const Header = () => {
           ) : (
             <button
               type='button'
-              className=' md:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
+              className='lg:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
               onClick={handleClick}
             >
               {BarsSVG}
@@ -78,7 +78,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div
-          className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
+          className='items-center justify-between hidden w-full lg:flex lg:w-auto md:order-1'
           id='navbar-sticky'
         >
           <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>

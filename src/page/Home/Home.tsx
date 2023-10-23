@@ -1,7 +1,6 @@
-
 import { Marquee } from "../../components";
-import { GitHubSVG } from "../../assets/svg/NavSVG";
 import MySVG from "../../assets/35496093_2211.w026.n002.2759B.p1.2759.svg";
+import { GitHubSVG } from "../../assets/svg/NavSVG";
 
 const Home = () => {
   return (
