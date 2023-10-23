@@ -14,10 +14,10 @@ const Marquee = ({ link }:MarqueeProps) => {
         className='py-5 font-bold lg:text-2xl md:text-xl sm:text-lg capitalize will-change-transform whitespace-nowrap'
         speed={100}
       >
-        <div className='px-16 flex flex-wrap justify-center p-6 lg:justify-between'>
+        <div className='flex flex-wrap justify-center p-6 lg:justify-between'>
           {Icons.map((icon) => (
             <div
-              className='px-16 flex flex-wrap justify-center p-6 lg:justify-between'
+              className='lg:px-16'
               key={icon.id}
             >
               {icon.icon as string}

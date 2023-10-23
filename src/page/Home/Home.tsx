@@ -7,16 +7,22 @@ const Home = () => {
     <>
       <section className='bg-white dark:bg-gray-900'>
         <div className='mt-24 mx-auto container pb-12 px-4 items-center lg:flex md:px-8'>
-          <div className='space-y-4 flex-1 sm:text-center lg:text-left'>
+          <div className='space-y-4 flex-1 s r lg:text-left'>
+            <span className='text-main-color font-semibold text-lg'>
+              Hi 👋, I'm Mohamed
+            </span>
+            <span className='ml-2 inline-block h-[1px] w-8 bg-blue-400'></span>
+  
             <h1 className=' max-w-5xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white'>
               Software Developer &amp;{" "}
               <span className='text-indigo-400'>Web Designer.</span>
             </h1>
             <p className='text-gray-700 max-w-xl leading-relaxed sm:mx-auto lg:ml-0'>
               I'm a software developer based in Finland specializing in building
-              and designing websites, apps (and sometimes games 🎮), and
-              everything in between.
+              and designing websites, apps ( sometimes games 🎮), and everything
+              in between.
             </p>
+
             <div className=' pt-10 items-center justify-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start'>
               <a
                 href='https://github.com/themesberg/landwind'
@@ -39,7 +45,9 @@ const Home = () => {
           </div>
         </div>
         <div className='container mx-auto text-center'>
-          <h3 className='text-3xl font-bold'>Fully compatible with</h3>
+          <h3 className='lg:text-3xl md:text-2xl sm:text-xl max-sm:text-xl font-bold'>
+            Fully compatible with
+          </h3>
           <Marquee link='/contact' />
         </div>
       </section>

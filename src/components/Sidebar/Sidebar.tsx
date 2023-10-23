@@ -35,7 +35,7 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
   return (
     <div
       className={`fixed bg-gray-500 h-screen  
-            md:hidden flex flex-col gap-10 text-medium p-7 duration-500
+            lg:hidden flex flex-col gap-10 text-medium p-7 duration-500
             ${open ? "left-0" : "left-[-100%]"}`}
     >
       <div className='text-gray-100 text-xl'>
@@ -49,7 +49,7 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
           {NavBarLinks.map((link) => (
             <Link
               to={link.to}
-              className='p-2.5 mt-2 flex items-center rounded-md   duration-300 cursor-pointer  hover:bg-blue-600'
+              className='p-2.5 mt-2 flex items-center rounded-md duration-300 cursor-pointer hover:bg-blue-600'
               key={link.id}
             >
               <span>{link.icon}</span>

@@ -35,8 +35,8 @@ const Header = () => {
   });
 
   return (
-    <nav
-      className={`text-gray-600 body-font sticky top-0 ${
+<nav
+      className={`text-gray-600 body-font sticky top-0 bg-white bg-opacity-90 shadow-sm backdrop-blur-sm ${
         !top && "sticky top-0 bg-zinc-100 shadow-md z-50"
       }`}
       ref={ref}
