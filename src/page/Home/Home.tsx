@@ -52,21 +52,8 @@ const Home = () => {
         </div>
       </section>
       <section className='bg-[#F8F8F8] dark:bg-gray-900 '>
-        <div className='pt-24 m-auto container pb-12 px-4 items-center lg:flex flex-row-reverse'>
+        <div className='pt-5 m-auto container pb-12 px-4 items-center lg:flex flex-row-reverse'>
           <div className='space-y-4 flex-1 lg:text-left'>
-            {/* <div className='relative'>
-              <h1 className='absolute -top-14 left-0 md:text-[70px] font-bold opacity-5 md:block hidden'>
-                SERVICES
-              </h1>
-              <h1 className='lg:text-5xl text-3xl font-bold dark:text-white'>
-                What <span className='text-blue-500'> I Do</span>
-              </h1>
-              <div className='flex w-24 mt-1 mb-6 overflow-hidden rounded md:mb-14'>
-                <span className='flex-1 h-2 bg-blue-200'></span>
-                <span className='flex-1 h-2 bg-blue-400'></span>
-                <span className='flex-1 h-2 bg-blue-600'></span>
-              </div>
-            </div> */}
             <span className='text-main-color font-semibold text-lg'>
               SERVICES
             </span>
