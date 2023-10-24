@@ -4,14 +4,12 @@ import { HeroObjOne, HeroObjTwo } from "../../data/HeroData";
 
 const Home = () => {
   return (
-    <>
+    <main className='container mx-auto px-4 space-y-12 lg:space-y-20 lg:py-24 '>
       <Hero {...HeroObjOne} />
-      <div className='container mx-auto text-center'>
-        <Marquee link='/contact' />
-      </div>
-       <Showcase />
-
-    </>
+      <Marquee link='/contact' />
+      <Hero {...HeroObjTwo} />
+      <Showcase />
+    </main>
 
     // <>
     //   <section className='bg-[#F8F8F8] dark:bg-gray-900'>

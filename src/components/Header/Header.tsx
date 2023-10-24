@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <header
-      className={`text-gray-600 body-font sticky top-0 bg-white bg-opacity-90  backdrop-blur-sm ${
+      className={`text-gray-600 body-font sticky top-0 bg-white bg-opacity-90 backdrop-blur-sm ${
         !top && "sticky top-0 bg-zinc-100 shadow-md z-50"
       }`}
     >
@@ -45,7 +45,7 @@ const Header = () => {
         }`}
         ref={ref}
       >
-        <div className='container flex flex-wrap items-center justify-between mx-auto '>
+        <div className='flex flex-wrap items-center justify-between mx-auto '>
           <Link to='/' className='flex items-center'>
             <span className='before:content-["<"] before:text-green-600 after:content-["/>"] after:text-green-600 after:ml-2 self-center  text-xl font-semibold whitespace-nowrap dark:text-white'>
               Mo
