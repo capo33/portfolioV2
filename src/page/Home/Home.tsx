@@ -1,4 +1,5 @@
 import { Hero, Marquee } from "../../components";
+import Showcase from "../../components/Showcase/Showcase";
 import { HeroObjOne, HeroObjTwo } from "../../data/HeroData";
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
       <div className='container mx-auto text-center'>
         <Marquee link='/contact' />
       </div>
-      <Hero {...HeroObjTwo} />
+       <Showcase />
 
     </>
 

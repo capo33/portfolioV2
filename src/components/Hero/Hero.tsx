@@ -23,7 +23,7 @@ const Hero = ({
   description,
 }: InfoSectionProps) => {
   return (
-    <section className='bg-[#F8F8F8] dark:bg-gray-900'>
+    <section className='dark:bg-gray-900'>
       <div className='pt-24 m-auto container pb-12 px-4 items-center lg:flex'>
         <div className='space-y-4 flex-1 lg:text-left'>
           <span className='text-main-color font-semibold text-lg'>
