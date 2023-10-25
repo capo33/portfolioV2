@@ -7,8 +7,7 @@ const Home = () => {
     <main className='container mx-auto px-4 space-y-12 lg:space-y-20 lg:py-24 '>
       <Hero {...HeroObjOne} />
       <Marquee link='/contact' />
-      <Hero {...HeroObjTwo} />
-      <Showcase />
+      <Showcase {...HeroObjTwo} />
     </main>
 
     // <>

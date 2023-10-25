@@ -11,6 +11,7 @@ interface InfoSectionProps {
   img?: string;
   description?: string;
 }
+
 const Hero = ({
   firstHeadLine,
   secondHeadLine,
@@ -25,7 +26,7 @@ const Hero = ({
   return (
     <section className='dark:bg-gray-900'>
       <div className='items-center lg:flex'>
-        <div className='space-y-4 flex-1 lg:text-left'>
+        <div className='space-y-4 flex-1'>
           <span className='text-main-color font-semibold text-lg'>
             {topLine}
           </span>
@@ -53,11 +54,7 @@ const Hero = ({
           </div>
         </div>
         <div className='flex-1 text-center mt-7 lg:mt-0 lg:ml-3'>
-          <img
-            src={img as string}
-            className='w-full mx-auto sm:w-10/12  lg:w-full'
-            alt=''
-          />
+          <img src={img} className='object-cover' alt='Hero Image' />
         </div>
       </div>
     </section>

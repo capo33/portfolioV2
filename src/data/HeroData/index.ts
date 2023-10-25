@@ -1,5 +1,7 @@
 import HeroImage from "../../assets/35496093_2211.w026.n002.2759B.p1.2759.svg";
+import SHowcaseImage from "../../assets/hero.png";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
+import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
 // <section className='bg-[#F8F8F8] dark:bg-gray-900 '>
 //     <div className='pt-5 m-auto container pb-12 px-4 items-center lg:flex flex-row-reverse'>
 //       <div className='space-y-4 flex-1 lg:text-left'>
@@ -81,7 +83,7 @@ import { GitHubSVG } from "../../assets/svg/NavSVG";
 //                 />
 //               </svg>
 //               <span className='lg:text-lg leading-tight text-gray-700 text-base font-medium'>
-//                 Design and implementation of database schema
+//                 Design and implementation of database schema Creating responsive and friendly user interfaces Developing scalable and robust API and integration
 //               </span>
 //             </li>
 //           </ul>
@@ -109,15 +111,71 @@ export const HeroObjOne = {
 };
 
 export const HeroObjTwo = {
+  imgStart: true,
   topLine: "SERVICES",
   firstHeadLine: "What",
-  secondHeadLine: "I Do.",
-  headLine: "Software Developer & Web Designer.",
-  description:
-    "I'm a software developer based in Finland specializing in building and designing websites, apps ( sometimes games 🎮), and everything in between.",
+  secondHeadLine: " I Do.",
+  // description: [
+  //   "Building custom web applications from scratch",
+  //   "Developing scalable and robust API and integration",
+  //   "Creating responsive and friendly user interfaces",
+  //   "Design and implementation of database schema",
+  // ],
+  description: [
+    {
+      id: 1,
+      title: "Creative Design",
+      icon: ShowcaseSVG.lightSVG,
+      text: "Building custom web applications from scratch",
+    },
+    {
+      id: 2,
+      title: "Web developemnt",
+      icon: ShowcaseSVG.bracketSVG,
+      text: "Developing scalable API and integration",
+    },
+    {
+      id: 3,
+      title: "User Interface",
+      icon: ShowcaseSVG.handSVG,
+      text: "Creating responsive and friendly user interfaces",
+    },
+    {
+      id: 4,
+      title: "Database Design",
+      icon: ShowcaseSVG.databaseSVG,
+      text: "Design and implementation of database schema",
+    },
+  ],
   firstLabel: "View on Github",
   secondLabel: "something else",
-  firstIcon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
-  // secondIcon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
-  img: HeroImage,
+  img: SHowcaseImage,
+};
+
+export const HeroObjThree = {
+  imgStart: true,
+  topLine: "SERVICES",
+  firstHeadLine: "What",
+  secondHeadLine: " I Do.",
+  description: [
+    {
+      id: 1,
+      text: "Building custom web applications from scratch",
+    },
+    {
+      id: 2,
+      text: "Developing scalable and robust API and integration",
+    },
+    {
+      id: 3,
+      text: "Creating responsive and friendly user interfaces",
+    },
+    {
+      id: 4,
+      text: "Design and implementation of database schema",
+    },
+  ],
+  firstLabel: "View on Github",
+  secondLabel: "something else",
+  img: SHowcaseImage,
 };
