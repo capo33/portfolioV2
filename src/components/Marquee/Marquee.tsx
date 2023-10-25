@@ -10,7 +10,7 @@ const Marquee = ({ link }: MarqueeProps) => {
   return (
     <Link to={link}>
       <M pauseOnHover speed={100}>
-        <div className='flex flex-wrap justify-center p-6 lg:justify-between'>
+        <div className='flex flex-wrap justify-center pt-10 lg:justify-between'>
           {Icons.map((icon) => (
             <div className='lg:px-16' key={icon.id}>
               {icon.icon as string}
