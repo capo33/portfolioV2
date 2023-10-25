@@ -106,7 +106,7 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
             rel='noreferrer'
             className='text-gray-200 hover:text-gray-300'
           >
-            {LinkedInSVG}
+            {LinkedInSVG("w-7 h-7")}
           </a>
         </div>
       </div>
