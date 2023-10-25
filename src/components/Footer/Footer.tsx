@@ -100,7 +100,7 @@ const Footer = () => {
               </div>
               <div className='flex justify-between border-t border-gray-100 dark:border-gray-800 py-4 pb-8 '>
                 <span>
-                  © Mo {new Date().getFullYear()} - All rights reserved
+                  © Copyright  Mo {new Date().getFullYear()} - All rights reserved
                 </span>
               </div>
             </div>
