@@ -6,7 +6,7 @@ import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
 export const HeroObjOne = {
   topLine: "Hi 👋, I'm Mohamed",
   firstHeadLine: "Software Developer &",
-  secondHeadLine: "Web Designer.",
+  secondHeadLine: " Web Designer.",
   description:
     "I'm a software developer based in Finland specializing in building and designing websites, apps ( sometimes games 🎮), and everything in between.",
   firstLabel: "View on Github",
@@ -20,7 +20,7 @@ export const HeroObjTwo = {
   imgStart: true,
   topLine: "SERVICES",
   firstHeadLine: "What",
-  secondHeadLine: " I Do.",
+  secondHeadLine: " I Offer.",
   description: [
     {
       id: 1,
