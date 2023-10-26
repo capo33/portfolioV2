@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { portfolioProjects } from "./test";
 import { motion, AnimatePresence } from "framer-motion";
-
- const Projects = () => {
+ 
+const Projects = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [Items, setItems] = React.useState(portfolioProjects);
 
@@ -19,10 +19,10 @@ import { motion, AnimatePresence } from "framer-motion";
     setItems(updatedItems);
     setActiveTab(value);
   };
-   
+
   return (
-    <>
-      <div className='flex justify-center items-center flex-wrap text-center sticky bg-opacity-90 backdrop-blur-sm  top-16 z-50 bg-white'>
+    <section>
+      <div className='flex justify-center items-center flex-wrap text-center'>
         <button
           onClick={() => {
             setItems(portfolioProjects);
@@ -57,6 +57,7 @@ import { motion, AnimatePresence } from "framer-motion";
           Full-stack
         </button>
       </div>
+
       <AnimatePresence mode='wait'>
         <motion.div
           initial={{ y: 10, opacity: 0 }}
@@ -64,42 +65,125 @@ import { motion, AnimatePresence } from "framer-motion";
           exit={{ y: -10, opacity: 0 }}
           transition={{ ease: "easeIn", duration: 0.5 }}
         >
-          <div className='flex flex-wrap items-center justify-center w-full'>
-            {Items.map((item) => {
-              return (
-                <div
-                  key={item.id()}
-                  className='relative w-80 h-80 m-4 overflow-hidden bg-gray-200 rounded-lg shadow-2xl'
-                >
-                  <img
-                    src='https://images.pexels.com/photos/18857014/pexels-photo-18857014/free-photo-of-aesthetic-nordic-design-sofa-in-vancouver-photography-studio.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load'
-                    alt='portfolio'
-                    className='absolute object-cover w-full h-full'
-                  />
-                  <div className='absolute w-full h-full bg-gray-900 bg-opacity-50'></div>
-                  <div className='absolute flex flex-col items-center justify-center w-full h-full text-center'>
-                    <h1 className='text-2xl font-bold text-bl uppercase'>
-                      {item.title}
-                    </h1>
-                    <h2 className='text-xl font-bold text-bl uppercase'>
-                      {item.tag}
-                    </h2>
-                    <a
-                      href='#'
-                      target='_blank'
-                      rel='noreferrer'
-                      className='px-4 py-2 mt-4 text-sm font-bold text-bl uppercase bg-blue-500 rounded hover:bg-blue-400'
-                    >
-                      See Project
+          <section className='py-10 bg-gray-100'>
+            <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
+              {Items.map((item) => {
+                return (
+                  <div className='bg-white shadow-md dark:bg-gray-800'>
+                    <a href='#' className=''>
+                      <img
+                        src='https://i.postimg.cc/904JVBhh/pexels-andrea-piacquadio-840996.jpg'
+                        alt=''
+                        className='object-cover w-full h-64'
+                      />
                     </a>
+                    <div className='p-5 flex flex-col justify-between'>
+                      <a href='#' className=''>
+                        <h2 className='mb-2 text-xl font-bold tracking-tight text-gray-700 dark:text-gray-400'>
+                          {item.title}
+                        </h2>
+                      </a>
+                      <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          </section>
         </motion.div>
       </AnimatePresence>
-    </>
+
+      <div>
+        <div className='pt-32  bg-white'>
+          <h1 className='text-center text-2xl font-bold text-gray-800'>
+            All Products
+          </h1>
+        </div>
+        {/* Tab Menu */}
+        <div className='flex flex-wrap items-center  overflow-x-auto overflow-y-hidden py-10 justify-center   bg-white text-gray-800'>
+          <a
+            rel='noopener noreferrer'
+            href='#'
+            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2text-gray-600'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth={2}
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              className='w-4 h-4'
+            >
+              <path d='M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z' />
+            </svg>
+            <span>Architecto</span>
+          </a>
+          <a
+            rel='noopener noreferrer'
+            href='#'
+            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2 rounded-t-lg text-gray-900'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth={2}
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              className='w-4 h-4'
+            >
+              <path d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z' />
+              <path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z' />
+            </svg>
+            <span>Corrupti</span>
+          </a>
+          <a
+            rel='noopener noreferrer'
+            href='#'
+            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2  text-gray-600'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth={2}
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              className='w-4 h-4'
+            >
+              <polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' />
+            </svg>
+            <span>Excepturi</span>
+          </a>
+          <a
+            rel='noopener noreferrer'
+            href='#'
+            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2  text-gray-600'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth={2}
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              className='w-4 h-4'
+            >
+              <circle cx={12} cy={12} r={10} />
+              <polygon points='16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76' />
+            </svg>
+            <span>Consectetur</span>
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 

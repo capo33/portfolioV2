@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { NavBarLinks } from "../../data/NavbarLinks";
@@ -14,11 +14,11 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
-  const [isChecked, setIsChecked] = useState(false);
+  // const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
+  // const handleCheckboxChange = () => {
+  //   setIsChecked(!isChecked);
+  // };
 
   // to close navbar when pressed escape
   useEscapeClick(() => {
