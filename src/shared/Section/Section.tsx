@@ -2,11 +2,11 @@ import React from "react";
 
 interface SectionProps {
   children: React.ReactNode;
-  topLine: string;
+  topLine?: string;
   firstHeadLine?: string;
   secondHeadLine?: string;
   description?: string;
-  img: string;
+  img?: string;
   imgStart?: boolean;
 }
 
