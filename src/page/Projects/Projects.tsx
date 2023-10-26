@@ -22,7 +22,7 @@ import { motion, AnimatePresence } from "framer-motion";
    
   return (
     <>
-      <div className='flex justify-center items-center flex-wrap text-center pt-10'>
+      <div className='flex justify-center items-center flex-wrap text-center sticky bg-opacity-90 backdrop-blur-sm  top-16 z-50 bg-white'>
         <button
           onClick={() => {
             setItems(portfolioProjects);
