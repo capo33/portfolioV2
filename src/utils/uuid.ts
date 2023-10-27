@@ -1,10 +1,8 @@
 export const uuid = () => {
-  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
-    /[xy]/g,
-    function (caracter: string) {
-      const random = (Math.random() * 16) | 0,
-        value = caracter === "x" ? random : (random & 0x3) | 0x8;
-      return value.toString(16);
-    }
-  );
+  return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) => {
+    const r =
+      Number(c) ^
+      (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (Number(c) / 4)));
+    return r.toString(16);
+  });
 };

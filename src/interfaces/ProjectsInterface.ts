@@ -1,11 +1,12 @@
 export interface IIProjectLinks {
-  id: () => void;
+  id: () => string | number | null;
   link: string;
+  title: string;
   icon: JSX.Element;
 }
 
 export default interface IProject {
-  id: () => void;
+  id: () => string | number | null ;
   tag: string;
   image: string;
   title: string;

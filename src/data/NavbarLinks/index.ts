@@ -5,29 +5,30 @@ import {
   ContactSVG,
 } from "../../assets/svg/NavSVG";
 import { INavLink } from "../../interfaces";
+import { uuid } from "../../utils/uuid";
 
 export const NavBarLinks: INavLink[] = [
   {
-    id: 1,
+    id: uuid,
     to: "/",
     text: "Home",
     icon: HomeSVG,
   },
   {
-    id: 3,
+    id: uuid,
     to: "/projects",
     text: "Projects",
     icon: ProjectsSVG,
   },
   {
-    id: 2,
+    id: uuid,
     to: "/about",
     text: "About",
     icon: AboutSVG,
   },
 
   {
-    id: 4,
+    id: uuid,
     to: "/contact",
     text: "Contact",
     icon: ContactSVG,

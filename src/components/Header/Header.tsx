@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import { Sidebar } from "..";
 import CV from "../../assets/pdf/CV.pdf";
-import { useOutsideClick, useWindowResize, useWindowScroll } from "../../hooks";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { BarsSVG, XCircledSVG } from "../../assets/svg/NavSVG";
+import { useOutsideClick, useWindowResize, useWindowScroll } from "../../hooks";
 
 const Header = () => {
   const [top, setTop] = useState<boolean>(true);
@@ -102,7 +102,7 @@ const Header = () => {
               <li className='hidden md:flex items-center space-x-3'>
                 {NavBarLinks.map((link) => (
                   <Link
-                    key={link.id}
+                    key={link.id()}
                     to={link.to}
                     className='px-2 text-gray-500 hover:text-gray-600 font-semibold flex items-center space-x-2 cursor-pointer'
                   >

@@ -1,6 +1,6 @@
 export default interface ILinks {
+  id: () => string | number | null;
   to: string;
   text: string;
-  id: number;
-  icon?: React.ReactElement
+  icon?: React.ReactElement;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+
  import { SharedSection } from "../../shared";
 
 interface InfoSectionProps {

@@ -1,5 +1,6 @@
 import M from "react-fast-marquee";
 import { Link } from "react-router-dom";
+
 import Icons from "../../assets/svg/MarqueeSVG";
 
 interface MarqueeProps {

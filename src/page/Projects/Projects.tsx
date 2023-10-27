@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import { IProjects } from "../../interfaces";
 import { motion, AnimatePresence } from "framer-motion";
-import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
 import { portfolioProjects } from "../../data/ProjectData";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
-  const [Items, setItems] = React.useState(portfolioProjects);
+  const [Items, setItems] = React.useState<IProjects[]>(portfolioProjects);
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
     const target = e.target as HTMLSpanElement;
@@ -67,10 +67,11 @@ const Projects = () => {
           <section className='py-10'>
             <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
               {Items.map((item) => {
-                console.log(item);
-
                 return (
-                  <article className='rounded p-3 shadow-lg hover:shadow-xl flex flex-col justify-around'>
+                  <article
+                    className='rounded p-3 shadow-lg hover:shadow-xl flex flex-col justify-around'
+                    key={item.id()}
+                  >
                     <div className='overflow-hidden rounded'>
                       <img src={item.image} alt='Photo' />
                       <div className='mt-1 p-2'>
@@ -82,20 +83,20 @@ const Projects = () => {
                     </div>
                     <div className='mt-1 p-2'>
                       <div className='mt-3 flex   justify-between'>
-                        <div className='flex items-center space-x-1.5 rounded bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600'>
-                          <span className='max-sm:hidden'>
-                            {GlobalSVG("h-4 w-4")}
-                          </span>
-
-                          <button className='text-sm'>Live Demo</button>
-                        </div>
-                        <div className='flex items-center space-x-1.5 rounded bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600'>
-                          <span className='max-sm:hidden'>
-                            {GitHubSVG("h-4 w-4")}
-                          </span>
-
-                          <button className='text-sm'>Source Code</button>
-                        </div>
+                        {item.links.map((link) => {
+                          return (
+                            <div className='flex items-center space-x-1.5 rounded bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600'>
+                              <a
+                                href={link.link}
+                                key={link.id()}
+                                target='_blank'
+                                rel='noreferrer'
+                              ></a>
+                              <span className='max-sm:hidden'>{link.icon}</span>
+                              <button className='text-sm'>{link.title}</button>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   </article>
