@@ -174,7 +174,7 @@ export const portfolioProjects: IProjects[] = [
   {
     id: uuid,
     tag: "Fullstack",
-    image: "image/social-network.png",
+    image: "image/socialnetwork.png",
     title: "Social Network",
     description: "React - NodeJS - MongoDB - TypeScript - Material-ui",
     links: [
@@ -195,7 +195,7 @@ export const portfolioProjects: IProjects[] = [
   {
     id: uuid,
     tag: "Fullstack",
-    image: "image/home-page.png",
+    image: "image/yupfood.png",
     title: "Yupfood",
     description: "React - NodeJS - MongoDB - TypeScript - Bootstrap",
     links: [
@@ -237,7 +237,7 @@ export const portfolioProjects: IProjects[] = [
   {
     id: uuid,
     tag: "Fullstack",
-    image: "image/homeScreen.png",
+    image: "image/secondhandstore.png",
     title: "Second Hand Store",
     description: "React - GrapghQL - Apollo - Javascript",
     links: [
