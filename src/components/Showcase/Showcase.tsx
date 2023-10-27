@@ -1,6 +1,5 @@
 import React from "react";
-import MySVG from "../../assets/hero.png";
-import { SharedSection } from "../../shared";
+ import { SharedSection } from "../../shared";
 
 interface InfoSectionProps {
   topLine: string;
@@ -14,19 +13,21 @@ interface InfoSectionProps {
     title: string;
     text: string;
   }[];
+  img: string;
 }
 const Showcase: React.FC<InfoSectionProps> = ({
   topLine,
   description,
   firstHeadLine,
   secondHeadLine,
+  img,
 }) => {
   return (
     <SharedSection
       topLine={topLine}
       firstHeadLine={firstHeadLine}
       secondHeadLine={secondHeadLine}
-      img={MySVG}
+      img={img}
       imgStart
     >
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 z-20'>
