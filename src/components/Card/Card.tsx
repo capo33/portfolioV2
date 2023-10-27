@@ -7,14 +7,14 @@ interface CardProps {
 const Card = ({ item }: CardProps) => {
   return (
     <article
-      className='rounded p-3 shadow-lg hover:shadow-xl flex flex-col justify-around'
+      className='rounded p-3 shadow-2xl flex flex-col justify-around'
       key={item.id()}
     >
       <div className='overflow-hidden rounded'>
         <img
           src={item.image}
           alt={item.title}
-          className='w-full h-auto object-cover'
+          className='w-full h-auto object-cover shadow-lg'
         />
         <div className='mt-1 p-2'>
           <h2 className='text-slate-700'>{item.title}</h2>
