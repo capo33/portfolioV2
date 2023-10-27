@@ -34,15 +34,14 @@ const Projects = () => {
 
   return (
     <section>
-      <div>
-        <div className='pt-32  bg-white'>
-          <h1 className='text-center text-2xl font-bold text-gray-800'>
-            All Projects
-          </h1>
-        </div>
+      <div className='pt-10 bg-white'>
+        <h1 className='text-center text-2xl font-bold text-gray-800'>
+          All Projects
+        </h1>
       </div>
 
-      <div className='flex flex-wrap items-center  overflow-x-auto overflow-y-hidden py-10 justify-center text-gray-800'>
+      {/* Tabs */}
+      <div className='flex flex-wrap items-center py-10 justify-center text-gray-800'>
         {tabs.map((tab) => (
           <button
             onClick={() => handleTabCheck(tab)}
@@ -56,6 +55,8 @@ const Projects = () => {
           </button>
         ))}
       </div>
+
+      {/* Projects */}
       <AnimatePresence mode='wait'>
         <motion.div
           initial={{ y: 10, opacity: 0 }}
@@ -85,14 +86,19 @@ const Projects = () => {
                       </div>
                     </div>
                     <div className='mt-1 p-2'>
-                      <div className='mt-3 flex justify-between'>
+                      <div className='mt-3 flex   justify-between'>
                         <div className='flex items-center space-x-1.5 rounded bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600'>
-                          {GlobalSVG("h-4 w-4")}
+                          <span className='max-sm:hidden'>
+                            {GlobalSVG("h-4 w-4")}
+                          </span>
 
                           <button className='text-sm'>Live Demo</button>
                         </div>
                         <div className='flex items-center space-x-1.5 rounded bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600'>
-                          {GitHubSVG("h-4 w-4")}
+                          <span className='max-sm:hidden'>
+                            {GitHubSVG("h-4 w-4")}
+                          </span>
+
                           <button className='text-sm'>Source Code</button>
                         </div>
                       </div>
