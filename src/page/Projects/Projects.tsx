@@ -20,13 +20,15 @@ const Projects = () => {
     setItems(updatedItems);
     setActiveTab(value);
   };
-   const tabs = ["All", "Experimental", "Frontend", "Full-stack"];
+  const tabs = ["All", "Experimental", "Frontend", "Full-stack"];
   const handleTabCheck = (tab: string) => {
     if (activeTab === tab) {
       setItems(portfolioProjects);
       setActiveTab("All");
     } else {
-      handleFilter({ target: { innerText: tab } } as unknown as React.MouseEvent<HTMLSpanElement>);
+      handleFilter({
+        target: { innerText: tab },
+      } as unknown as React.MouseEvent<HTMLSpanElement>);
     }
   };
 
@@ -43,59 +45,16 @@ const Projects = () => {
       <div className='flex flex-wrap items-center  overflow-x-auto overflow-y-hidden py-10 justify-center text-gray-800'>
         {tabs.map((tab) => (
           <button
-          onClick={() => handleTabCheck(tab)}
-           className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
+            onClick={() => handleTabCheck(tab)}
+            className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
               activeTab === tab
-                ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md    "
+                ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md"
                 : ""
             } `}
           >
             {tab}
           </button>
         ))}
-        <button
-          onClick={() => {
-            setItems(portfolioProjects);
-            setActiveTab("All");
-          }}
-          className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
-            activeTab === "All"
-              ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md    "
-              : ""
-          } `}
-        >
-          All
-        </button>
-        <button
-          onClick={handleFilter}
-          className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
-            activeTab === "Experimental"
-              ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md"
-              : ""
-          } `}
-        >
-          Experimental
-        </button>
-        <button
-          onClick={handleFilter}
-          className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300  ${
-            activeTab === "Frontend"
-              ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md"
-              : ""
-          } `}
-        >
-          Frontend
-        </button>
-        <button
-          onClick={handleFilter}
-          className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
-            activeTab === "Full-stack"
-              ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md    "
-              : ""
-          } `}
-        >
-          Full-stack
-        </button>
       </div>
       <AnimatePresence mode='wait'>
         <motion.div
