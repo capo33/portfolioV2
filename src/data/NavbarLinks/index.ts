@@ -4,9 +4,9 @@ import {
   AboutSVG,
   ContactSVG,
 } from "../../assets/svg/NavSVG";
-import { NavLinkInterface } from "../../interfaces";
+import { INavLink } from "../../interfaces";
 
-export const NavBarLinks: NavLinkInterface[] = [
+export const NavBarLinks: INavLink[] = [
   {
     id: 1,
     to: "/",

@@ -1,6 +1,6 @@
 import HeroImage from "../../assets/svg/hero.svg";
-import SHowcaseImage from "../../assets/hero.png";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
+import SHowcaseImage from "../../assets/images/hero.png";
 import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
 
 export const HeroObjOne = {
@@ -31,7 +31,7 @@ export const HeroObjTwo = {
       text: "Building custom web applications from scratch",
     },
     {
-      id: 2,  
+      id: 2,
       title: "Web developemnt",
       icon: ShowcaseSVG.bracketSVG,
       iconColor: "green-700",

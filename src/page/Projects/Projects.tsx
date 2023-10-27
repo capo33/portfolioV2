@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { portfolioProjects } from "./test";
 import { motion, AnimatePresence } from "framer-motion";
 import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
+import { portfolioProjects } from "../../data/ProjectData";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
@@ -72,12 +72,7 @@ const Projects = () => {
                 return (
                   <article className='rounded p-3 shadow-lg hover:shadow-xl flex flex-col justify-around'>
                     <div className='overflow-hidden rounded'>
-                      <img
-                        src={
-                          "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fH"
-                        }
-                        alt='Photo'
-                      />
+                      <img src={item.image} alt='Photo' />
                       <div className='mt-1 p-2'>
                         <h2 className='text-slate-700'>{item.title}</h2>
                         <p className='mt-1 text-sm text-slate-400'>

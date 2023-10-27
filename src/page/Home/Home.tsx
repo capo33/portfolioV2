@@ -1,5 +1,4 @@
-import { Hero, Marquee } from "../../components";
-import Showcase from "../../components/Showcase/Showcase";
+import { Hero, Marquee, Showcase } from "../../components";
 import { HeroObjOne, HeroObjTwo } from "../../data/HeroData";
 
 const Home = () => {
