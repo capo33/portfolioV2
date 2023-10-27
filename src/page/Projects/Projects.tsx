@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { portfolioProjects } from "./test";
 import { motion, AnimatePresence } from "framer-motion";
+import { GitHubSVG } from "../../assets/svg/NavSVG";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
@@ -28,48 +29,18 @@ const Projects = () => {
             All Projects
           </h1>
         </div>
-        {/* Tab Menu */}
-        <div className='flex flex-wrap items-center  overflow-x-auto overflow-y-hidden py-10 justify-center   bg-white text-gray-800'>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2text-gray-600'
-          >
-            <span>All</span>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2 rounded-t-lg text-gray-900'
-          >
-            <span>Experimental</span>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2  text-gray-600'
-          >
-            <span>Fronend</span>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='flex items-center flex-shrink-0 px-5 py-3 space-x-2  text-gray-600'
-          >
-            <span>Fullstack</span>
-          </a>
-        </div>
+       
       </div>
-      
-      <div className='flex justify-center items-center flex-wrap text-center'>
+
+      <div className='flex flex-wrap items-center  overflow-x-auto overflow-y-hidden py-10 justify-center text-gray-800'>
         <button
           onClick={() => {
             setItems(portfolioProjects);
             setActiveTab("All");
           }}
-          className={` m-4 px-5 py-1 text-lg font-medium shrink-0 rounded-lg p-2   text-gray-500 hover:bg-[#222222] hover:text-white hover:rounded-md  ${
+          className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
             activeTab === "All"
-              ? "bg-cyan-500 text-white transition-all ease-in-out duration-0 rounded-md    "
+              ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md    "
               : ""
           } `}
         >
@@ -77,9 +48,19 @@ const Projects = () => {
         </button>
         <button
           onClick={handleFilter}
-          className={`m-4 px-5 py-1 text-lg font-medium shrink-0 rounded-lg p-2   text-gray-500 hover:bg-[#222222] hover:text-white hover:rounded-md  ${
+          className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
+            activeTab === "Experimental"
+              ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md"
+              : ""
+          } `}
+        >
+          Experimental
+        </button>
+        <button
+          onClick={handleFilter}
+          className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300  ${
             activeTab === "Frontend"
-              ? "bg-cyan-500 text-white transition-all ease-in-out duration-0 rounded-md    "
+              ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md"
               : ""
           } `}
         >
@@ -87,9 +68,9 @@ const Projects = () => {
         </button>
         <button
           onClick={handleFilter}
-          className={`m-4 px-5 py-1 text-lg font-medium shrink-0 rounded-lg p-2   text-gray-500 hover:bg-[#222222] hover:text-white hover:rounded-md  ${
+          className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
             activeTab === "Full-stack"
-              ? "bg-cyan-500 text-white transition-all ease-in-out duration-0 rounded-md    "
+              ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md    "
               : ""
           } `}
         >
@@ -126,7 +107,7 @@ const Projects = () => {
                         <p className='mt-1 text-sm text-slate-400 flex-grow'>
                           {item.description}
                         </p>
-                        {/* <div className='mt-3 flex justify-between flex-grow'>
+                        <div className='mt-3 flex justify-between flex-grow'>
                           <div className='flex items-center space-x-1.5 rounded bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600'>
                             <svg
                               xmlns='http://www.w3.org/2000/svg'
@@ -149,7 +130,7 @@ const Projects = () => {
                             {GitHubSVG("h-4 w-4")}
                             <button className='text-sm'>Source Code</button>
                           </div>
-                        </div> */}
+                        </div>
                       </div>
                     </a>
                   </article>
