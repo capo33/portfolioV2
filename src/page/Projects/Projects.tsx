@@ -46,6 +46,7 @@ const Projects = () => {
       <div className='flex flex-wrap items-center py-10 justify-center text-gray-800'>
         {tabs.map((tab) => (
           <button
+            key={tab}
             onClick={() => handleTabCheck(tab)}
             className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
               activeTab === tab
@@ -63,7 +64,7 @@ const Projects = () => {
         <section className='py-10'>
           <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
             {Items.map((item) => {
-              return <Card item={item} />;
+              return <Card item={item} key={item.id()} />;
             })}
           </div>
         </section>
