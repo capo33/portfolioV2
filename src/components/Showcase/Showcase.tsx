@@ -35,13 +35,13 @@ const Showcase: React.FC<InfoSectionProps> = ({
         {description &&
           description.map((item) => (
             <div
-              className={`flex bg-gray-100 ${item.bg}   dark:bg-gray-800 dark:bg-opacity-70 rounded-lg 2xl:rounded-xl p-5 transition duration-200 ease-in-out`}
+              className={`flex bg-gray-100 ${item.bg} dark:bg-gray-800 dark:bg-opacity-70 rounded  p-5 transition duration-200 ease-in-out`}
             >
               <span className={`text-${item.iconColor}`}>{item.icon}</span>
 
               <div className={`ml-4`}>
                 <h2 className='mb-4 font-bold'>{item.title}</h2>
-                <p className='lg:text-lg leading-tight text-gray-700 text-base font-medium'>
+                <p className='leading-tight text-gray-700 text-base font-medium'>
                   {item.text}
                 </p>
               </div>
