@@ -21,8 +21,6 @@ const Header = () => {
   // to handle navbar when clicked outside
   const handleClick = () => {
     setOpen((open) => !open);
-    // to prevent scrolling when navbar is open
-    // window.document.body.style.overflowY = open ? "unset" : "hidden";
     console.log("clicked");
   };
 
@@ -31,16 +29,11 @@ const Header = () => {
 
   // to close navbar when clicked outside
   const ref = useOutsideClick(() => {
-    // to prevent scrolling when navbar is open
-    // window.document.body.style.overflowY = open ? "unset" : "hidden";
     setOpen(false);
   });
 
   //  to handle navbar when resized
   useWindowResize(() => {
-    // to prevent scrolling when navbar is open
-    // window.document.body.style.overflowY = open ? "unset" : "hidden";
-
     if (window.innerWidth > 1024) {
       setOpen(false);
     }
