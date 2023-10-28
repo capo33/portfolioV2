@@ -20,9 +20,16 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
   //   setIsChecked(!isChecked);
   // };
 
+  // to prevent scrolling when navbar is open
+  useEffect(() => {
+    open
+      ? (document.body.style.overflowY = "hidden")
+      : (document.body.style.overflowY = "unset");
+  }, [open]);
+
   // to close navbar when pressed escape
   useEscapeClick(() => {
-     setOpen(false);
+    setOpen(false);
   });
 
   // to close navbar when resized
