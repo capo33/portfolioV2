@@ -1,21 +1,31 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
+import {
+  useActiveLink,
+  useOutsideClick,
+  useWindowResize,
+  useWindowScroll,
+} from "../../hooks";
 import { Sidebar } from "..";
 import CV from "../../assets/pdf/CV.pdf";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { BarsSVG, XCircledSVG } from "../../assets/svg/NavSVG";
-import { useOutsideClick, useWindowResize, useWindowScroll } from "../../hooks";
 
 const Header = () => {
   const [top, setTop] = useState<boolean>(true);
   const [open, setOpen] = useState<boolean>(false);
+
   const menuRef = useRef<HTMLDivElement>(null);
 
+  // to handle navbar when clicked outside
   const handleClick = () => {
     setOpen((open) => !open);
     console.log("clicked");
   };
+
+  // Active Link
+  const { linkness } = useActiveLink();
 
   // to close navbar when clicked outside
   const ref = useOutsideClick(() => {
@@ -36,7 +46,7 @@ const Header = () => {
 
   return (
     <header
-      className={`text-gray-600 body-font sticky top-0 bg-white bg-opacity-90 backdrop-blur-sm ${
+      className={`text-gray-600 sticky top-0 bg-white bg-opacity-90 backdrop-blur-sm ${
         !top && "sticky top-0 bg-zinc-100 shadow-md z-50"
       }`}
     >
@@ -62,7 +72,7 @@ const Header = () => {
               />
             </svg>
 
-            <span className='     text-2xl font-semibold whitespace-nowrap dark:text-white'>
+            <span className='text-2xl font-semibold whitespace-nowrap dark:text-white'>
               Mo
             </span>
           </Link>
@@ -99,12 +109,14 @@ const Header = () => {
             id='navbar-sticky'
           >
             <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
-              <li className='hidden md:flex items-center space-x-3'>
+              <li className={`hidden md:flex items-center space-x-3`}>
                 {NavBarLinks.map((link) => (
                   <Link
                     key={link.id()}
                     to={link.to}
-                    className='px-2 text-gray-500 hover:text-gray-600 font-semibold flex items-center space-x-2 cursor-pointer'
+                    aria-label={link.text}
+                    className={`${linkness(link.to.split("/")[1])} 
+                }`}
                   >
                     {link.icon}
                     {link.text}
