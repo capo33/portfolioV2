@@ -27,7 +27,7 @@ const Card = ({ item }: CardProps) => {
           {item.links.map((link) => {
             return (
               <div
-                className='flex items-center space-x-1.5 rounded bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600'
+                className='flex items-center space-x-1.5 rounded bg-gray-500 px-4 py-1.5 text-white duration-100 hover:bg-gray-600'
                 key={link.id()}
               >
                 <AnchorTag
