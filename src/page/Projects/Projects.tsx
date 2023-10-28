@@ -8,6 +8,8 @@ const Projects = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [Items, setItems] = React.useState<IProjects[]>(portfolioProjects);
 
+  const tabs = ["All", "Experimental", "Frontend", "Fullstack"];
+
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
     const target = e.target as HTMLSpanElement;
     const value = target.innerText;
@@ -22,7 +24,6 @@ const Projects = () => {
     setItems(updatedItems);
     setActiveTab(value);
   };
-  const tabs = ["All", "Experimental", "Frontend", "Fullstack"];
 
   const handleTabCheck = (tab: string) => {
     if (activeTab === tab) {
@@ -55,7 +56,7 @@ const Projects = () => {
 
       {/* Projects */}
       <MitionAnimate>
-        <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+        <div className='mx-auto grid container grid-cols-1 gap-6 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {Items.map((item) => {
             return <Card item={item} key={item.id()} />;
           })}

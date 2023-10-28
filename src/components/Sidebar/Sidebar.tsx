@@ -22,6 +22,8 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
 
   // to close navbar when pressed escape
   useEscapeClick(() => {
+    window.document.body.style.overflowY = open ? "unset" : "hidden";
+
     setOpen(false);
   });
 
