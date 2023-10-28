@@ -42,7 +42,7 @@ const Projects = () => {
           <button
             key={tab}
             onClick={() => handleTabCheck(tab)}
-            className={`m-4 py-1 px-3 text-lg font-semibold rounded text-gray-600 hover:bg-gray-600 hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
+            className={`mx-4 my-2 py-1 px-3 text-lg font-semibold rounded text-gray-600 hover:bg-gray-600 hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
               activeTab === tab
                 ? "bg-gray-500 text-white transition-all ease-in-out duration-0 rounded-md"
                 : ""
@@ -55,7 +55,7 @@ const Projects = () => {
 
       {/* Projects */}
       <MitionAnimate>
-        <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
+        <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {Items.map((item) => {
             return <Card item={item} key={item.id()} />;
           })}
