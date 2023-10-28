@@ -5,3 +5,5 @@ export { default as Header } from "./Header/Header";
 export { default as Marquee } from "./Marquee/Marquee";
 export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as Showcase } from "./Showcase/Showcase";
+export { default as MitionAnimate } from "./MitionAnimate/MitionAnimate";
+

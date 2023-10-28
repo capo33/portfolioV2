@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+
 import { IProjects } from "../../interfaces";
-import { motion, AnimatePresence } from "framer-motion";
+import { Card, MitionAnimate } from "../../components";
 import { portfolioProjects } from "../../data/ProjectData";
-import { Card } from "../../components";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
@@ -59,22 +59,15 @@ const Projects = () => {
       </div>
 
       {/* Projects */}
-      <AnimatePresence mode='wait'>
-        <motion.div
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -10, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <section className='py-10'>
-            <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
-              {Items.map((item) => {
-                return <Card item={item} />;
-              })}
-            </div>
-          </section>
-        </motion.div>
-      </AnimatePresence>
+      <MitionAnimate>
+        <section className='py-10'>
+          <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
+            {Items.map((item) => {
+              return <Card item={item} />;
+            })}
+          </div>
+        </section>
+      </MitionAnimate>
     </section>
   );
 };
