@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { useEffect } from "react";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { useEscapeClick, useWindowResize } from "../../hooks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
@@ -22,8 +22,7 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
 
   // to close navbar when pressed escape
   useEscapeClick(() => {
-    window.document.body.style.overflowY = open ? "unset" : "hidden";
-    setOpen(false);
+     setOpen(false);
   });
 
   // to close navbar when resized
@@ -37,7 +36,7 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
     <div
       className={`fixed bg-gray-500 h-screen my-4 
             lg:hidden flex flex-col gap-10 text-medium p-10 duration-500
-            ${open ? "left-0" : "left-[-100%]"}`}
+            ${open ? "left-0 overflow-y-hidden" : "-left-full"}`}
     >
       <div className='text-gray-100 text-xl'>
         <div className='py-2 flex items-center rounded-md'>

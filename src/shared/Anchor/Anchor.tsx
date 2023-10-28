@@ -1,8 +1,8 @@
 import React from "react";
 
 interface IAnchor {
-  icon: React.JSX.Element | undefined;
-  label: string | undefined;
+  icon?: React.JSX.Element | undefined;
+  label?: string | undefined;
   aClass?: string;
   sClass?: string;
   href?: React.AnchorHTMLAttributes<HTMLAnchorElement>["href"];

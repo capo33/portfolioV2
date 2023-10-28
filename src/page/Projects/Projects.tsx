@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { IProjects } from "../../interfaces";
 import { Card, MitionAnimate } from "../../components";
 import { portfolioProjects } from "../../data/ProjectData";
+import { GitHubSVG } from "../../assets/svg/NavSVG";
+import Anchor from "../../shared/Anchor/Anchor";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
@@ -37,13 +39,26 @@ const Projects = () => {
   };
 
   return (
-    <section className='pt-10'>
-      <div className='flex flex-wrap items-center py-10 justify-center text-gray-500'>
+    <section className='py-10'>
+      <h2 className='text-center text-2xl font-bold text-gray-800'>
+        Most Recent Projects
+      </h2>
+      <p className='text-center text-lg text-gray-500'>
+        Here are some of my recent deployed projects. Want to see more?{" "}
+        <i className=''>
+          Check out my Github profile{" "}
+          <Anchor
+            href='https://github.com/capo33'
+            icon={GitHubSVG("w-5 h-5 inline-block")}
+          />
+        </i>
+      </p>
+      <div className='flex flex-wrap items-center py-10 justify-center'>
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => handleTabCheck(tab)}
-            className={`mx-4 my-2 py-1 px-3 text-lg font-semibold rounded text-gray-600 hover:bg-gray-600 hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
+            className={`mx-4 my-2 py-1 px-3 text-lg font-semibold rounded hover:bg-gray-600 hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
               activeTab === tab
                 ? "bg-gray-500 text-white transition-all ease-in-out duration-0 rounded-md"
                 : ""
@@ -56,7 +71,7 @@ const Projects = () => {
 
       {/* Projects */}
       <MitionAnimate>
-        <div className='mx-auto grid container grid-cols-1 gap-6 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+        <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-6 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
           {Items.map((item) => {
             return <Card item={item} key={item.id()} />;
           })}
