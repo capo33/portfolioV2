@@ -49,7 +49,7 @@ const Projects = () => {
           Check out my Github profile{" "}
           <Anchor
             href='https://github.com/capo33'
-            icon={GitHubSVG("w-5 h-5 inline-block")}
+            icon={GitHubSVG("w-5 h-5 inline-block hover:text-black")}
           />
         </i>
       </p>
