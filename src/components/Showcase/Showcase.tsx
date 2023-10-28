@@ -1,6 +1,6 @@
 import React from "react";
 
- import { SharedSection } from "../../shared";
+import { SharedSection } from "../../shared";
 
 interface InfoSectionProps {
   topLine: string;
@@ -36,6 +36,7 @@ const Showcase: React.FC<InfoSectionProps> = ({
           description.map((item) => (
             <div
               className={`flex bg-gray-100 ${item.bg} dark:bg-gray-800 dark:bg-opacity-70 rounded  p-5 transition duration-200 ease-in-out`}
+              key={item.id}
             >
               <span className={`text-${item.iconColor}`}>{item.icon}</span>
 
