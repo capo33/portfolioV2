@@ -13,6 +13,7 @@ const Projects = () => {
     const value = target.innerText;
     if (value === "All") {
       setItems(portfolioProjects);
+      setActiveTab("All");
       return;
     }
     const updatedItems = portfolioProjects.filter((currentItem) => {
@@ -36,21 +37,14 @@ const Projects = () => {
 
   return (
     <section className='pt-10'>
-      <h1 className='text-center text-2xl font-bold text-gray-800'>
-        All Projects
-      </h1>
-      <p className='text-center text-gray-500'>
-        Here you can find all my projects
-      </p>
-      {/* Tabs */}
-      <div className='flex flex-wrap items-center py-10 justify-center text-gray-800'>
+      <div className='flex flex-wrap items-center py-10 justify-center text-gray-500'>
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => handleTabCheck(tab)}
-            className={`m-4 py-1 px-3 text-lg font-semibold rounded p-2 text-gray-600 hover:bg-[#222222] hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
+            className={`m-4 py-1 px-3 text-lg font-semibold rounded text-gray-600 hover:bg-gray-600 hover:text-white hover:rounded hover:transition-all hover:ease-in-out hover:duration-300 ${
               activeTab === tab
-                ? "bg-blue-500 text-white transition-all ease-in-out duration-0 rounded-md"
+                ? "bg-gray-500 text-white transition-all ease-in-out duration-0 rounded-md"
                 : ""
             } `}
           >
@@ -61,13 +55,11 @@ const Projects = () => {
 
       {/* Projects */}
       <MitionAnimate>
-        <section className='py-10'>
-          <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
-            {Items.map((item) => {
-              return <Card item={item} key={item.id()} />;
-            })}
-          </div>
-        </section>
+        <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
+          {Items.map((item) => {
+            return <Card item={item} key={item.id()} />;
+          })}
+        </div>
       </MitionAnimate>
     </section>
   );
