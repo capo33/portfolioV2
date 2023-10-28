@@ -62,7 +62,7 @@ const Header = () => {
               Mo
             </span>
           </Link>
-          {/* Menu Icons */}
+          {/* CV */}
           <div className='flex md:order-2'>
             <a
               download={true}
@@ -71,24 +71,17 @@ const Header = () => {
             >
               Download CV
             </a>
-            {open ? (
-              <button
-                type='button'
-                className='lg:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
-                onClick={handleClick}
-              >
-                {XCircledSVG}
-              </button>
-            ) : (
-              <button
-                type='button'
-                className='lg:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
-                onClick={handleClick}
-              >
-                {BarsSVG}
-              </button>
-            )}
+
+            {/* Menu Icons */}
+            <button
+              type='button'
+              className='lg:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
+              onClick={handleClick}
+            >
+              {open ? XCircledSVG : BarsSVG}
+            </button>
           </div>
+          
           {/* Desktop Menu */}
           <div
             className='items-center justify-between hidden w-full lg:flex lg:w-auto md:order-1'
