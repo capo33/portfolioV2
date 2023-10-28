@@ -1,7 +1,7 @@
 import React from "react";
 
- import { MitionAnimate } from "..";
- import { SharedSection,AnchorTag } from "../../shared";
+import { MitionAnimate } from "..";
+import { SharedSection, AnchorTag } from "../../shared";
 
 interface InfoSectionProps {
   topLine: string;

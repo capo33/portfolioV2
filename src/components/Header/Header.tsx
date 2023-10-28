@@ -45,7 +45,6 @@ const Header = () => {
 
   // to handle navbar with shadow on scroll
   useWindowScroll(() => {
-    // to prevent scrolling when navbar is open
     window.scrollY > 10 ? setTop(false) : setTop(true);
   });
 

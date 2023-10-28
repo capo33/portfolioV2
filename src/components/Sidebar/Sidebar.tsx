@@ -23,7 +23,6 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
   // to close navbar when pressed escape
   useEscapeClick(() => {
     window.document.body.style.overflowY = open ? "unset" : "hidden";
-
     setOpen(false);
   });
 
@@ -37,7 +36,7 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
   return (
     <div
       className={`fixed bg-gray-500 h-screen my-4 
-            lg:hidden flex flex-col gap-10 text-medium p-7 duration-500
+            lg:hidden flex flex-col gap-10 text-medium p-10 duration-500
             ${open ? "left-0" : "left-[-100%]"}`}
     >
       <div className='text-gray-100 text-xl'>
