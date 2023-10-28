@@ -1,5 +1,5 @@
+import { AnchorTag } from "../../shared";
 import { IProjects } from "../../interfaces";
-import Anchor from "../Anchor/Anchor";
 
 interface CardProps {
   item: IProjects;
@@ -30,7 +30,7 @@ const Card = ({ item }: CardProps) => {
                 className='flex items-center space-x-1.5 rounded bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600'
                 key={link.id()}
               >
-                <Anchor
+                <AnchorTag
                   href={link.link}
                   icon={link.icon}
                   label={link.title}
