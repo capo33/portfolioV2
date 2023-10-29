@@ -39,12 +39,12 @@ const Projects = () => {
   };
 
   return (
-    <section className='py-10'>
+    <section className='py-10 sticky top-0'>
       <h2 className='text-center text-2xl font-bold text-gray-800'>
-        Most Recent Projects
+        Most of my deployed projects
       </h2>
       <p className='text-center text-lg text-gray-500'>
-        Here are some of my recent deployed projects. Want to see more?{" "}
+        Want to see more?{" "}
         <i className=''>
           Check out my Github profile{" "}
           <Anchor
