@@ -28,12 +28,12 @@ const Projects = () => {
   };
 
   return (
-    <section className='py-10'>
+    <section className='py-10 flex flex-wrap items-center my-10 text-lg font-medium text-center flex-col'>
       <h2 className='text-center text-2xl font-bold text-gray-800'>
         Most of my deployed projects
       </h2>
-      <p className='text-center text-lg text-gray-500'>
-        Want to see more? <i className=''>Check out my Github profile </i>
+      <p className='text-center text-lg text-cyan-700'>
+        Want to see more? Check out my Github profile{" "}
         <Anchor
           href='https://github.com/capo33'
           icon={GitHubSVG("w-5 h-5 inline-block hover:text-black")}
@@ -41,39 +41,37 @@ const Projects = () => {
       </p>
 
       {/* Tabs */}
-      <div className='flex flex-wrap  items-center justify-center my-10'>
-        <ul className='flex flex-wrap text-lg font-medium text-center justify-center text-gray-500'>
-          {tabs.map((tab) => (
-            <li className='mr-2'>
-              <button
-                key={tab}
-                onClick={
-                  tab === tabs[0]
-                    ? () => {
-                        setItems(portfolioProjects);
-                        setActiveTab("All");
-                      }
-                    : handleFilter
-                }
-                className={`inline-flex items-center justify-center px-4 py-1 rounded hover:bg-gray-200 hover:text-black ${
-                  activeTab === tab ? "bg-gray-500 text-white duration-300" : ""
-                }`}
+      <ul className='flex flex-wrap items-center my-10 text-lg font-medium text-center gap-2 text-gray-500'>
+        {tabs.map((tab) => (
+          <li>
+            <button
+              key={tab}
+              onClick={
+                tab === tabs[0]
+                  ? () => {
+                      setItems(portfolioProjects);
+                      setActiveTab("All");
+                    }
+                  : handleFilter
+              }
+              className={`inline-flex items-center justify-center px-4 py-1 rounded hover:bg-gray-200 hover:text-black ${
+                activeTab === tab ? "bg-gray-500 text-white duration-300" : ""
+              }`}
+            >
+              <svg
+                className='w-4 h-4 mr-2 text-gray-400'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='currentColor'
+                viewBox='0 0 20 20'
               >
-                <svg
-                  className='w-4 h-4 mr-2 text-gray-400'
-                  aria-hidden='true'
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                >
-                  <path d='M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z' />
-                </svg>
-                {tab}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
+                <path d='M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z' />
+              </svg>
+              {tab}
+            </button>
+          </li>
+        ))}
+      </ul>
 
       {/* Projects */}
       <MitionAnimate>
