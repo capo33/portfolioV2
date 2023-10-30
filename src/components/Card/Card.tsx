@@ -1,5 +1,6 @@
 import { AnchorTag } from "../../shared";
 import { IProjects } from "../../interfaces";
+import { MitionAnimate } from "..";
 
 interface CardProps {
   item: IProjects;
@@ -7,6 +8,7 @@ interface CardProps {
 
 const Card = ({ item }: CardProps) => {
   return (
+    <MitionAnimate>
     <article
       className='rounded p-3 shadow-2xl flex flex-col justify-around'
       key={item.id()}
@@ -43,6 +45,7 @@ const Card = ({ item }: CardProps) => {
         </div>
       </div>
     </article>
+    </MitionAnimate>
   );
 };
 
