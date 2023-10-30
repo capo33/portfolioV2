@@ -41,7 +41,7 @@ const Projects = () => {
       </p>
 
       {/* Tabs */}
-      <ul className='flex flex-wrap items-center my-10 text-lg font-medium text-center justify-center gap-2 text-gray-500'>
+      <ul className='flex flex-wrap items-center my-10 text-lg font-medium text-center gap-2 text-gray-500'>
         {tabs.map((tab) => (
           <li>
             <button
