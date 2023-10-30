@@ -32,7 +32,7 @@ const Projects = () => {
       <h2 className='text-center text-2xl font-bold text-gray-800'>
         Most of my deployed projects
       </h2>
-      <p className='text-center text-lg text-cyan-700'>
+      <p className='text-center text-[16px] text-cyan-700'>
         Want to see more? Check out my Github profile{" "}
         <Anchor
           href='https://github.com/capo33'
@@ -41,7 +41,7 @@ const Projects = () => {
       </p>
 
       {/* Tabs */}
-      <ul className='flex flex-wrap items-center my-10 text-lg font-medium text-center gap-2 text-gray-500'>
+      <ul className='flex flex-wrap items-center my-10 text-lg font-medium text-center justify-center gap-2 text-gray-500'>
         {tabs.map((tab) => (
           <li>
             <button
