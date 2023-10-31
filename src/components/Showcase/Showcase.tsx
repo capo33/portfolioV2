@@ -38,7 +38,7 @@ const Showcase: React.FC<InfoSectionProps> = ({
               className={`flex bg-gray-100 ${item.bg} dark:bg-gray-800 dark:bg-opacity-70 rounded  p-5 transition duration-200 ease-in-out`}
               key={item.id}
             >
-              <span className={`text-${item.iconColor}`}>{item.icon}</span>
+              <span className={item.iconColor}>{item.icon}</span>
 
               <div className={`ml-4`}>
                 <h2 className='mb-4 font-bold'>{item.title}</h2>
