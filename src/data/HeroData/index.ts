@@ -3,7 +3,7 @@ import { GitHubSVG } from "../../assets/svg/NavSVG";
 import SHowcaseImage from "../../assets/images/hero.png";
 import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
 
-export const HeroObjOne = {
+export const HeroObj = {
   topLine: "Hi 👋, I'm Mohamed",
   firstHeadLine: "Software Developer &",
   secondHeadLine: " Web Designer.",
@@ -16,7 +16,7 @@ export const HeroObjOne = {
   img: HeroImage,
 };
 
-export const HeroObjTwo = {
+export const ShowcaseObj = {
   imgStart: true,
   topLine: "SERVICES",
   firstHeadLine: "What",
