@@ -1,8 +1,3 @@
-import py from "./python.svg";
-import dotNet from "./dotnet.svg";
-import aws from "./aws.svg";
-import unity from "./unity.svg";
-import csharp from "./csharp.svg";
 import Capo from "../../assets/images/hero.png";
 
 export const AboutObj = {
@@ -39,20 +34,11 @@ export const AboutObj = {
     },
     {
       id: 7,
-      title: `Currently I'm learning `,
-      icon: <img src={aws} alt='aws' width='25' height='25' />,
-      title1: " -",
-      icon1: <img src={py} alt='python' width='25' height='25' />,
-      title4: " -",
-      icon4: <img src={dotNet} alt='dotNet' width='25' height='25' />,
+      title: `Currently I'm learning AWS, Python and .NET`,
     },
     {
       id: 8,
-      title: "For fun I use",
-      icon: <img src={csharp} alt='csharp' width='25' height='25' />,
-      title1: "and",
-      icon1: <img src={unity} alt='unity' width='25' height='25' />,
-      title3: " to develop games.",
+      title: "For fun I use C# and Unity to develop games.",
     },
   ],
   img: Capo,
