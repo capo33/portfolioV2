@@ -1,16 +1,5 @@
 import { SharedSection } from "../../shared";
-
-interface InfoSectionProps {
-  topLine: string;
-  firstHeadLine?: string;
-  secondHeadLine?: string;
-  description?: {
-    id: number;
-    emoji?: string;
-    title: string;
-  }[];
-  img: string;
-}
+import { IAboutMainObj } from "../../interfaces";
 
 const AboutDetails = ({
   firstHeadLine,
@@ -18,7 +7,7 @@ const AboutDetails = ({
   topLine,
   description,
   img,
-}: InfoSectionProps) => {
+}: IAboutMainObj) => {
   return (
     <>
       <SharedSection
@@ -29,7 +18,7 @@ const AboutDetails = ({
         imgStart
       >
         <div className='text-gray-500 xl:text-lg md:text-base dark:text-gray-400'>
-          <ul className='space-y-5'>
+          <ul className='space-y-2'>
             {description &&
               description.map((item) => (
                 <li

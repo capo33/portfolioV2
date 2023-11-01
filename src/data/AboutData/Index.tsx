@@ -1,6 +1,7 @@
+import { IAboutMainObj } from "../../interfaces";
 import Capo from "../../assets/images/coding.gif";
 
-export const AboutObj = {
+export const AboutObj: IAboutMainObj = {
   imgStart: true,
   topLine: "Snippet",
   firstHeadLine: "Who",
@@ -17,19 +18,18 @@ export const AboutObj = {
       id: 2,
       emoji: "📚",
       title:
-        "My coding journey started in 2020 when I decided to change my career path and become a developer, then I started learning web-development at Business Collage Helsinki.",
+        "My coding journey started in 2020 when I decided to become a developer.",
     },
     {
       id: 3,
       emoji: "🎓",
-      title:
-        "I studied web-development at Business Collage School.",
+      title: "I studied web-development at Business Collage School.",
     },
     {
       id: 4,
       emoji: "👨‍💻",
       title:
-        "During my programming journey, I learned technologies related to web development, such as JavaScript, React, TypeScript, NodeJS, etc.",
+        "During my programming journey, I have learned technologies related to web development, such as JavaScript, React, TypeScript, NodeJS, etc.",
     },
     {
       id: 5,
