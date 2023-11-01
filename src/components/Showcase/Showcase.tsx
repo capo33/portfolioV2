@@ -1,22 +1,9 @@
 import React from "react";
 
 import { SharedSection } from "../../shared";
+import { IHomeMainObj, IDescription } from "../../interfaces";
 
-interface InfoSectionProps {
-  topLine: string;
-  firstHeadLine?: string;
-  secondHeadLine?: string;
-  description?: {
-    id: number;
-    icon: React.JSX.Element;
-    iconColor?: string;
-    bg: string;
-    title: string;
-    text: string;
-  }[];
-  img: string;
-}
-const Showcase: React.FC<InfoSectionProps> = ({
+const Showcase: React.FC<IHomeMainObj<IDescription[]>> = ({
   topLine,
   description,
   firstHeadLine,

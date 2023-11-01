@@ -2,8 +2,10 @@ import HeroImage from "../../assets/svg/hero.svg";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
 import SHowcaseImage from "../../assets/images/hero.png";
 import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
- 
-export const HeroObj = {
+import   { IDescription, IHomeMainObj, } from "../../interfaces";
+
+export const HeroObj: IHomeMainObj<string> = {
+  imgStart: false,
   topLine: "Hi 👋, I'm Mohamed",
   firstHeadLine: "Software Developer &",
   secondHeadLine: " Web Designer.",
@@ -16,7 +18,7 @@ export const HeroObj = {
   img: HeroImage,
 };
 
-export const ShowcaseObj = {
+export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
   imgStart: true,
   topLine: "SERVICES",
   firstHeadLine: "What",

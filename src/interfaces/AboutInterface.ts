@@ -1,7 +1,6 @@
-type IDescriptionV1 = {
+type IDescription = {
   id?: number;
   title?: string;
-  description?: string;
   emoji?: string;
 };
 export default interface IAboutMainObj {
@@ -9,6 +8,6 @@ export default interface IAboutMainObj {
   topLine: string;
   firstHeadLine: string;
   secondHeadLine: string;
-  description: IDescriptionV1[];
+  description: IDescription[];
   img: string;
 }

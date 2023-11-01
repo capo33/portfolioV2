@@ -1,18 +1,6 @@
-import React from "react";
 
 import { SharedSection, AnchorTag } from "../../shared";
-
-interface InfoSectionProps {
-  topLine: string;
-  img: string;
-  firstHeadLine?: string;
-  secondHeadLine?: string;
-  firstLabel?: string;
-  secondLabel?: string;
-  firstIcon?: React.JSX.Element;
-  secondIcon?: React.JSX.Element;
-  description?: string;
-}
+import IHomeMainObj from "../../interfaces/HomeInterface";
 
 const Hero = ({
   firstHeadLine,
@@ -24,7 +12,7 @@ const Hero = ({
   secondIcon,
   img,
   description,
-}: InfoSectionProps) => {
+}: IHomeMainObj<string>) => {
   return (
     <SharedSection
       topLine={topLine}
