@@ -2,7 +2,7 @@ import HeroImage from "../../assets/svg/hero.svg";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
 import SHowcaseImage from "../../assets/images/hero.png";
 import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
-
+ 
 export const HeroObj = {
   topLine: "Hi 👋, I'm Mohamed",
   firstHeadLine: "Software Developer &",
