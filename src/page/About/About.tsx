@@ -1,12 +1,11 @@
-import { AboutObj } from "../../data/AboutData/Index";
-import AboutDetails from "../../components/AboutDetails/AboutDetails";
-import { MitionAnimate } from "../../components";
+import { AboutMainObj } from "../../data/AboutData/Index";
+import { MitionAnimate, AboutDetails } from "../../components";
 
 const About = () => {
   return (
     <section className='container mx-auto px-4 space-y-12 md:space-y-16 lg:space-y-20 py-10'>
       <MitionAnimate>
-        <AboutDetails {...AboutObj} />
+        <AboutDetails {...AboutMainObj} />
       </MitionAnimate>
     </section>
   );

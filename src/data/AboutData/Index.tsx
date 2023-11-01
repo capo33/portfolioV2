@@ -1,7 +1,7 @@
 import { IAboutMainObj } from "../../interfaces";
 import Capo from "../../assets/images/coding.gif";
 
-export const AboutObj: IAboutMainObj = {
+export const AboutMainObj: IAboutMainObj = {
   imgStart: true,
   topLine: "Snippet",
   firstHeadLine: "Who",
