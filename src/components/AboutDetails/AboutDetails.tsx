@@ -36,36 +36,16 @@ const AboutDetails = ({
         img={img}
         imgStart
       >
-        {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 z-20'>
-        {description &&
-          description.map((item) => (
-            <ol className='shadow-md '>
-              <li className={`border-t-2  `} key={item.id}>
-                <span className={`before:content-['🦾'] before:text-[#222222] block p-1 m-1 transition-all hover:bg-[#eee]`}>
-                {item.title}
-                  {item.icon}
-                  {item.title4}
-                  {item.icon4}
-                  {item.title1}
-                  {item.icon1}
-                  {item.title2}
-                  {item.icon2}
-                  {item.title3}
-                </span>
-              </li>
-            </ol>
-          ))}
-      </div> */}
+       
         <div className=' '>
-          <div className='text-gray-500 sm:text-lg dark:text-gray-400'>
-            {/* List */}
-            <ul
+          <div className='text-gray-500 xl:text-lg md:text-base dark:text-gray-400'>
+             <ul
               role='list'
               className='pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700'
             >
               {description &&
                 description.map((item) => (
-                  <li className='flex space-x-3 '>
+                  <li className='flex space-x-3'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400'
                       fill='currentColor'
@@ -78,12 +58,12 @@ const AboutDetails = ({
                         clipRule='evenodd'
                       />
                     </svg>
-                    {/* Icon */}
-                    <span className='lg:text-lg leading-tight text-gray-900 dark:text-white'>
+ 
+                     <span className='lg:text-l leading-tight text-gray-900 dark:text-white'>
                       {item.title}
                     </span>
                     {item.icon}
-                    {/* {item.x} */}
+
                     <span className='text-base leading-tight text-gray-900 dark:text-white'>
                       {item.title4}
                     </span>

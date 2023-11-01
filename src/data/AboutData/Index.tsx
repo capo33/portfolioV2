@@ -5,7 +5,6 @@ import unity from "./unity.svg";
 import csharp from "./csharp.svg";
 import Capo from "../../assets/images/hero.png";
 
- 
 export const AboutObj = {
   imgStart: true,
   topLine: "Snippet",
@@ -15,23 +14,18 @@ export const AboutObj = {
     {
       id: 1,
       title:
-        "I’m a Software Developer with a passion for building beautiful and functional websites and applications.",
+        "A Software Developer with a passion for building beautiful and functional websites.",
     },
 
     {
       id: 3,
       title:
-        "My coding journey started in 2020 when I decided to change my career path and become a developer.",
+        "My coding journey started in 2020 when I decided to change my career path and become a developer, then I started learning web-development at Business Collage Helsinki.",
     },
-    {
-      id: 4,
-      title: "I studied web-development at Business Collage Helsinki.",
-    },
-
     {
       id: 5,
       title:
-        "During my programming journey, I learned some technologies related to web development, such as JavaScript, React, TypeScript, and NodeJS, etc.. and I really enjoyed every moment of this journey.",
+        "During my programming journey, I learned technologies related to web development, such as JavaScript, React, TypeScript, NodeJS, etc.",
     },
     {
       id: 6,
@@ -41,7 +35,7 @@ export const AboutObj = {
     {
       id: 6,
       title:
-        "I now have experience working as part of a team and individually. I have successfully met deadlines on every project I’ve worked on.",
+        "I now have experience working as part of a team and individually.",
     },
     {
       id: 7,
@@ -61,7 +55,5 @@ export const AboutObj = {
       title3: " to develop games.",
     },
   ],
-  firstLabel: "View on Github",
-  secondLabel: "something else",
   img: Capo,
 };
