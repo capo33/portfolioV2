@@ -8,8 +8,15 @@ interface ITimeLineProps {
 
 const TimeLine = ({ educaction, workExperience }: ITimeLineProps) => {
   return (
-    <div className='container mx-auto py-5'>
-      <h2 className='text-3xl font-bold underline py-5 '>Qualification</h2>
+    <div className='container mx-auto px- py-10'>
+      <span className='text-main-color font-semibold text-lg'>
+        Experience & Education
+      </span>
+      <span className='ml-2 inline-block h-[1px] w-8 bg-blue-400'></span>
+      <h2 className='max-w-5xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white'>
+        My
+        <span className='text-blue-500'> Qualification</span>
+      </h2>
       <div className='grid lg:grid-cols-2'>
         <div>
           <h3 className='text-2xl font-bold flex py-5'>💼 Experience</h3>

@@ -18,15 +18,15 @@ const AboutDetails = ({
       imgStart
     >
       <div className='text-gray-500 xl:text-lg md:text-base dark:text-gray-400'>
-        <ul className='space-y-2'>
+        <ul className='space-y-3'>
           {description &&
             description.map((item) => (
               <li
-                className='flex space-x-3 lg:text-lg items-center p-2 hover:bg-gray-200'
+                className='flex space-x-3 lg:text-lg items-start p-2 hover:bg-gray-200'
                 key={item.id}
               >
                 <span className='text-lg'>{SuccessSVG}</span>
-                <span className='text-base text-gray-900'>{item.title}</span>
+                <span className='text-base text-gray-900 '>{item.title}</span>
               </li>
             ))}
         </ul>
