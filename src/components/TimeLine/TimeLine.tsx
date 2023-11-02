@@ -1,3 +1,5 @@
+import { IQualification } from "../../interfaces";
+
 interface WorkExperienceProps {
   time: string;
   what: string;
@@ -35,62 +37,12 @@ function WorkExperience(props: WorkExperienceProps) {
   );
 }
 
-const TimeLine = () => {
-  const workExperienceData = [
-    {
-      id: 1,
-      date: "09/2022 - 02/2023",
-      title: "Software Developer",
-      company: "Nordcloud IBM Company, Helsinki",
-      description:
-        "Designed reusable and reliable code for use within distributed cloud environments",
-    },
-    {
-      id: 2,
-      date: "04/2022 - 08/20220",
-      title: "Full Stack Developer Intern",
-      company: "Integrify, Helsinki",
-      description:
-        "Created, designed and presented 5 projects from concept to solution.",
-    },
-    {
-      id: 3,
-      date: "04/2019 - 07/2020",
-      title: "The restaurateur - an entrepreneur",
-      company: "Capo33, Helsinki",
-      description:
-        "Implemented effective inventory control systems to reduce food spoilage and waste",
-    },
-  ];
+interface ITimeLineProps {
+  educaction: IQualification[];
+  workExperience: IQualification[];
+}
 
-  const educactionData = [
-    {
-      id: 1,
-      date: "08/2020 - Present",
-      title: "Software development Angular and .Net",
-      company: "Business College Helsinki",
-      description:
-        "I have completed the coding part & what remains is the theoretical part",
-    },
-    {
-      id: 2,
-      date: "2012 - 2015",
-      title: "Hotel, restaurant and catering industry",
-      company: "Stadin Ammattiopisto, Varia, Vantaa",
-      description:
-        "I have learned how to care about Hygiene & Food Safety, Product Purchasing & Inventory Management",
-    },
-    {
-      id: 3,
-      date: "06/2003 - 06/2007",
-      title: "Business management",
-      company:
-        "Higher Institute for Cooperative-administrative Studies Egypt, Cairo",
-      description:
-        "Financial accounting, marketing strategy, organizational leadership, and business decision-making",
-    },
-  ];
-
+const TimeLine = ({ educaction, workExperience }: ITimeLineProps) => {
   return (
     <div className='container mx-auto py-5'>
       <h2 className='text-3xl font-bold underline py-5'>Qualification</h2>
@@ -98,7 +50,7 @@ const TimeLine = () => {
         <div>
           <h3 className='text-2xl font-bold flex  py-5'>💼 Experience</h3>
 
-          {workExperienceData.map((item) => {
+          {workExperience.map((item) => {
             return (
               <WorkExperience
                 key={item.id}
@@ -112,7 +64,7 @@ const TimeLine = () => {
         </div>
         <div>
           <h3 className='text-2xl font-bold flex  py-5'>📖 Education</h3>
-          {educactionData.map((item) => {
+          {educaction.map((item) => {
             return (
               <WorkExperience
                 key={item.id}
