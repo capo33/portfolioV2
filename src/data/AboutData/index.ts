@@ -1,4 +1,32 @@
 import Capo from "../../assets/images/coding.gif";
+import {
+  JsSVG,
+  AwsSVG,
+  NetSVG,
+  SassSVG,
+  NodeSVG,
+  ReactSVG,
+  UnitySVG,
+  GithubSVG,
+  DockerSVG,
+  CSharpSVG,
+  ApolloSVG,
+  PythonSVG,
+  RestAPISVG,
+  ExpressSVG,
+  AngularSVG,
+  MongoDBSVG,
+  PostmamSVG,
+  GraphqlSVG,
+  TailwindSVG,
+  BootStrapSVG,
+  MaterialUISVG,
+  TypescriptSVG,
+  PostgresqlSVG,
+  GitHubActionsSVG,
+  StyledComponentSVG,
+  GitSVG,
+} from "../../assets/svg";
 import { IAboutMainObj, IQualification, ITechIcons } from "../../interfaces";
 
 // Main
@@ -110,27 +138,27 @@ const EducactionData: IQualification[] = [
 const BackEndIcons: ITechIcons[] = [
   {
     id: 1,
-    img: "icons/nodejs-1.svg",
+    img: NodeSVG,
     alt: "NodeJs",
   },
   {
     id: 2,
-    img: "icons/python.svg",
+    img: PythonSVG,
     alt: "Python",
   },
   {
     id: 3,
-    img: "icons/typescript.svg",
+    img: TypescriptSVG,
     alt: "TypeScript",
   },
   {
     id: 4,
-    img: "icons/express.svg",
+    img: ExpressSVG,
     alt: "Express",
   },
   {
     id: 5,
-    img: "icons/net.svg",
+    img: NetSVG,
     alt: "TypeScript",
   },
 ];
@@ -138,27 +166,27 @@ const BackEndIcons: ITechIcons[] = [
 const DatabaseIcons: ITechIcons[] = [
   {
     id: 1,
-    img: "icons/mongodb.svg",
+    img: MongoDBSVG,
     alt: "MongoDB",
   },
   {
     id: 2,
-    img: "icons/postgresql.svg",
+    img: PostgresqlSVG,
     alt: "PostgreSQL",
   },
   {
     id: 3,
-    img: "icons/Rest-api.svg",
+    img: RestAPISVG,
     alt: "Rest API",
   },
   {
     id: 4,
-    img: "icons/graphql.svg",
+    img: GraphqlSVG,
     alt: "GraphQL",
   },
   {
     id: 5,
-    img: "icons/apollographql.svg",
+    img: ApolloSVG,
     alt: "Apollo",
   },
 ];
@@ -166,22 +194,22 @@ const DatabaseIcons: ITechIcons[] = [
 const FrontEndIcons: ITechIcons[] = [
   {
     id: 1,
-    img: "icons/js.svg",
+    img: JsSVG,
     alt: "JavaScript",
   },
   {
     id: 2,
-    img: "icons/typescript.svg",
+    img: TypescriptSVG,
     alt: "TypeScript",
   },
   {
     id: 3,
-    img: "icons/react.svg",
+    img: ReactSVG,
     alt: "React",
   },
   {
     id: 4,
-    img: "icons/angular.svg",
+    img: AngularSVG,
     alt: "Angular",
   },
 ];
@@ -189,32 +217,32 @@ const FrontEndIcons: ITechIcons[] = [
 const StylesIcons: ITechIcons[] = [
   {
     id: 1,
-    img: "icons/css-3.svg",
+    img: AwsSVG,
     alt: "AWS",
   },
   {
     id: 2,
-    img: "icons/sass.svg",
+    img: SassSVG,
     alt: "Sass",
   },
   {
     id: 3,
-    img: "icons/bootstrap.svg",
+    img: BootStrapSVG,
     alt: "Bootstrap",
   },
   {
     id: 4,
-    img: "icons/material-ui.svg",
+    img: MaterialUISVG,
     alt: "Material-Ui",
   },
   {
     id: 5,
-    img: "icons/tailwind.svg",
+    img: TailwindSVG,
     alt: "Tailwind CSS",
   },
   {
     id: 6,
-    img: "icons/styled-components.svg",
+    img: StyledComponentSVG,
     alt: "Styled-components",
   },
 ];
@@ -222,27 +250,27 @@ const StylesIcons: ITechIcons[] = [
 const ToolsIcons: ITechIcons[] = [
   {
     id: 1,
-    img: "icons/git.svg",
+    img: GitSVG,
     alt: "Git",
   },
   {
     id: 2,
-    img: "icons/github.svg",
+    img: GithubSVG,
     alt: "GitHub",
   },
   {
     id: 3,
-    img: "icons/githubactions.svg",
+    img: GitHubActionsSVG,
     alt: "GitHub Action",
   },
   {
     id: 4,
-    img: "icons/postman.svg",
+    img: PostmamSVG,
     alt: "Postman",
   },
   {
     id: 5,
-    img: "icons/docker.svg",
+    img: DockerSVG,
     alt: "Dockers",
   },
 ];
@@ -250,12 +278,12 @@ const ToolsIcons: ITechIcons[] = [
 const GameIcons: ITechIcons[] = [
   {
     id: 1,
-    img: "icons/c-sharp.svg",
+    img: CSharpSVG,
     alt: "C#",
   },
   {
     id: 2,
-    img: "icons/unity.svg",
+    img: UnitySVG,
     alt: "Unity",
   },
 ];
@@ -263,7 +291,7 @@ const GameIcons: ITechIcons[] = [
 const CloudIcon: ITechIcons[] = [
   {
     id: 1,
-    img: "icons/aws.svg",
+    img: AwsSVG,
     alt: "AWS",
   },
 ];

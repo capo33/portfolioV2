@@ -1,4 +1,3 @@
-import { IMarqueeIcons } from "../../interfaces";
 import {
   PostgresqlSVG,
   ReactSVG,
@@ -10,6 +9,7 @@ import {
   TypescriptSVG,
   TailwindSVG,
 } from ".";
+import { IMarqueeIcons } from "../../interfaces";
 
 const Icons: IMarqueeIcons[] = [
   {
