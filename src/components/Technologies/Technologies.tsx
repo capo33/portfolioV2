@@ -21,7 +21,7 @@ const Technologies = () => {
       </h2>
       {/* Add My Tech skills in responsive way */}
       <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-10 py-5'>
-        <div className='flex flex-col px-3 py-1'>
+        <div className='flex flex-col py-1'>
           <h3 className='text-xl font-semibold flex py-1'>Frontend</h3>
           <ul className='flex flex-wrap items-center justify-start gap-2'>
             {FrontEndIcons.map((icon) => (
@@ -34,7 +34,7 @@ const Technologies = () => {
             ))}
           </ul>
         </div>
-        <div className='flex flex-col px-3 py-1'>
+        <div className='flex flex-col py-1'>
           <h3 className='text-xl font-semibold flex py-1'>Styles</h3>
           <ul className='flex flex-wrap items-center justify-start gap-2'>
             {StylesIcons.map((icon) => (
@@ -47,7 +47,7 @@ const Technologies = () => {
             ))}
           </ul>
         </div>
-        <div className='flex flex-col px-3 py-1'>
+        <div className='flex flex-col py-1'>
           <h3 className='text-xl font-semibold flex py-1'>Backend</h3>
           <ul className='flex flex-wrap items-center justify-start gap-2'>
             {BackEndIcons.map((icon) => (
@@ -60,7 +60,7 @@ const Technologies = () => {
             ))}
           </ul>
         </div>
-        <div className='flex flex-col px-3 py-1'>
+        <div className='flex flex-col py-1'>
           <h3 className='text-xl font-semibold flex py-1'>Database & API</h3>
           <ul className='flex flex-wrap items-center justify-start gap-2'>
             {DatabaseIcons.map((icon) => (
@@ -73,7 +73,7 @@ const Technologies = () => {
             ))}
           </ul>
         </div>
-        <div className='flex flex-col px-3 py-1'>
+        <div className='flex flex-col py-1'>
           <h3 className='text-xl font-semibold flex py-1'>Tools</h3>
           <ul className='flex flex-wrap items-center justify-start gap-2'>
             {ToolsIcons.map((icon) => (
@@ -86,7 +86,7 @@ const Technologies = () => {
             ))}
           </ul>
         </div>
-        <div className='flex flex-col px-3 py-1'>
+        <div className='flex flex-col py-1'>
           <h3 className='text-xl font-semibold flex py-1'>Game</h3>
           <ul className='flex flex-wrap items-center justify-start gap-2'>
             {GameIcons.map((icon) => (
@@ -99,7 +99,7 @@ const Technologies = () => {
             ))}
           </ul>
         </div>
-        <div className='flex flex-col px-3 py-1'>
+        <div className='flex flex-col py-1'>
           <h3 className='text-xl font-semibold flex py-1'>Cloud</h3>
           <ul className='flex flex-wrap items-center justify-start gap-2'>
             {CloudIcon.map((icon) => (
