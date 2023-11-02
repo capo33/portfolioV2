@@ -1,6 +1,6 @@
-import { MarqueeIconsInterface } from "../../interfaces";
+import { IMarqueeIcons } from "../../interfaces";
 
-const Icons: MarqueeIconsInterface[] = [
+const Icons: IMarqueeIcons[] = [
   {
     id: 1,
     icon: (
