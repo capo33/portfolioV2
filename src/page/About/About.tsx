@@ -3,7 +3,7 @@ import {
   EducactionData,
   WorkExperienceData,
 } from "../../data/AboutData";
-import { MitionAnimate, AboutDetails, TimeLine } from "../../components";
+import { MitionAnimate, AboutDetails, TimeLine, Technologies } from "../../components";
 
 const About = () => {
   return (
@@ -14,6 +14,7 @@ const About = () => {
           educaction={...EducactionData}
           workExperience={WorkExperienceData}
         />
+        <Technologies />
       </MitionAnimate>
     </section>
   );

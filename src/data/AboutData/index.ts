@@ -1,6 +1,7 @@
-import { IAboutMainObj, IQualification } from "../../interfaces";
 import Capo from "../../assets/images/coding.gif";
+import { IAboutMainObj, IQualification, ITechIcons } from "../../interfaces";
 
+// Main
 const AboutMainObj: IAboutMainObj = {
   imgStart: true,
   topLine: "Snippet",
@@ -49,6 +50,7 @@ const AboutMainObj: IAboutMainObj = {
   img: Capo,
 };
 
+// Qualification
 const WorkExperienceData: IQualification[] = [
   {
     id: 1,
@@ -104,4 +106,172 @@ const EducactionData: IQualification[] = [
   },
 ];
 
-export { AboutMainObj, EducactionData, WorkExperienceData };
+// Tech Skills
+const BackEndIcons: ITechIcons[] = [
+  {
+    id: 1,
+    img: "icons/nodejs-1.svg",
+    alt: "NodeJs",
+  },
+  {
+    id: 2,
+    img: "icons/python.svg",
+    alt: "Python",
+  },
+  {
+    id: 3,
+    img: "icons/typescript.svg",
+    alt: "TypeScript",
+  },
+  {
+    id: 4,
+    img: "icons/express.svg",
+    alt: "Express",
+  },
+  {
+    id: 5,
+    img: "icons/net.svg",
+    alt: "TypeScript",
+  },
+];
+
+const DatabaseIcons: ITechIcons[] = [
+  {
+    id: 1,
+    img: "icons/mongodb.svg",
+    alt: "MongoDB",
+  },
+  {
+    id: 2,
+    img: "icons/postgresql.svg",
+    alt: "PostgreSQL",
+  },
+  {
+    id: 3,
+    img: "icons/Rest-api.svg",
+    alt: "Rest API",
+  },
+  {
+    id: 4,
+    img: "icons/graphql.svg",
+    alt: "GraphQL",
+  },
+  {
+    id: 5,
+    img: "icons/apollographql.svg",
+    alt: "Apollo",
+  },
+];
+
+const FrontEndIcons: ITechIcons[] = [
+  {
+    id: 1,
+    img: "icons/js.svg",
+    alt: "JavaScript",
+  },
+  {
+    id: 2,
+    img: "icons/typescript.svg",
+    alt: "TypeScript",
+  },
+  {
+    id: 3,
+    img: "icons/react.svg",
+    alt: "React",
+  },
+  {
+    id: 4,
+    img: "icons/angular.svg",
+    alt: "Angular",
+  },
+];
+
+const StylesIcons: ITechIcons[] = [
+  {
+    id: 1,
+    img: "icons/material-ui.svg",
+    alt: "Material-Ui",
+  },
+  {
+    id: 2,
+    img: "icons/bootstrap.svg",
+    alt: "Bootstrap",
+  },
+  {
+    id: 3,
+    img: "icons/sass.svg",
+    alt: "Sass",
+  },
+  {
+    id: 4,
+    img: "icons/tailwind.svg",
+    alt: "Tailwind CSS",
+  },
+  {
+    id: 5,
+    img: "icons/styled-components.svg",
+    alt: "Styled-components",
+  },
+];
+
+const ToolsIcons: ITechIcons[] = [
+  {
+    id: 1,
+    img: "icons/git.svg",
+    alt: "Git",
+  },
+  {
+    id: 2,
+    img: "icons/github.svg",
+    alt: "GitHub",
+  },
+  {
+    id: 3,
+    img: "icons/githubactions.svg",
+    alt: "GitHub Action",
+  },
+  {
+    id: 4,
+    img: "icons/postman.svg",
+    alt: "Postman",
+  },
+  {
+    id: 5,
+    img: "icons/docker.svg",
+    alt: "Dockers",
+  },
+];
+
+const GameIcons: ITechIcons[] = [
+  {
+    id: 1,
+    img: "icons/c-sharp.svg",
+    alt: "C#",
+  },
+  {
+    id: 2,
+    img: "icons/unity.svg",
+    alt: "Unity",
+  },
+];
+
+const CloudIcon: ITechIcons[] = [
+  {
+    id: 1,
+    img: "icons/aws.svg",
+    alt: "AWS",
+  },
+];
+
+export {
+  AboutMainObj,
+  EducactionData,
+  WorkExperienceData,
+  BackEndIcons,
+  DatabaseIcons,
+  FrontEndIcons,
+  StylesIcons,
+  ToolsIcons,
+  GameIcons,
+  CloudIcon,
+};

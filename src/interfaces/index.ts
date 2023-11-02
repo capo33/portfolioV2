@@ -1,4 +1,5 @@
 export type { default as INavLink } from "./NavLinkInterface";
+export type { default as ITechIcons } from "./TeckskillsInterface";
 export type { default as IHomeMainObj } from "./HomeInterface";
 export type { default as IDescription } from "./Shareinterface";
 export type { default as IProjects } from "./ProjectsInterface";

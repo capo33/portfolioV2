@@ -8,7 +8,7 @@ interface ITimeLineProps {
 
 const TimeLine = ({ educaction, workExperience }: ITimeLineProps) => {
   return (
-    <div className='container mx-auto px- py-10'>
+    <div className='container mx-auto py-10'>
       <span className='text-main-color font-semibold text-lg'>
         Experience & Education
       </span>
