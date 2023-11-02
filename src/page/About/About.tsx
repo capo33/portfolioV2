@@ -3,8 +3,7 @@ import {
   EducactionData,
   WorkExperienceData,
 } from "../../data/AboutData";
-import { MitionAnimate, AboutDetails } from "../../components";
-import TimeLine from "../../components/TimeLine/TimeLine";
+import { MitionAnimate, AboutDetails, TimeLine } from "../../components";
 
 const About = () => {
   return (
