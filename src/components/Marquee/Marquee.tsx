@@ -14,7 +14,7 @@ const Marquee = ({ link }: MarqueeProps) => {
         <div className='flex flex-wrap justify-center pt-10 lg:justify-between'>
           {Icons.map((icon) => (
             <div className='lg:px-16' key={icon.id}>
-              {icon.icon as string}
+              <img src={icon.icon} alt='' className="w-12 hover:scale-125 transition-all duration-300 ease-in-out" />
             </div>
           ))}
         </div>
