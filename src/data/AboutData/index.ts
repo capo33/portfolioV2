@@ -64,7 +64,7 @@ const WorkExperienceData: IQualification[] = [
     title: "Full Stack Developer Intern",
     company: "Integrify, Helsinki",
     description:
-      "Created, designed and presented 5 projects from concept to solution.",
+      "Designed and built book library management system application using TypeScript, ReactJS, Redux, and Material‑UI.",
   },
   {
     id: 3,
@@ -83,7 +83,7 @@ const EducactionData: IQualification[] = [
     title: "Software development Angular and .Net",
     company: "Business College Helsinki",
     description:
-      "I have completed the coding part & what remains is the theoretical part",
+      "I have completed the coding part & what remains is the theoretical part.",
   },
   {
     id: 2,
@@ -91,7 +91,7 @@ const EducactionData: IQualification[] = [
     title: "Hotel, restaurant and catering industry",
     company: "Stadin Ammattiopisto, Varia, Vantaa",
     description:
-      "I have learned how to care about Hygiene & Food Safety, Product Purchasing & Inventory Management",
+      "I have learned how to care about Hygiene & Food Safety, Products Purchasing & Inventory Management",
   },
   {
     id: 3,
@@ -100,7 +100,7 @@ const EducactionData: IQualification[] = [
     company:
       "Higher Institute for Cooperative-administrative Studies Egypt, Cairo",
     description:
-      "Financial accounting, marketing strategy, organizational leadership, and business decision-making",
+      "Financial accounting, marketing strategy, and business decision-making",
   },
 ];
 
