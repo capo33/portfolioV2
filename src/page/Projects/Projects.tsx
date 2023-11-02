@@ -55,9 +55,8 @@ const Projects = () => {
       {/* Tabs */}
       <ul className='flex flex-wrap items-center justify-center my-10 text-lg font-medium text-center gap-2 text-gray-500'>
         {tabs.map((tab) => (
-          <li>
+          <li key={tab.id}>
             <button
-              key={tab.id}
               onClick={
                 tab.name === tabs[0].name
                   ? () => {
