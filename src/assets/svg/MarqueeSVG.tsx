@@ -1,13 +1,15 @@
 import { IMarqueeIcons } from "../../interfaces";
-import ReactSVG from "../../../public/icons/react.svg";
-import PostgresqlSVG from "../../../public/icons/postgresql.svg";
-import PostmamSVG from "../../../public/icons/postman.svg";
-import AwsSVG from "../../../public/icons/aws.svg";
-import GithubSVG from "../../../public/icons/github.svg";
-import GraphqlSVG from "../../../public/icons/graphql.svg";
-import NodeSVG from "../../../public/icons/nodejs-1.svg";
-import TypescriptSVG from "../../../public/icons/typescript.svg";
-import TailwindSVG from "../../../public/icons/tailwind.svg";
+import {
+  PostgresqlSVG,
+  ReactSVG,
+  PostmamSVG,
+  AwsSVG,
+  GithubSVG,
+  GraphqlSVG,
+  NodeSVG,
+  TypescriptSVG,
+  TailwindSVG,
+} from ".";
 
 const Icons: IMarqueeIcons[] = [
   {
