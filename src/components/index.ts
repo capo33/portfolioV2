@@ -8,4 +8,5 @@ export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as Showcase } from "./Showcase/Showcase";
 export { default as AboutDetails } from "./AboutDetails/AboutDetails";
 export { default as MitionAnimate } from "./MitionAnimate/MitionAnimate";
+export { default as WorkExperience } from "./WorkExperience/WorkExperience";
 
