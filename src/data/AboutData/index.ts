@@ -189,26 +189,31 @@ const FrontEndIcons: ITechIcons[] = [
 const StylesIcons: ITechIcons[] = [
   {
     id: 1,
-    img: "icons/material-ui.svg",
-    alt: "Material-Ui",
+    img: "icons/css-3.svg",
+    alt: "AWS",
   },
   {
     id: 2,
-    img: "icons/bootstrap.svg",
-    alt: "Bootstrap",
-  },
-  {
-    id: 3,
     img: "icons/sass.svg",
     alt: "Sass",
   },
   {
+    id: 3,
+    img: "icons/bootstrap.svg",
+    alt: "Bootstrap",
+  },
+  {
     id: 4,
+    img: "icons/material-ui.svg",
+    alt: "Material-Ui",
+  },
+  {
+    id: 5,
     img: "icons/tailwind.svg",
     alt: "Tailwind CSS",
   },
   {
-    id: 5,
+    id: 6,
     img: "icons/styled-components.svg",
     alt: "Styled-components",
   },
