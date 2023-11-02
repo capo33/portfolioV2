@@ -25,10 +25,10 @@ const WorkExperience = ({ desc, time, what, where }: WorkExperienceProps) => {
             {where}
           </h3>
           <h4 className='text-base font-normal'>{what}</h4>
-          <time className='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+          <time className='tracking-[2px] block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
             {time}
           </time>
-          <p className='text-base font-normal text-gray-500 dark:text-gray-400'>
+          <p className='text-base font-normal text-gray-600'>
             {desc}
           </p>
         </div>
