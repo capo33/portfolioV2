@@ -26,7 +26,7 @@ const AboutDetails = ({
                 key={item.id}
               >
                 <span className='text-lg'>{SuccessSVG}</span>
-                <span className='text-base text-gray-900 '>{item.title}</span>
+                <span className='text-base text-gray-900'>{item.title}</span>
               </li>
             ))}
         </ul>
