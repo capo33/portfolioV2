@@ -16,7 +16,7 @@ const Marquee = ({ link }: MarqueeProps) => {
             <div className='lg:px-16 md:px-10 px-5 pb-10' key={icon.id}>
               <img
                 src={icon.icon}
-                alt=''
+                alt={icon.alt}
                 className='w-16 pr-5 hover:scale-125 transition-all duration-300 ease-in-out'
               />
             </div>
