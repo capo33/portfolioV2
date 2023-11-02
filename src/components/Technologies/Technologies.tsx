@@ -11,7 +11,7 @@ import {
 
 const Technologies = () => {
   return (
-    <section className='container mx-auto py-10'>
+    <section className='container mx-auto'>
       <span className='text-main-color font-semibold text-lg'>
         Technologies
       </span>

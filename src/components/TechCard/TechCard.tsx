@@ -13,7 +13,7 @@ const TechCard = ({ data,title }: TechCardProps) => {
       <ul className='flex flex-wrap items-center justify-start gap-2'>
         {data.map((icon) => (
           <li key={icon.id} className='flex items-center border rounded-md p-5'>
-            <img src={icon.img} alt={icon.alt} className='w-12' />
+            <img src={icon.img} alt={icon.alt} className='w-12 hover:scale-125 transition-all duration-300 ease-in-out' />
           </li>
         ))}
       </ul>
