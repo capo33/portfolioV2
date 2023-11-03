@@ -65,7 +65,7 @@ const Projects = () => {
                     }
                   : handleFilter
               }
-              className={`inline-flex items-center justify-center px-4 py-1 rounded hover:bg-gray-200 hover:text-black ${
+              className={`inline-flex items-center justify-center px-4 py-1 rounded hover:bg-gray-500 hover:text-white ${
                 activeTab === tab.name
                   ? "bg-gray-500 text-white duration-300"
                   : ""
