@@ -3,10 +3,10 @@ export default interface IHomeMainObj<T> {
   topLine: string;
   firstHeadLine: string;
   secondHeadLine: string;
-  description: T;
+  description?: T;
   firstLabel?: string;
   secondLabel?: string;
   firstIcon?: React.JSX.Element;
   secondIcon?: React.JSX.Element;
-  img: string;
+  img?: string;
 }
