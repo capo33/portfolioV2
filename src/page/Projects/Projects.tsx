@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { IProjects } from "../../interfaces";
-import { Card, MitionAnimate } from "../../components";
+import { Card } from "../../components";
 import { portfolioProjects } from "../../data/ProjectData";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
 import Anchor from "../../shared/Anchor/Anchor";
