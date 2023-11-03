@@ -33,12 +33,12 @@ const Footer = () => {
                  <div className='flex gap-6'>
                   <AnchorTag
                     href='https://github.com/capo33'
-                    icon={GitHubSVG("h-6 w-6")}
+                    icon={GitHubSVG("h-5 w-5")}
                     aClass='hover:text-black'
                   />
                   <AnchorTag
                     href='https://www.linkedin.com/in/mohamed-capo/'
-                    icon={LinkedInSVG("h-6 w-6")}
+                    icon={LinkedInSVG("h-5 w-5")}
                     aClass='hover:text-[#0A66C2]'
                   />
                 </div>
