@@ -29,17 +29,16 @@ const Footer = () => {
                     Mo
                   </span>
                 </Link>
-                <div></div>
-                <div className='flex gap-6'>
+                 <div className='flex gap-6'>
                   <AnchorTag
                     href='https://github.com/capo33'
                     icon={GitHubSVG("h-6 w-6")}
-                    aClass="hover:text-black"
+                    aClass='hover:text-black'
                   />
                   <AnchorTag
                     href='https://www.linkedin.com/in/mohamed-capo/'
                     icon={LinkedInSVG("h-6 w-6")}
-                    aClass="hover:text-[#0A66C2]"
+                    aClass='hover:text-[#0A66C2]'
                   />
                 </div>
               </div>
@@ -98,16 +97,6 @@ const Footer = () => {
                   © Copyright Mo {new Date().getFullYear()} - All rights
                   reserved
                 </span>
-                {/* <div className='flex gap-2'>
-                      <AnchorTag
-                        href='https://github.com/capo33'
-                        icon={GitHubSVG("h-6 w-6")}
-                      />
-                      <AnchorTag
-                        href='https://www.linkedin.com/in/mohamed-capo/'
-                        icon={LinkedInSVG("h-6 w-6")}
-                      />
-                    </div> */}
               </div>
             </div>
           </div>
