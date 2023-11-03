@@ -10,16 +10,16 @@ const Card = ({ item }: CardProps) => {
   return (
     <MitionAnimate>
     <article
-      className='rounded p-3 shadow-2xl flex flex-col justify-around'
+      className='rounded p-3 shadow-2xl flex flex-col item- justify-around  bg-white dark:bg-gray-800 dark:text-white'
       key={item.id()}
     >
       <div className='overflow-hidden rounded'>
         <img
           src={item.image}
           alt={item.title}
-          className='w-full h-auto object-cover shadow-lg'
+          className='w-full object-cover shadow-lg'
         />
-        <div className='mt-1 p-2'>
+        <div className='flex flex-col items-start mt-1 p-2'>
           <h2 className='text-slate-700'>{item.title}</h2>
           <p className='mt-1 text-sm text-slate-400'>{item.description}</p>
         </div>
