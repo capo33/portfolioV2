@@ -11,4 +11,5 @@ export { default as Technologies } from "./Technologies/Technologies";
 export { default as AboutDetails } from "./AboutDetails/AboutDetails";
 export { default as MitionAnimate } from "./MitionAnimate/MitionAnimate";
 export { default as WorkExperience } from "./WorkExperience/WorkExperience";
+export { default as ContactDetails } from "./ContactDetails/ContactDetails";
 
