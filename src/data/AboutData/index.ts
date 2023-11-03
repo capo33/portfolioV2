@@ -217,7 +217,7 @@ const FrontEndIcons: ITechIcons[] = [
 const StylesIcons: ITechIcons[] = [
   {
     id: 1,
-    img: AwsSVG,
+    img: MaterialUISVG,
     alt: "AWS",
   },
   {
@@ -232,16 +232,11 @@ const StylesIcons: ITechIcons[] = [
   },
   {
     id: 4,
-    img: MaterialUISVG,
-    alt: "Material-Ui",
-  },
-  {
-    id: 5,
     img: TailwindSVG,
     alt: "Tailwind CSS",
   },
   {
-    id: 6,
+    id: 5,
     img: StyledComponentSVG,
     alt: "Styled-components",
   },
