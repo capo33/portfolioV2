@@ -13,11 +13,11 @@ const Card = ({ item }: CardProps) => {
       className='rounded p-3 shadow-2xl flex flex-col item- justify-around  bg-white dark:bg-gray-800 dark:text-white'
       key={item.id()}
     >
-      <div className='rounded'>
+      <div className='flex flex-col rounded'>
         <img
           src={item.image}
           alt={item.title}
-          className='w-full h-48 object-cover'
+          className='w-full h-48 object-cover rounded-t'
         />
         <div className='flex flex-col items-start mt-1 p-2'>
           <h2 className='text-slate-700'>{item.title}</h2>

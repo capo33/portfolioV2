@@ -79,13 +79,11 @@ const Projects = () => {
       </ul>
 
       {/* Projects */}
-      <MitionAnimate>
-        <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-6 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
-          {Items.map((item) => {
-            return <Card item={item} key={item.id()} />;
-          })}
-        </div>
-      </MitionAnimate>
+      <div className='mx-auto grid container grid-cols-1 gap-6 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
+        {Items.map((item) => {
+          return <Card item={item} key={item.id()} />;
+        })}
+      </div>
     </section>
   );
 };
