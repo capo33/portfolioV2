@@ -55,7 +55,7 @@ const Header = () => {
         }`}
         ref={ref}
       >
-        <div className='flex flex-wrap items-center justify-between mx-auto '>
+        <div className='flex flex-wrap items-center justify-between mx-auto'>
           <Link to='/' className='flex items-center gap-2'>
             {SpiderSVG("h-6 w-6 text-blue-500 dark:text-white")}
             <span className='text-2xl font-semibold whitespace-nowrap dark:text-white'>

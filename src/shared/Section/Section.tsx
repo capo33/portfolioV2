@@ -39,7 +39,7 @@ const Section = ({
             {children}
           </div>
         </div>
-        <div className='flex-1 text-center py-10 lg:py-0'>
+        <div className='flex-1 text-center flex justify-center py-10 lg:py-0'>
           <img src={img} className='object-cover' />
         </div>
       </div>

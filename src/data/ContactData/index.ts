@@ -1,6 +1,6 @@
 import { GitHubSVG } from "../../assets/svg/NavSVG";
 import { IHomeMainObj } from "../../interfaces";
-import HeroImage from "../../assets/svg/giphy.gif";
+import HeroImage from "../../assets/svg/envelope.svg";
 
 export const ContactObj: IHomeMainObj<string> = {
   imgStart: false,

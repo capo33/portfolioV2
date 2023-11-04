@@ -14,6 +14,7 @@ const ContactDetails = ({
       firstHeadLine={firstHeadLine}
       secondHeadLine={secondHeadLine}
       img={img}
+      imgStart
     >
       <div className='xl:text-lg md:text-base font-semibold'>
         <ul className='space-y-3'>{description}</ul>
