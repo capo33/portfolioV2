@@ -14,7 +14,6 @@ const ContactDetails = ({
       firstHeadLine={firstHeadLine}
       secondHeadLine={secondHeadLine}
       img={img}
-      imgStart
     >
       <div>
         <ul className='space-y-3'>{description}</ul>
