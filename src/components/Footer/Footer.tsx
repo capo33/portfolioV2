@@ -20,7 +20,7 @@ const Footer = () => {
         />
       </svg>
       <div className='bg-gradient-to-b from-gray-100 to-transparent dark:from-gray-800 dark:to-transparent pt-1'>
-        <div className='container m-auto text-gray-700 px-4'>
+        <div className='px-10 container mx-auto'>
           <div className='grid lg:grid-cols-8 md:grid-cols-8 gap-6 md:gap-0'>
             <div className='col-span-8 border-r border-gray-100 dark:border-gray-800 md:col-span-2 lg:col-span-3'>
               <div className='flex items-center justify-between gap-6 border-b border-white dark:border-gray-800 py-6 md:block md:space-y-6 md:border-none md:py-0'>
@@ -30,7 +30,7 @@ const Footer = () => {
                     Mo
                   </span>
                 </Link>
-                 <div className='flex gap-6'>
+                <div className='flex gap-6'>
                   <AnchorTag
                     href='https://github.com/capo33'
                     icon={GitHubSVG("h-5 w-5")}
@@ -53,12 +53,22 @@ const Footer = () => {
                   <ul className='mt-4 list-inside space-y-4'>
                     <li>
                       <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
-                        React <img src={ReactSVG} alt="React" className="w-4 inline" />
+                        React{" "}
+                        <img
+                          src={ReactSVG}
+                          alt='React'
+                          className='w-4 inline'
+                        />
                       </span>
                     </li>
                     <li>
                       <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
-                        Typescript <img src={TypescriptSVG} alt="Typescript" className="w-4 inline" />
+                        Typescript{" "}
+                        <img
+                          src={TypescriptSVG}
+                          alt='Typescript'
+                          className='w-4 inline'
+                        />
                       </span>
                     </li>
                   </ul>
@@ -70,7 +80,12 @@ const Footer = () => {
                   <ul className='mt-4 list-inside space-y-4'>
                     <li>
                       <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
-                        TailwindCSS <img src={TailwindSVG} alt="TailwindCSS" className="w-4 inline" />
+                        TailwindCSS{" "}
+                        <img
+                          src={TailwindSVG}
+                          alt='TailwindCSS'
+                          className='w-4 inline'
+                        />
                       </span>
                     </li>
                   </ul>
