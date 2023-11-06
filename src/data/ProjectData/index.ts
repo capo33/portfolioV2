@@ -1,7 +1,13 @@
+import {
+  ExperimentSVG,
+  FrontendSVG,
+  StackSVG,
+  TableSVG,
+} from "../../assets/svg/TabsSVG";
 import { uuid } from "../../utils/uuid";
 import { IProjectHero, IProjects } from "../../interfaces";
-import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
 import ProjectHero from "../../assets/images/projectHero.png";
+import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
 
 // Array of Projects
 export const portfolioProjects: IProjects[] = [
@@ -17,12 +23,12 @@ export const portfolioProjects: IProjects[] = [
         link: "https://crypto-coins-tracker-react.netlify.app/",
         icon: GlobalSVG("h-4 w-4"),
         title: "Live Demo",
-       },
+      },
       {
         id: uuid,
         link: "https://github.com/capo33/react-crypto-tracker",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -43,7 +49,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/data-company",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -64,7 +70,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/country-api-app",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -85,7 +91,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/react-smooth-scroll",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -106,7 +112,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/fakeshop",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -127,7 +133,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/react-styled-component",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -148,7 +154,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/react-pokemon-ts",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -190,7 +196,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/social-app-v2",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -211,7 +217,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/recipes-blog",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -232,7 +238,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/Q_shop",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -253,7 +259,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/second_hand-frontend",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -268,13 +274,13 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/social-media-backend",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
       {
         id: uuid,
         link: "https://github.com/capo33/social-media-frontend",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -289,7 +295,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/restaurant-finder",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -310,7 +316,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/rental-car-backend",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -353,7 +359,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/rick-and-morty",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -374,7 +380,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/rick-and-morty-apollo-clien",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -395,7 +401,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/star-wars",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -416,7 +422,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/search-feature",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -437,7 +443,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/kahvila.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -543,7 +549,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/school-projects.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -564,7 +570,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/Blitz",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -585,7 +591,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/spliting.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -606,7 +612,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/joke-list.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -627,7 +633,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/warning-et-success.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -669,7 +675,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/Note-keeper-ts",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -690,7 +696,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/react-todo-app.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -711,7 +717,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/egyption-gods.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -732,7 +738,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/emojipedia",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -753,7 +759,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/Digital-Marketing.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -774,7 +780,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/tindog.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -795,7 +801,7 @@ export const portfolioProjects: IProjects[] = [
         id: uuid,
         link: "https://github.com/capo33/travel-agency.git",
         icon: GitHubSVG("h-4 w-4"),
-        title: "Source Code"
+        title: "Source Code",
       },
     ],
   },
@@ -809,6 +815,14 @@ export const ProjectHeroObj: IProjectHero = {
   topLine: "Projects",
   firstHeadLine: "My",
   secondHeadLine: " Deployed Projects",
-  description: "Here are most of the deployed projects I've worked on such as Front-end & Full-Stack projects .. Want to see more? Check out my GitHub repository!",
+  description:
+    "Here are most of the deployed projects I've worked on such as Front-end & Full-Stack projects .. Want to see more? Check out my GitHub repository!",
   img: ProjectHero,
 };
+
+export const Tabs = [
+  { id: 1, name: "All", icon: TableSVG },
+  { id: 2, name: "Experimental", icon: ExperimentSVG },
+  { id: 3, name: "Frontend", icon: FrontendSVG },
+  { id: 4, name: "Fullstack", icon: StackSVG },
+];
