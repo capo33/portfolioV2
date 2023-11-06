@@ -5,4 +5,6 @@ export default interface IProjectHero {
   secondHeadLine: string;
   description: string;
   img: string;
+  icon: React.JSX.Element;
+  firstLabel: string;
 }

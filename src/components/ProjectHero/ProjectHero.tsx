@@ -1,25 +1,33 @@
-import Anchor from "../../shared/Anchor/Anchor";
-import { GitHubSVG } from "../../assets/svg/NavSVG";
+import { IProjectHero } from "../../interfaces";
+import { SharedSection, AnchorTag } from "../../shared";
 
-const ProjectHero = () => {
+const ProjectHero = ({
+  firstHeadLine,
+  secondHeadLine,
+  firstLabel,
+  topLine,
+  description,
+  img,
+  icon,
+}: IProjectHero) => {
   return (
-    <section className='py-10'>
-      <span className='font-semibold text-lg'>Projects</span>
-      <span className='ml-2 inline-block h-[1px] w-8 bg-blue-400'></span>
-      <h2 className='max-w-5xl text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white'>
-        My
-        <span className='text-blue-500'> Deployed Projects</span>
-      </h2>
-      <p className='py-4 text-2xl font-bold '>
-        Want to see more? Check out my Github profile{" "}
-        <Anchor
+    <SharedSection
+      topLine={topLine}
+      firstHeadLine={firstHeadLine}
+      secondHeadLine={secondHeadLine}
+      description={description}
+      img={img}
+      imgStart
+    >
+      <div className='pt-10 items-center justify-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start'>
+        <AnchorTag
           href='https://github.com/capo33'
-          icon={GitHubSVG(
-            "w-5 h-5 inline-block hover:text-black text-blue-500"
-          )}
+          label={firstLabel}
+          icon={icon}
+          aClass='inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800'
         />
-      </p>
-    </section>
+      </div>
+    </SharedSection>
   );
 };
 

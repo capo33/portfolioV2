@@ -802,11 +802,13 @@ export const portfolioProjects: IProjects[] = [
 ];
 
 // Project Data
-export const AboutMainObj: IProjectHero = {
+export const ProjectHeroObj: IProjectHero = {
   imgStart: true,
-  topLine: "Snippet",
-  firstHeadLine: "Who",
-  secondHeadLine: " I am",
-  description: 'This is',
+  firstLabel: "View on Github",
+  icon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
+  topLine: "Projects",
+  firstHeadLine: "My",
+  secondHeadLine: " Deployed Projects",
+  description: "Here are most of the deployed projects I've worked on such as Front-end & Full-Stack projects .. Want to see more? Check out my GitHub repository!",
   img: ProjectHero,
 };
