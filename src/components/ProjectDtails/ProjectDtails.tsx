@@ -1,26 +1,12 @@
 import React, { useState } from "react";
 
-import {
-  FrontendSVG,
-  ExperimentSVG,
-  StackSVG,
-  TableSVG,
-} from "../../assets/svg/TabsSVG";
 import { Card } from "../../components";
 import { IProjects } from "../../interfaces";
-import { portfolioProjects } from "../../data/ProjectData";
+import { Tabs, portfolioProjects } from "../../data/ProjectData";
 
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [Items, setItems] = React.useState<IProjects[]>(portfolioProjects);
-
-  // const tabs = ["All", "Experimental", "Frontend", "Fullstack"];
-  const tabs = [
-    { id: 1, name: "All", icon: TableSVG },
-    { id: 2, name: "Experimental", icon: ExperimentSVG },
-    { id: 3, name: "Frontend", icon: FrontendSVG },
-    { id: 4, name: "Fullstack", icon: StackSVG },
-  ];
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
     const target = e.target as HTMLSpanElement;
@@ -36,14 +22,15 @@ const ProjectDtails = () => {
     setItems(updatedItems);
     setActiveTab(value);
   };
+
   return (
     <section className='space-y-12 lg:space-y-20'>
       <ul className='flex flex-wrap items-center justify-center text-lg font-medium text-center gap-2 text-gray-500'>
-        {tabs.map((tab) => (
+        {Tabs.map((tab) => (
           <li key={tab.id}>
             <button
               onClick={
-                tab.name === tabs[0].name
+                tab.name === Tabs[0].name
                   ? () => {
                       setItems(portfolioProjects);
                       setActiveTab("All");
@@ -56,7 +43,7 @@ const ProjectDtails = () => {
                   : ""
               }`}
             >
-              {tab.icon()}
+              {tab.icon}
               {tab.name}
             </button>
           </li>

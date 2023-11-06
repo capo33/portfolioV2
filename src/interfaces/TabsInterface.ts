@@ -1,5 +1,5 @@
 export default interface ITab {
-  id: string;
+  id: number;
   name: string;
   icon: React.JSX.Element;
 }

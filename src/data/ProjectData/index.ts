@@ -5,7 +5,7 @@ import {
   TableSVG,
 } from "../../assets/svg/TabsSVG";
 import { uuid } from "../../utils/uuid";
-import { IProjectHero, IProjects } from "../../interfaces";
+import { IProjectHero, IProjects, ITab } from "../../interfaces";
 import ProjectHero from "../../assets/images/projectHero.png";
 import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
 
@@ -820,9 +820,9 @@ export const ProjectHeroObj: IProjectHero = {
   img: ProjectHero,
 };
 
-export const Tabs = [
-  { id: 1, name: "All", icon: TableSVG },
-  { id: 2, name: "Experimental", icon: ExperimentSVG },
-  { id: 3, name: "Frontend", icon: FrontendSVG },
-  { id: 4, name: "Fullstack", icon: StackSVG },
+export const Tabs: ITab[] = [
+  { id: 1, name: "All", icon: TableSVG() },
+  { id: 2, name: "Experimental", icon: ExperimentSVG() },
+  { id: 3, name: "Frontend", icon: FrontendSVG() },
+  { id: 4, name: "Fullstack", icon: StackSVG() },
 ];
