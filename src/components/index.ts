@@ -1,5 +1,6 @@
 export { default as Hero } from "./Hero/Hero";
 export { default as Card } from "./Card/Card";
+export { default as Email } from "./Email/Email";
 export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/Header";
 export { default as Marquee } from "./Marquee/Marquee";
