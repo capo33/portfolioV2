@@ -6,7 +6,7 @@ const Home = () => {
     <section className='container mx-auto px-10 space-y-12 md:space-y-16 lg:space-y-20 py-10'>
     <MitionAnimate>
         <Hero {...HeroObj} />
-        <Marquee link='/contact' />
+        <Marquee link='/about' />
         <Showcase {...ShowcaseObj} />
       </MitionAnimate>
     </section>

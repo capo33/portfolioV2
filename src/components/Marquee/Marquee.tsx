@@ -10,6 +10,9 @@ interface MarqueeProps {
 const Marquee = ({ link }: MarqueeProps) => {
   return (
     <Link to={link}>
+      <h2 className='text-center p-5 text-lg font-semibold leading-8 text-gray-900'>
+        Technologies I been working with
+      </h2>
       <M pauseOnHover={true} speed={100}>
         <div className='py-10 grid grid-cols-12 gap-x-8 '>
           {Icons.map((icon) => (
