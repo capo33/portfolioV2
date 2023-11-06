@@ -50,11 +50,7 @@ const Header = () => {
         !top && "sticky top-0 bg-zinc-100 shadow-md z-50"
       }`}
     >
-      <nav
-        className={`container mx-auto p-4
-        }`}
-        ref={ref}
-      >
+      <nav className='container mx-auto px-10 py-4' ref={ref}>
         <div className='flex flex-wrap items-center justify-between mx-auto'>
           <Link to='/' className='flex items-center gap-2'>
             {SpiderSVG("h-6 w-6 text-blue-500 dark:text-white")}
@@ -81,7 +77,7 @@ const Header = () => {
               {open ? XCircledSVG : BarsSVG}
             </button>
           </div>
-          
+
           {/* Desktop Menu */}
           <div
             className='items-center justify-between hidden w-full lg:flex lg:w-auto md:order-1'
