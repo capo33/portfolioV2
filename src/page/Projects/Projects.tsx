@@ -40,20 +40,24 @@ const Projects = () => {
   };
 
   return (
-    <section className='py-10 flex flex-wrap items-center my-10 text-lg font-medium text-center flex-col'>
-      <h2 className='text-center text-2xl font-bold text-gray-800'>
-        Most of my deployed projects
-      </h2>
-      <p className='text-center text-[16px] text-cyan-700'>
-        Want to see more? Check out my Github profile{" "}
-        <Anchor
-          href='https://github.com/capo33'
-          icon={GitHubSVG("w-5 h-5 inline-block hover:text-black")}
-        />
-      </p>
-
+    <section className='container mx-auto px-4 space-y-12 md:space-y-16 lg:space-y-20 py-10'>
+      <div>
+        <span className='font-semibold text-lg'>Projects</span>
+        <span className='ml-2 inline-block h-[1px] w-8 bg-blue-400'></span>
+        <h2 className='max-w-5xl text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white'>
+          My
+          <span className='text-blue-500'> Deployed Projects</span>
+        </h2>
+        <p className='py-4 text-2xl font-bold '>
+          Want to see more? Check out my Github profile{" "}
+          <Anchor
+            href='https://github.com/capo33'
+            icon={GitHubSVG("w-5 h-5 inline-block hover:text-black text-blue-500")}
+          />
+        </p>
+      </div>
       {/* Tabs */}
-      <ul className='flex flex-wrap items-center justify-center my-10 text-lg font-medium text-center gap-2 text-gray-500'>
+      <ul className='flex flex-wrap items-center justify-center text-lg font-medium text-center gap-2 text-gray-500'>
         {tabs.map((tab) => (
           <li key={tab.id}>
             <button
@@ -79,7 +83,7 @@ const Projects = () => {
       </ul>
 
       {/* Projects */}
-      <div className='mx-auto grid container grid-cols-1 gap-6 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='mx-auto grid container grid-cols-1 gap-6 p- sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3'>
         {Items.map((item) => {
           return <Card item={item} key={item.id()} />;
         })}

@@ -1,6 +1,6 @@
 import { SharedSection } from "../../shared";
 import { IAboutMainObj } from "../../interfaces";
-import { SuccessSVG } from "../../assets/svg/AboutSVg";
+import { SuccessSVG } from "../../assets/svg/AboutSVG";
 
 const AboutDetails = ({
   firstHeadLine,
