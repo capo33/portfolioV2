@@ -51,7 +51,7 @@ const ProjectDtails = () => {
       </ul>
 
       {/* Projects */}
-      <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 g:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3'>
+      <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 g:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
         {Items.map((item) => {
           return <Card item={item} key={item.id()} />;
         })}
