@@ -1,6 +1,6 @@
+import { MitionAnimate } from "..";
 import { AnchorTag } from "../../shared";
 import { IProjects } from "../../interfaces";
-import { MitionAnimate } from "..";
 
 interface CardProps {
   item: IProjects;

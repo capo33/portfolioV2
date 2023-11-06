@@ -1,7 +1,9 @@
 import { uuid } from "../../utils/uuid";
-import { IProjects } from "../../interfaces";
+import { IProjectHero, IProjects } from "../../interfaces";
 import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
+import ProjectHero from "../../assets/images/projectHero.png";
 
+// Array of Projects
 export const portfolioProjects: IProjects[] = [
   {
     id: uuid,
@@ -798,3 +800,13 @@ export const portfolioProjects: IProjects[] = [
     ],
   },
 ];
+
+// Project Data
+export const AboutMainObj: IProjectHero = {
+  imgStart: true,
+  topLine: "Snippet",
+  firstHeadLine: "Who",
+  secondHeadLine: " I am",
+  description: 'This is',
+  img: ProjectHero,
+};

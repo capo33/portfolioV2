@@ -7,6 +7,8 @@ export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as TechCard } from "./TechCard/TechCard";
 export { default as Showcase } from "./Showcase/Showcase";
 export { default as TimeLine } from "./TimeLine/TimeLine";
+export { default as ProjectHero } from "./ProjectHero/ProjectHero";
+export { default as ProjectDtails } from "./ProjectDtails/ProjectDtails";
 export { default as Technologies } from "./Technologies/Technologies";
 export { default as AboutDetails } from "./AboutDetails/AboutDetails";
 export { default as MitionAnimate } from "./MitionAnimate/MitionAnimate";
