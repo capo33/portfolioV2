@@ -15,6 +15,7 @@ const ContactDetails = ({
       firstHeadLine={firstHeadLine}
       secondHeadLine={secondHeadLine}
       img={img}
+      imgStart={true}
     >
       <div>
         <ul className='space-y-3'>{description}</ul>

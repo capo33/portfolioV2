@@ -1,7 +1,7 @@
-import { GitHubSVG } from "../../assets/svg/NavSVG";
 import { IHomeMainObj } from "../../interfaces";
-import HeroImage from "../../assets/svg/envelope.svg";
- 
+import { GitHubSVG } from "../../assets/svg/NavSVG";
+import GetINTouch from "../../assets/images/getInTouch.gif";
+
 export const ContactObj: IHomeMainObj<string> = {
   imgStart: false,
   topLine: "Contact",
@@ -13,5 +13,5 @@ export const ContactObj: IHomeMainObj<string> = {
   secondLabel: "something else",
   firstIcon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
   secondIcon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
-  img: HeroImage,
+  img: GetINTouch,
 };
