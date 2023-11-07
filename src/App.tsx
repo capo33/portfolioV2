@@ -3,13 +3,11 @@ import { Footer, Header } from "./components";
 
 function App() {
   return (
-    <>
+    <main className="">
       <Header />
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
       <Footer />
-    </>
+    </main>
   );
 }
 

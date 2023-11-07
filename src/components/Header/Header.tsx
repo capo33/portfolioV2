@@ -53,7 +53,7 @@ const Header = () => {
       <nav className='container mx-auto px-10 py-4' ref={ref}>
         <div className='flex flex-wrap items-center justify-between mx-auto'>
           <Link to='/' className='flex items-center gap-2'>
-            {SpiderSVG("h-6 w-6 text-blue-500 dark:text-white")}
+            {SpiderSVG("h-6 w-6 text-cyan-500 dark:text-white")}
             <span className='text-2xl font-semibold whitespace-nowrap dark:text-white'>
               Mo
             </span>
@@ -63,7 +63,7 @@ const Header = () => {
             <a
               download={true}
               href={CV}
-              className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='text-white bg-cyan-500 hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0'
             >
               Download CV
             </a>

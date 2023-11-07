@@ -28,10 +28,10 @@ const Section = ({
           <span className='text-main-color font-semibold text-lg'>
             {topLine}
           </span>
-          <span className='ml-2 inline-block h-[1px] w-8 bg-blue-400'></span>
+          <span className='ml-2 inline-block h-[1px] w-8 bg-cyan-400'></span>
           <h2 className='max-w-5xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white'>
             {firstHeadLine}
-            <span className='text-blue-500'>{secondHeadLine}</span>
+            <span className='text-cyan-500'>{secondHeadLine}</span>
           </h2>
           <p className='mb-8 lg:text-xl text-gray-700'>{description} </p>
 
