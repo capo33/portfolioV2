@@ -28,12 +28,12 @@ const Email = ({ line }: IEmailProps) => {
     e: React.FormEvent<HTMLFormElement | HTMLButtonElement>
   ) => {
     e.preventDefault();
-     const SERVICE_ID = import.meta.env.VITE_SERVICE_ID as string;
+    const SERVICE_ID = import.meta.env.VITE_SERVICE_ID as string;
     const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID as string;
     const USER_ID = import.meta.env.VITE_PUBLIC_KEY as string;
 
     console.log(SERVICE_ID, TEMPLATE_ID, USER_ID);
-    
+
     // emailjs contains a sendForm method that takes the service id, template id, form element, and user id
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current || "", USER_ID).then(
       (result: { text: string }) => {
@@ -95,7 +95,7 @@ const Email = ({ line }: IEmailProps) => {
       />
       <button
         type='submit'
-        className='inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 '
+        className='inline-flex items-center cursor-pointer justify-center bg-gray-50 hover:bg-gray-100   dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded focus:ring-4 focus:ring-gray-100 '
       >
         Send Message
       </button>
