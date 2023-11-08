@@ -14,7 +14,7 @@ const useActiveLink = () => {
     let classes =
       "px-2 text-lg font-semibold flex items-center space-x-2 cursor-pointer";
     if (type === subpage) {
-      classes += " text-blue-500";
+      classes += " text-cyan-500";
     } else {
       classes += " dark:bg-gray-800 dark:text-gray-200";
     }
