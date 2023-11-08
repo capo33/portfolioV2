@@ -1,4 +1,5 @@
 export type { default as ITab } from "./TabsInterface";
+export type { default as ITheme } from "./ThemeInterface";
 export type { default as IFormData } from "./FormInterface";
 export type { default as INavLink } from "./NavLinkInterface";
 export type { default as IHomeMainObj } from "./HomeInterface";
