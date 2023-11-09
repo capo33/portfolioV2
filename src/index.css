@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply transition-colors duration-200;
+}
 /* scrollbar hidden */
 body::-webkit-scrollbar {
   display: none;
@@ -26,7 +29,7 @@ body {
     @apply text-red-300;
   }
   .dark_bg {
-    @apply bg-[#1B1B1D] text-[#E3E3E3];
+    @apply bg-[#252626] text-[#E3E3E3];
   }
   .light_bg {
     @apply bg-[#FFFFFF] text-[#1B1B1D];
