@@ -22,22 +22,17 @@ body {
   .light_text {
     @apply text-[#E3E3E3];
   }
-  /* .dark_text:hover {
-    color: #fff;
-  } */
-  .light_text:hover {
-    @apply text-red-300;
-  }
+
   .dark_bg {
-    @apply bg-[#252626] text-[#E3E3E3];
+    @apply bg-[#252626] text-[#FFFFFF];
   }
   .light_bg {
-    @apply bg-[#FFFFFF] text-[#1B1B1D];
+    @apply bg-[#FFFFFF] text-[#252626];
   }
-  /* .dark_bg:hover {
-    background-color: #000;
-  } */
-  /* .light_bg:hover {
-    background-color: #fff;
-  } */
+  .sub_text_dark {
+    @apply text-[#6E6E6E];
+  }
+  .sub_text_light {
+    @apply text-[#b4b3b3];
+  }
 }

@@ -29,7 +29,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       title: "Creative Design",
       icon: ShowcaseSVG.lightSVG,
       iconColor: "text-yellow-700",
-      bg: "hover:bg-yellow-300",
+      bg: "bg-yellow-300",
       text: "Building custom web applications from scratch",
     },
     {
@@ -37,7 +37,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       title: "Web developemnt",
       icon: ShowcaseSVG.bracketSVG,
       iconColor: "text-green-700",
-      bg: "hover:bg-green-300",
+      bg: "bg-green-300",
       text: "Developing scalable API and integration",
     },
     {
@@ -45,7 +45,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       title: "User Interface",
       icon: ShowcaseSVG.handSVG,
       iconColor: "text-cyan-700",
-      bg: "hover:bg-cyan-300",
+      bg: "bg-cyan-300",
       text: "Creating responsive and friendly user interfaces",
     },
     {
@@ -53,7 +53,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       title: "Database Design",
       icon: ShowcaseSVG.databaseSVG,
       iconColor: "text-purple-700",
-      bg: "hover:bg-purple-300",
+      bg: "bg-purple-300",
       text: "Design and implementation of database schema",
     },
   ],

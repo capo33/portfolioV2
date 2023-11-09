@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 interface SectionProps {
   children: React.ReactNode;
@@ -19,8 +20,10 @@ const Section = ({
   img,
   imgStart,
 }: SectionProps) => {
+  const { toggle } = useContext(ThemeContext);
+
   return (
-    <section className='dark:bg-gray-900'>
+    <section>
       <div
         className={`items-center lg:flex ${imgStart && "flex-row-reverse"} `}
       >
@@ -33,7 +36,7 @@ const Section = ({
             {firstHeadLine}
             <span className='text-cyan-500'>{secondHeadLine}</span>
           </h2>
-          <p className='mb-8 lg:text-xl text-gray-700'>{description} </p>
+          <p className={`mb-8 lg:text-xl ${!toggle? 'sub_text_dark': 'sub_text_light'}  `}>{description} </p>
 
           <div className='items-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start'>
             {children}
