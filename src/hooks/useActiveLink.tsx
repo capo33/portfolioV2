@@ -16,7 +16,7 @@ const useActiveLink = () => {
     if (type === subpage) {
       classes += " text-cyan-500";
     } else {
-      classes += " dark:bg-gray-800 dark:text-gray-200";
+      classes += " ";
     }
     return classes;
   };

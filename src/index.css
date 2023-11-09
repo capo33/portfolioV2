@@ -6,8 +6,35 @@
 body::-webkit-scrollbar {
   display: none;
 }
-body{
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   scroll-behavior: smooth;
+}
+
+@layer components {
+  .dark_text {
+    @apply text-[#1B1B1D];
+  }
+  .light_text {
+    @apply text-[#E3E3E3];
+  }
+  /* .dark_text:hover {
+    color: #fff;
+  } */
+  .light_text:hover {
+    @apply text-red-300;
+  }
+  .dark_bg {
+    @apply bg-[#1B1B1D] text-[#E3E3E3];
+  }
+  .light_bg {
+    @apply bg-[#FFFFFF] text-[#1B1B1D];
+  }
+  /* .dark_bg:hover {
+    background-color: #000;
+  } */
+  /* .light_bg:hover {
+    background-color: #fff;
+  } */
 }

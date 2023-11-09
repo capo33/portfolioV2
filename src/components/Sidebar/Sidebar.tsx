@@ -8,12 +8,14 @@ import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
 // Props
 interface SidebarProps {
   open: boolean;
+  toggle: boolean;
+  setToggle: (toggle: boolean) => void;
   handleClick: () => void;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   menuRef?: React.RefObject<HTMLDivElement>;
 }
 
-const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
+const Sidebar = ({ open, handleClick, setOpen, toggle,setToggle }: SidebarProps) => {
   // const [isChecked, setIsChecked] = useState(false);
 
   // const handleCheckboxChange = () => {
@@ -97,6 +99,8 @@ const Sidebar = ({ open, handleClick, setOpen }: SidebarProps) => {
               className='relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]'
             >
               <input
+              checked={toggle}
+              onChange={() => setToggle(!toggle)}
                 type='checkbox'
                 id='AcceptConditions'
                 className='peer sr-only [&:checked_+_span_svg[data-checked-icon]]:block [&:checked_+_span_svg[data-unchecked-icon]]:hidden'

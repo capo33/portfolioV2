@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useContext, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -11,12 +11,18 @@ import { Sidebar } from "..";
 import CV from "../../assets/pdf/CV.pdf";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { BarsSVG, SpiderSVG, XCircledSVG } from "../../assets/svg/NavSVG";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Header = () => {
+  // States
   const [top, setTop] = useState<boolean>(true);
   const [open, setOpen] = useState<boolean>(false);
 
+  // Ref
   const menuRef = useRef<HTMLDivElement>(null);
+
+  // Context
+  const { toggle, setToggle } = useContext(ThemeContext);
 
   // to handle navbar when clicked outside
   const handleClick = () => {
@@ -46,17 +52,17 @@ const Header = () => {
 
   return (
     <header
-      className={`text-gray-600 sticky top-0 bg-white bg-opacity-90 backdrop-blur-sm ${
+      className={`sticky top-0 ${
+        !toggle ? "light_bg" : "dark_bg"
+      }  bg-opacity-90 backdrop-blur-sm ${
         !top && "sticky top-0 bg-zinc-100 shadow-md z-50"
       }`}
     >
       <nav className='container mx-auto px-10 py-4' ref={ref}>
         <div className='flex flex-wrap items-center justify-between mx-auto'>
           <Link to='/' className='flex items-center gap-2'>
-            {SpiderSVG("h-6 w-6 text-cyan-500 dark:text-white")}
-            <span className='text-2xl font-semibold whitespace-nowrap dark:text-white'>
-              Mo
-            </span>
+            {SpiderSVG("h-6 w-6 text-cyan-500 ")}
+            <span className='text-2xl font-semibold whitespace-nowrap'>Mo</span>
           </Link>
           {/* CV */}
           <div className='flex md:order-2'>
@@ -83,7 +89,7 @@ const Header = () => {
             className='items-center justify-between hidden w-full lg:flex lg:w-auto md:order-1'
             id='navbar-sticky'
           >
-            <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+            <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 '>
               <li className={`hidden md:flex items-center space-x-3`}>
                 {NavBarLinks.map((link) => (
                   <Link
@@ -108,6 +114,8 @@ const Header = () => {
           handleClick={handleClick}
           setOpen={setOpen}
           menuRef={menuRef}
+          toggle={toggle}
+          setToggle={setToggle}
         />
       </nav>
     </header>
