@@ -1,7 +1,7 @@
 import HeroImage from "../../assets/svg/hero.svg";
-import { GitHubSVG } from "../../assets/svg/NavSVG";
 import SHowcaseImage from "../../assets/images/hero.png";
 import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
+import { GitHubSVG, ResumeSVG } from "../../assets/svg/NavSVG";
 import   { IDescription, IHomeMainObj, } from "../../interfaces";
 
 export const HeroObj: IHomeMainObj<string> = {
@@ -12,9 +12,9 @@ export const HeroObj: IHomeMainObj<string> = {
   description:
     "I'm a software developer based in Finland specializing in building and designing websites, apps ( sometimes games 🎮), and everything in between.",
   firstLabel: "View on Github",
-  secondLabel: "something else",
+  secondLabel: "Download Resume",
   firstIcon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-  secondIcon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+  secondIcon: ResumeSVG("w-4 h-4 mr-2 dark_text"),
   img: HeroImage,
 };
 
