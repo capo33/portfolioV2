@@ -1,6 +1,9 @@
 import React from "react";
 
+import { useContext } from "react";
+
 import { SharedSection } from "../../shared";
+import { ThemeContext } from "../../context/ThemeContext";
 import { IHomeMainObj, IDescription } from "../../interfaces";
 
 const Showcase: React.FC<IHomeMainObj<IDescription[]>> = ({
@@ -10,6 +13,8 @@ const Showcase: React.FC<IHomeMainObj<IDescription[]>> = ({
   secondHeadLine,
   img,
 }) => {
+  const { toggle } = useContext(ThemeContext);
+
   return (
     <SharedSection
       topLine={topLine}
@@ -22,14 +27,14 @@ const Showcase: React.FC<IHomeMainObj<IDescription[]>> = ({
         {description &&
           description.map((item) => (
             <div
-              className={`flex ${item.bg} rounded p-5 transition duration-200 ease-in-out`}
+              className={`flex ${item.bg} rounded p-5 transition duration-200 ease-in-out sub_text_dark`}
               key={item.id}
             >
               <span className={item.iconColor}>{item.icon}</span>
 
               <div className={`ml-4`}>
                 <h2 className='mb-4 font-bold'>{item.title}</h2>
-                <p className='leading-tight  text-base font-medium'>
+                <p className='leading-tight text-base font-medium'>
                   {item.text}
                 </p>
               </div>
