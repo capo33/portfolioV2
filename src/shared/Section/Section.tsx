@@ -25,10 +25,10 @@ const Section = ({
   return (
     <section>
       <div
-        className={`items-center lg:flex ${imgStart && "flex-row-reverse"} `}
+        className={`items-center lg:flex pb-10 ${imgStart && "flex-row-reverse"} `}
       >
         <div className='flex-1'>
-          <span className='text-main-color font-semibold text-lg'>
+          <span className='font-semibold text-lg'>
             {topLine}
           </span>
           <span className='ml-2 inline-block h-[1px] w-8 bg-cyan-400'></span>
