@@ -33,7 +33,7 @@ const TimeLine = ({ educaction, workExperience }: ITimeLineProps) => {
           })}
         </div>
         <div>
-          <h3 className='text-2xl font-bold flex py-5'>📖 Education</h3>
+          <h3 className='text-2xl font-bold flex py-5'>📚 Education</h3>
           {educaction.map((item) => {
             return (
               <TimeLineData
