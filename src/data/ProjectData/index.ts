@@ -16,7 +16,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/crypto.png",
     title: "Crypto Tracker",
-    description: "React - Redux-toolkit - Typescript- Material-UI",
+    description: "React - Redux-toolkit - Typescript - MUI",
     links: [
       {
         id: uuid,
@@ -184,7 +184,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/socialnetwork.png",
     title: "Social Network",
-    description: "React - NodeJS - MongoDB - TypeScript - Material-ui",
+    description: "React - NodeJS - MongoDB - TypeScript - MUI",
     links: [
       {
         id: uuid,
@@ -226,7 +226,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/Q-Shop.png",
     title: "Q-Shop",
-    description: "React - NodeJS - MongoDB - Express - Paypal",
+    description: "React - NodeJS - MongoDB - Bootstrap - Paypal",
     links: [
       {
         id: uuid,
@@ -247,7 +247,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/secondhandstore.png",
     title: "Second Hand Store",
-    description: "React - GrapghQL - Apollo - Javascript",
+    description: "React - GrapghQL - Apollo-Client",
     links: [
       {
         id: uuid,
@@ -268,7 +268,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/social-media.png",
     title: "Social Media",
-    description: "React - NodeJS - MongoDB - TypeScript",
+    description: "React - NodeJS - MongoDB - TypeScript - MUI",
     links: [
       {
         id: uuid,
