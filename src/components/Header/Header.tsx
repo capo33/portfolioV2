@@ -55,7 +55,7 @@ const Header = () => {
       className={`sticky top-0 ${
         !toggle ? "light_bg" : "dark_bg"
       }  bg-opacity-90 backdrop-blur-sm ${
-        !top && "sticky top-0 bg-zinc-100 shadow-md z-50"
+        !top && `sticky top-0 ${!toggle ?  "light_bg" : "dark_bg"} shadow-md z-50`
       }`}
     >
       <nav className='container mx-auto px-10 py-4' ref={ref}>
