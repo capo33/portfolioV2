@@ -29,10 +29,10 @@ const Card = ({ item }: CardProps) => {
     <MitionAnimate>
       <div
         ref={menuRef}
-        className='rounded shadow-2xl flex flex-col items-center justify-center light_bg'
+        className='rounded flex flex-col items-center justify-center light_bg'
       >
         <img
-          className='w-full h-48 object-cover shadow-2xl'
+          className='w-full h-48 object-cover'
           src={item?.image}
           alt='Placeholder'
         />
@@ -48,7 +48,7 @@ const Card = ({ item }: CardProps) => {
 
         <button
           onClick={handleShowModal}
-          className='p-3 font-semibold bg-[#bdbdbd] hover:bg-[#989898] outline-none w-full'
+          className='p-3 font-semibold bg-[#dcdcdc] hover:bg-[#bdbdbd] outline-none w-full'
         >
           {item?.title}
         </button>
