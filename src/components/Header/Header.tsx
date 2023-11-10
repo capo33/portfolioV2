@@ -55,7 +55,8 @@ const Header = () => {
       className={`sticky top-0 ${
         !toggle ? "light_bg" : "dark_bg"
       }  bg-opacity-90 backdrop-blur-sm ${
-        !top && `sticky top-0 ${!toggle ?  "light_bg" : "dark_bg"} shadow-md z-50`
+        !top &&
+        `sticky top-0 ${!toggle ? "light_bg" : "dark_bg"} shadow-md z-50`
       }`}
     >
       <nav className='container mx-auto px-10 py-4' ref={ref}>
@@ -64,22 +65,16 @@ const Header = () => {
             {SpiderSVG("h-6 w-6 text-cyan-500 ")}
             <span className='text-2xl font-semibold whitespace-nowrap'>Mo</span>
           </Link>
-          {/* CV */}
+
           <div className='flex md:order-2'>
-            <a
-              download={true}
-              href={CV}
-              className='text-white bg-cyan-500 hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0'
-            >
-              Download CV
-            </a>
+            {/* Dark Mood */}
             <label
               htmlFor='AcceptConditions'
-              className='relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]'
+              className='max-lg:hidden relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]'
             >
               <input
-              checked={toggle}
-              onChange={() => setToggle(!toggle)}
+                checked={toggle}
+                onChange={() => setToggle(!toggle)}
                 type='checkbox'
                 id='AcceptConditions'
                 className='peer sr-only [&:checked_+_span_svg[data-checked-icon]]:block [&:checked_+_span_svg[data-unchecked-icon]]:hidden'
@@ -114,6 +109,7 @@ const Header = () => {
               </span>
               <span className='absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500' />
             </label>
+
             {/* Menu Icons */}
             <button
               type='button'
