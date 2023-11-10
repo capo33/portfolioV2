@@ -16,6 +16,9 @@ body {
 }
 
 @layer components {
+  .btn{
+    @apply inline-flex items-center cursor-pointer justify-center w-full px-5 py-3 text-sm font-medium text-center border border-gray-200 rounded sm:w-auto  bg-gradient-to-r from-[#efefef] to-[#dcdcdc]
+  }
   .dark_text {
     @apply text-[#1B1B1D];
   }

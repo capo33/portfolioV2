@@ -7,13 +7,7 @@ interface IAnchor {
   sClass?: string;
   href?: React.AnchorHTMLAttributes<HTMLAnchorElement>["href"];
 }
-const Anchor = ({
-  icon,
-  label,
-  aClass = "inline-flex items-center cursor-pointer justify-center w-full px-5 py-3 text-sm font-medium text-center border border-gray-200 rounded sm:w-auto  bg-gradient-to-r from-[#efefef] to-[#dcdcdc]",
-  sClass,
-  href,
-}: IAnchor) => {
+const Anchor = ({ icon, label, aClass = "btn", sClass, href }: IAnchor) => {
   return (
     <a href={href} className={aClass} target='_blank' rel='noreferrer'>
       <span className={sClass}>{icon}</span>

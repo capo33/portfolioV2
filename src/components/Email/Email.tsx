@@ -93,10 +93,7 @@ const Email = ({ line }: IEmailProps) => {
         onChange={handleChanges}
         className='block w-full px-4 mb-4 outline-none border rounded py-7 resize-none bg-gray-100'
       />
-      <button
-        type='submit'
-        className='inline-flex items-center cursor-pointer justify-center   bg-gradient-to-r from-[#efefef] to-[#dcdcdc] w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded focus:ring-4 focus:ring-gray-100 '
-      >
+      <button type='submit' className='btn w-full px-5 py-3 text-base'>
         Send Message
       </button>
     </form>
