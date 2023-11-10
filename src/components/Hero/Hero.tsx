@@ -1,5 +1,6 @@
 import { SharedSection, AnchorTag } from "../../shared";
 import IHomeMainObj from "../../interfaces/HomeInterface";
+import CV from '../../assets/pdf/CV.pdf'
 
 const Hero = ({
   firstHeadLine,
@@ -21,8 +22,17 @@ const Hero = ({
       img={img}
     >
       <div className='pt-10 items-center justify-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start'>
-        <AnchorTag icon={firstIcon} label={firstLabel} />
-        <AnchorTag icon={secondIcon} label={secondLabel} />
+        <AnchorTag
+          icon={firstIcon}
+          label={firstLabel}
+          href='https://github.com/capo33'
+        />
+        <AnchorTag
+          icon={secondIcon}
+          label={secondLabel}
+          href={CV}
+          aClass='btn bg-cyan-400 hover:bg-cyan-500'
+        />
       </div>
     </SharedSection>
   );

@@ -24,7 +24,6 @@ const ProjectHero = ({
           href='https://github.com/capo33'
           label={firstLabel}
           icon={icon}
-          aClass='btn'
         />
       </div>
     </SharedSection>
