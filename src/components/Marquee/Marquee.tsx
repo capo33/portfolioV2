@@ -12,24 +12,27 @@ interface MarqueeProps {
 const Marquee = ({ link }: MarqueeProps) => {
   const { toggle } = useContext(ThemeContext);
   return (
+    <div >
+
     <Link to={link}>
-      <h2 className={`text-center text-xl font-semibold leading-8 ${!toggle ? 'dark_text':'light_text'}`}>
+      <h2 className={`text-center text-xl font-semibold leading-8 pb-3 ${!toggle ? 'dark_text':'light_text'}`}>
         Technologies I been working with
       </h2>
-      <M pauseOnHover={true} speed={100}>
-        <div className='pt-10 grid grid-cols-12 gap-x-8 '>
+      <M pauseOnHover={true} speed={100} className={`${toggle &&'bg-[#3d3d3d] shadow-2xl rounded'}`}>
+        <div className='pt-5 grid grid-cols-12 gap-x-8'>
           {Icons.map((icon) => (
-            <div className='lg:px-16 md:px-10 px-5 pb-10' key={icon.id}>
+            <div className='lg:px-16 md:px-10 px-5 pb-5' key={icon.id}>
               <img
                 src={icon.icon}
                 alt={icon.alt}
-                className='w-16 pr-5 hover:scale-125 transition-all duration-300 ease-in-out'
+                className='w-10 hover:scale-125 transition-all duration-300 ease-in-out'
               />
             </div>
           ))}
         </div>
       </M>
     </Link>
+          </div>
   );
 };
 
