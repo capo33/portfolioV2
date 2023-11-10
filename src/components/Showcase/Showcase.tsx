@@ -1,9 +1,6 @@
 import React from "react";
 
-import { useContext } from "react";
-
 import { SharedSection } from "../../shared";
-import { ThemeContext } from "../../context/ThemeContext";
 import { IHomeMainObj, IDescription } from "../../interfaces";
 
 const Showcase: React.FC<IHomeMainObj<IDescription[]>> = ({
@@ -13,8 +10,6 @@ const Showcase: React.FC<IHomeMainObj<IDescription[]>> = ({
   secondHeadLine,
   img,
 }) => {
-  const { toggle } = useContext(ThemeContext);
-
   return (
     <SharedSection
       topLine={topLine}
