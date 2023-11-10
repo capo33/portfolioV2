@@ -29,7 +29,7 @@ const ProjectDtails = () => {
   return (
     <section className='space-y-12 lg:space-y-12 lg:pt-10'>
       <ul
-        className={`flex flex-wrap items-center justify-center text-lg font-medium text-center gap-2 ${
+        className={`flex flex-wrap items-center text-lg font-medium text-center gap-2 ${
           toggle ? "light_text" : "dark_text"
         }`}
       >
@@ -44,9 +44,11 @@ const ProjectDtails = () => {
                     }
                   : handleFilter
               }
-              className={`inline-flex items-center justify-center px-2 lg:px-4 py-1 rounded hover:bg-cyan-500 hover:text-white ${
+              className={`inline-flex items-center justify-center px-2 lg:px-4 py-1 rounded transition duration-100 ${
+                !toggle ? "hover:dark_bg" : "hover:light_bg"
+              } ${
                 activeTab === tab.name
-                  ? "bg-cyan-500 light_text duration-300"
+                  ? `${toggle ? "light_bg" : "dark_bg"}`
                   : ""
               }`}
             >
