@@ -5,7 +5,7 @@ const StackSVG = () => (
     viewBox='0 0 24 24'
     strokeWidth='1.5'
     stroke='currentColor'
-    className='w-4 h-4 mr-2 text-black'
+    className='w-4 h-4 mr-2'
   >
     <path
       strokeLinecap='round'
@@ -21,8 +21,8 @@ const ExperimentSVG = () => (
     id='Uploaded to svgrepo.com'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 32 32'
-    fill='#111918'
-    className='w-4 h-4 mr-2 text-black'
+    fill='none'
+    className='w-4 h-4 mr-2 text-cyan-500'
   >
     <path
       d='M28.342,27.603L20,11.753V6c1.657,0,3-1.343,3-3s-1.343-3-3-3h-8c-1.657,0-3,1.343-3,3
@@ -44,7 +44,7 @@ const FrontendSVG = () => (
     viewBox='0 0 24 24'
     strokeWidth={1.5}
     stroke='currentColor'
-    className='w-4 h-4 mr-2 text-black'
+    className='w-4 h-4 mr-2 text-cyan-900'
   >
     <path
       strokeLinecap='round'
@@ -61,7 +61,7 @@ const TableSVG = () => (
     viewBox='0 0 24 24'
     strokeWidth={1.5}
     stroke='currentColor'
-    className='w-4 h-4 mr-2 text-black'
+    className='w-4 h-4 mr-2'
   >
     <path
       strokeLinecap='round'

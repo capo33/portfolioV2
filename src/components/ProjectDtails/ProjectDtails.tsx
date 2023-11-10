@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { Card } from "../../components";
 import { IProjects } from "../../interfaces";
 import { Tabs, portfolioProjects } from "../../data/ProjectData";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [Items, setItems] = React.useState<IProjects[]>(portfolioProjects);
+
+  const { toggle } = useContext(ThemeContext);
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
     const target = e.target as HTMLSpanElement;
@@ -25,7 +28,11 @@ const ProjectDtails = () => {
 
   return (
     <section className='space-y-12 lg:space-y-12 lg:pt-10'>
-      <ul className='flex flex-wrap items-center justify-center text-lg font-medium text-center gap-2 text-gray-500'>
+      <ul
+        className={`flex flex-wrap items-center justify-center text-lg font-medium text-center gap-2 ${
+          toggle ? "light_text" : "dark_text"
+        }`}
+      >
         {Tabs.map((tab) => (
           <li key={tab.id}>
             <button
@@ -37,9 +44,9 @@ const ProjectDtails = () => {
                     }
                   : handleFilter
               }
-              className={`inline-flex items-center justify-center px-2 lg:px-4 py-1 rounded hover:bg-gray-500 hover:text-white ${
+              className={`inline-flex items-center justify-center px-2 lg:px-4 py-1 rounded hover:bg-cyan-500 hover:text-white ${
                 activeTab === tab.name
-                  ? "bg-gray-500 text-white duration-300"
+                  ? "bg-cyan-500 light_text duration-300"
                   : ""
               }`}
             >
