@@ -15,14 +15,10 @@ const ContactDetails = ({
       firstHeadLine={firstHeadLine}
       secondHeadLine={secondHeadLine}
       img={img}
+      description={description}
       imgStart={true}
     >
-      <div>
-        <ul className='space-y-3'>{description}</ul>
-        <div className='py-8'>
-          <Email line='Please send message for futher information!' />
-        </div>
-      </div>
+      <Email line='Please send message for futher information!' />
     </SharedSection>
   );
 };

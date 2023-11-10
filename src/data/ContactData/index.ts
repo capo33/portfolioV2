@@ -11,7 +11,7 @@ export const ContactObj: IHomeMainObj<string> = {
     "I am available for freelance work. If you have a project that you would like to get started, think you need my help with something or just fancy saying hello, then please get in touch",
   firstLabel: "View on Github",
   secondLabel: "something else",
-  firstIcon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
-  secondIcon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
+  firstIcon: GitHubSVG("w-4 h-4 mr-2"),
+  secondIcon: GitHubSVG("w-4 h-4 mr-2"),
   img: GetINTouch,
 };

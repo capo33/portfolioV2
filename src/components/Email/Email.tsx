@@ -58,7 +58,7 @@ const Email = ({ line }: IEmailProps) => {
   };
 
   return (
-    <form onSubmit={sendEmail} ref={form}>
+    <form onSubmit={sendEmail} ref={form} className="w-full">
       <div className='mb-6'>
         <h2 className='text-base text-gray-900'>{line}</h2>
       </div>
