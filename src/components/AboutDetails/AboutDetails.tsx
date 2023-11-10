@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import { SharedSection } from "../../shared";
 import { IAboutMainObj } from "../../interfaces";
 import { SuccessSVG } from "../../assets/svg/AboutSVG";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const AboutDetails = ({
   firstHeadLine,
@@ -9,6 +11,7 @@ const AboutDetails = ({
   description,
   img,
 }: IAboutMainObj) => {
+  const { toggle } = useContext(ThemeContext);
   return (
     <SharedSection
       topLine={topLine}
@@ -17,16 +20,18 @@ const AboutDetails = ({
       img={img}
       imgStart
     >
-      <div className='text-gray-500 xl:text-lg md:text-base dark:text-gray-400'>
+      <div className='  xl:text-lg md:text-base'>
         <ul className='space-y-3'>
           {description &&
             description.map((item) => (
               <li
-                className='flex space-x-3 lg:text-lg items-start p-2 hover:bg-gray-200'
+                className={`flex gap-3 lg:text-lg items-start p-1 transition duration-100 rounded ${
+                  toggle ? "hover:light_bg" : "hover:dark_bg"
+                }`}
                 key={item.id}
               >
                 <span className='text-lg'>{SuccessSVG}</span>
-                <span className='text-base text-gray-900 '>{item.title}</span>
+                <span className='text-base'>{item.title}</span>
               </li>
             ))}
         </ul>
