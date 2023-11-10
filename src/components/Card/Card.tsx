@@ -31,13 +31,12 @@ const Card = ({ item }: CardProps) => {
         ref={menuRef}
         className='rounded shadow-2xl flex flex-col items-center justify-center light_bg'
       >
-        <h2 className='font-semibold mt-1 p-3'>{item.title}</h2>
         <img
-          className='w-full h-48 object-cover rounded-t shadow-2xl'
+          className='w-full h-48 object-cover shadow-2xl'
           src={item?.image}
           alt='Placeholder'
         />
-
+                
         {/* Project Modal */}
         {showModal ? (
           <Modal
@@ -47,8 +46,11 @@ const Card = ({ item }: CardProps) => {
           />
         ) : null}
 
-        <button onClick={handleShowModal} className='p-3 bg-[#bdbdbd] hover:bg-[#989898] outline-none w-full'>
-          View Project
+        <button
+          onClick={handleShowModal}
+          className='p-3 font-semibold bg-[#bdbdbd] hover:bg-[#989898] outline-none w-full'
+        >
+          {item?.title}
         </button>
       </div>
     </MitionAnimate>
