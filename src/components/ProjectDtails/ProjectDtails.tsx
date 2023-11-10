@@ -24,7 +24,7 @@ const ProjectDtails = () => {
   };
 
   return (
-    <section className='space-y-12 lg:space-y-20'>
+    <section className='space-y-12 lg:space-y-12 lg:pt-10'>
       <ul className='flex flex-wrap items-center justify-center text-lg font-medium text-center gap-2 text-gray-500'>
         {Tabs.map((tab) => (
           <li key={tab.id}>
@@ -37,7 +37,7 @@ const ProjectDtails = () => {
                     }
                   : handleFilter
               }
-              className={`inline-flex items-center justify-center px-4 py-1 rounded hover:bg-gray-500 hover:text-white ${
+              className={`inline-flex items-center justify-center px-2 lg:px-4 py-1 rounded hover:bg-gray-500 hover:text-white ${
                 activeTab === tab.name
                   ? "bg-gray-500 text-white duration-300"
                   : ""
