@@ -1,16 +1,19 @@
+import { useContext } from "react";
 import M from "react-fast-marquee";
 import { Link } from "react-router-dom";
 
 import Icons from "../../assets/svg/MarqueeSVG";
+import { ThemeContext } from "../../context/ThemeContext";
 
 interface MarqueeProps {
   link: string;
 }
 
 const Marquee = ({ link }: MarqueeProps) => {
+  const { toggle } = useContext(ThemeContext);
   return (
     <Link to={link}>
-      <h2 className='text-center text-xl font-semibold leading-8 text-gray-900'>
+      <h2 className={`text-center text-xl font-semibold leading-8 ${!toggle ? 'dark_text':'light_text'}`}>
         Technologies I been working with
       </h2>
       <M pauseOnHover={true} speed={100}>
