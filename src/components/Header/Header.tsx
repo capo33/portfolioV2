@@ -8,15 +8,15 @@ import {
   useWindowScroll,
 } from "../../hooks";
 import { Sidebar } from "..";
-import CV from "../../assets/pdf/CV.pdf";
 import { NavBarLinks } from "../../data/NavbarLinks";
-import { BarsSVG, SpiderSVG, XCircledSVG } from "../../assets/svg/NavSVG";
 import { ThemeContext } from "../../context/ThemeContext";
+import { BarsSVG, SpiderSVG, XCircledSVG } from "../../assets/svg/NavSVG";
 
 const Header = () => {
   // States
   const [top, setTop] = useState<boolean>(true);
   const [open, setOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Ref
   const menuRef = useRef<HTMLDivElement>(null);
@@ -27,7 +27,6 @@ const Header = () => {
   // to handle navbar when clicked outside
   const handleClick = () => {
     setOpen((open) => !open);
-    console.log("clicked");
   };
 
   // Active Link
@@ -111,11 +110,7 @@ const Header = () => {
             </label>
 
             {/* Menu Icons */}
-            <button
-              type='button'
-              className='lg:hidden text-gray-600 hover:text-gray-600 focus:outline-none focus:text-gray-600'
-              onClick={handleClick}
-            >
+            <button type='button' className='lg:hidden' onClick={handleClick}>
               {open ? XCircledSVG : BarsSVG}
             </button>
           </div>

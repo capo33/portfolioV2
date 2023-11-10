@@ -70,7 +70,7 @@ const XCircledSVG = (
     viewBox='0 0 24 24'
     strokeWidth='1.5'
     stroke='currentColor'
-    className='w-7 h-7 bg-gray-100 rounded-full p-1 outline-none focus:outline-none'
+    className='w-9 text-cyan-500 outline-none'
   >
     <path
       strokeLinecap='round'
@@ -87,7 +87,7 @@ const BarsSVG = (
     viewBox='0 0 24 24'
     strokeWidth={1.5}
     stroke='currentColor'
-    className='w-7 h-7 bg-gray-100 rounded-full p-1 outline-none focus:outline-none'
+    className='w-9 text-cyan-500 outline-none'
   >
     <path
       strokeLinecap='round'
