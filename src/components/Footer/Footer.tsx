@@ -1,12 +1,15 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { GitHubSVG, LinkedInSVG, SpiderSVG } from "../../assets/svg/NavSVG";
 import { AnchorTag } from "../../shared";
 import { ReactSVG, TailwindSVG, TypescriptSVG } from "../../assets/svg";
+import { GitHubSVG, LinkedInSVG, SpiderSVG } from "../../assets/svg/NavSVG";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Footer = () => {
+  const { toggle } = useContext(ThemeContext);
   return (
     <footer>
-      <div className='p bg-[#f8f8f8]'>
+      <div className={`${toggle ? "dark_footer" : "light_footer"}`}>
         <div className='relative mt-16 pt-1 '>
           <div className='px-10 pt-12 container mx-auto'>
             <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
@@ -99,13 +102,14 @@ const Footer = () => {
                 <AnchorTag
                   href='https://github.com/capo33'
                   icon={GitHubSVG("h-6 w-6")}
-                  aClass='text-[#171515]'
-                  // aClass='text-[#EFF3F9]'
+                  aClass=''
+                  sClass=''
                 />
                 <AnchorTag
                   href='https://www.linkedin.com/in/mohamed-capo/'
                   icon={LinkedInSVG("h-6 w-6")}
-                  aClass='text-[#0077b5]'
+                  aClass=''
+                  sClass='text-[#0077b5]'
                 />
               </div>
             </div>

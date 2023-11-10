@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+ import React from "react";
 
 interface IAnchor {
   icon?: React.JSX.Element | undefined;
@@ -8,13 +7,11 @@ interface IAnchor {
   sClass?: string;
   href?: React.AnchorHTMLAttributes<HTMLAnchorElement>["href"];
 }
-const Anchor = ({ icon, label, aClass, sClass, href }: IAnchor) => {
-  const { toggle } = useContext(ThemeContext);
-  aClass = !toggle ? "btn" : "btn text-black";
+const Anchor = ({ icon, label, aClass = "btn", sClass, href }: IAnchor) => {
   return (
     <a href={href} className={aClass} target='_blank' rel='noreferrer'>
       <span className={sClass}>{icon}</span>
-      <span className='text-sm bg-clip-text'>{label}</span>
+      <span className='dark_text text-sm bg-clip-text'>{label}</span>
     </a>
   );
 };

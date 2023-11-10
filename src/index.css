@@ -14,7 +14,7 @@ body {
 
 @layer components {
   .btn {
-    @apply inline-flex items-center cursor-pointer justify-center w-full px-5 py-3 text-sm font-medium text-center border border-gray-200 rounded sm:w-auto bg-gradient-to-r from-[#efefef] to-[#dcdcdc];
+    @apply inline-flex items-center cursor-pointer justify-center w-full px-5 py-3 text-sm font-medium text-center border border-gray-200 rounded sm:w-auto  bg-gradient-to-r from-[#efefef] to-[#dcdcdc];
   }
   .dark_text {
     @apply text-[#252626];
@@ -28,6 +28,12 @@ body {
   }
   .light_bg {
     @apply bg-[#FFFFFF] text-[#252626];
+  }
+  .dark_footer {
+    @apply bg-[#3d3d3d] text-[#FFFFFF];
+  }
+  .light_footer {
+    @apply bg-[#efefef] text-[#3d3d3d];
   }
   .sub_text_dark {
     @apply text-[#292929];
