@@ -16,7 +16,6 @@ const Header = () => {
   // States
   const [top, setTop] = useState<boolean>(true);
   const [open, setOpen] = useState<boolean>(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   // Ref
   const menuRef = useRef<HTMLDivElement>(null);
@@ -61,7 +60,7 @@ const Header = () => {
       <nav className='container mx-auto px-10 py-4' ref={ref}>
         <div className='flex flex-wrap items-center justify-between mx-auto'>
           <Link to='/' className='flex items-center gap-2'>
-            {SpiderSVG("h-6 w-6 text-cyan-500 ")}
+            {SpiderSVG("h-6 w-6 text-cyan-500")}
             <span className='text-2xl font-semibold whitespace-nowrap'>Mo</span>
           </Link>
 
@@ -116,11 +115,8 @@ const Header = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div
-            className='items-center justify-between hidden w-full lg:flex lg:w-auto md:order-1'
-            id='navbar-sticky'
-          >
-            <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 '>
+          <div className='items-center justify-between hidden w-full lg:flex lg:w-auto md:order-1'>
+            <ul>
               <li className={`hidden md:flex items-center space-x-3`}>
                 {NavBarLinks.map((link) => (
                   <Link

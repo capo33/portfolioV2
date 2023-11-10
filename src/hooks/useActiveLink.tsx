@@ -12,7 +12,7 @@ const useActiveLink = () => {
       subpage = "";
     }
     let classes =
-      "px-2 text-lg font-semibold flex items-center space-x-2 cursor-pointer";
+      "px-2 text-lg font-semibold flex items-center space-x-2 cursor-pointer hover:text-cyan-500 transition duration-100";
     if (type === subpage) {
       classes += " text-cyan-500";
     } else {
