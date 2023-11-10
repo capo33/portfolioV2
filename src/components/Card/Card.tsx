@@ -1,4 +1,6 @@
-import { MitionAnimate } from "..";
+import { useState } from "react";
+
+import { MitionAnimate, Modal } from "..";
 import { IProjects } from "../../interfaces";
 
 interface CardProps {
@@ -6,6 +8,12 @@ interface CardProps {
 }
 
 const Card = ({ item }: CardProps) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal((prev) => !prev);
+  };
+
   return (
     <MitionAnimate>
       <div className='rounded shadow-2xl flex flex-col items-center justify-center light_bg'>
@@ -15,8 +23,19 @@ const Card = ({ item }: CardProps) => {
           src={item?.image}
           alt='Placeholder'
         />
+        
+        {/* Project Modal */}
+        {showModal ? (
+          <Modal
+            showModal={showModal}
+            setShowModal={setShowModal}
+            item={item}
+          />
+        ) : null}
 
-        <button className='btn w-full'>View Project</button>
+        <button onClick={handleShowModal} className='btn w-full'>
+          View Project
+        </button>
       </div>
     </MitionAnimate>
   );
