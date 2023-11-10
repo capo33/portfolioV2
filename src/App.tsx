@@ -6,7 +6,7 @@ import { ThemeContext } from "./context/ThemeContext";
 function App() {
   const { toggle } = useContext(ThemeContext);
   return (
-    <main className={`${!toggle ? "light_bg" : "dark_bg"}`}>
+    <main className={`${!toggle ? "light_bg" : "dark_bg"} transition-colors duration-300`}>
       <Header />
       <Outlet />
       <Footer />
