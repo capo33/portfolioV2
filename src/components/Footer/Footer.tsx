@@ -15,24 +15,24 @@ const Footer = () => {
             <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
               <div className='md:max-w-md lg:col-span-2'>
                 <Link to='/' className='flex items-center gap-2'>
-                  {SpiderSVG("h-6 w-6 text-blue-500 dark:text-white")}
+                  {SpiderSVG("h-6 w-6 text-cyan-600")}
                   <span className='text-2xl font-semibold whitespace-nowrap'>
                     Mo
                   </span>
                 </Link>
                 <div className='mt-4 lg:max-w-sm'>
-                  <p className='text-sm text-deep-purple-50'>
+                  <p className={`${toggle ? "dark_footer" : "light_footer"}`}>
                     This Portfolio has been updated to the latest version of
                     ReactJS and TypeScript
                   </p>
-                  <p className='mt-4 text-sm text-deep-purple-50'>
+                  <p className='mt-4  text-deep-purple-50'>
                     Made with <span>❤ </span>by Mohamed
                   </p>
                 </div>
               </div>
               <div className='grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3'>
                 <div>
-                  <h6 className='text-lg font-medium text-gray-800 dark:text-gray-200'>
+                  <h6 className='text-lg font-medium'>
                     Technologies
                   </h6>
                   <ul className='mt-2 space-y-2'>
@@ -59,7 +59,7 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div>
-                  <h6 className='text-lg font-medium text-gray-800 dark:text-gray-200'>
+                  <h6 className='text-lg font-medium'>
                     Styles
                   </h6>
                   <ul className='mt-4 list-inside space-y-4'>
@@ -76,7 +76,7 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div>
-                  <h6 className='text-lg font-medium text-gray-800 dark:text-gray-200'>
+                  <h6 className='text-lg font-medium'>
                     Contact Me
                   </h6>
                   <ul className='mt-4 list-inside space-y-4'>
