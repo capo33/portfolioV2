@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import { MitionAnimate, Modal } from "..";
 import { IProjects } from "../../interfaces";
-import { usePreventScrolling } from "../../hooks";
+import { useEscapeClick, usePreventScrolling } from "../../hooks";
 
 interface CardProps {
   item: IProjects;
@@ -11,6 +11,8 @@ interface CardProps {
 const Card = ({ item }: CardProps) => {
   const [showModal, setShowModal] = useState(false);
 
+  const menuRef = useRef<HTMLDivElement>(null);
+
   const handleShowModal = () => {
     setShowModal((prev) => !prev);
   };
@@ -18,9 +20,17 @@ const Card = ({ item }: CardProps) => {
   // to prevent scrolling when navbar is open
   usePreventScrolling(showModal);
 
+  // to close navbar when pressed escape
+  useEscapeClick(() => {
+    setShowModal(false);
+  });
+
   return (
     <MitionAnimate>
-      <div className='rounded shadow-2xl flex flex-col items-center justify-center light_bg'>
+      <div
+        ref={menuRef}
+        className='rounded shadow-2xl flex flex-col items-center justify-center light_bg'
+      >
         <h2 className='font-semibold mt-1 p-3'>{item.title}</h2>
         <img
           className='w-full h-48 object-cover rounded-t shadow-2xl'
@@ -37,7 +47,7 @@ const Card = ({ item }: CardProps) => {
           />
         ) : null}
 
-        <button onClick={handleShowModal} className='btn w-full'>
+        <button onClick={handleShowModal} className='btn outline-none w-full'>
           View Project
         </button>
       </div>
