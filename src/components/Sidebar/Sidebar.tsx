@@ -1,8 +1,12 @@
 // import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+
+import {
+  useEscapeClick,
+  usePreventScrolling,
+  useWindowResize,
+} from "../../hooks";
 import { NavBarLinks } from "../../data/NavbarLinks";
-import { useEscapeClick, useWindowResize } from "../../hooks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
 
 // Props
@@ -15,19 +19,16 @@ interface SidebarProps {
   menuRef?: React.RefObject<HTMLDivElement>;
 }
 
-const Sidebar = ({ open, handleClick, setOpen, toggle,setToggle }: SidebarProps) => {
-  // const [isChecked, setIsChecked] = useState(false);
-
-  // const handleCheckboxChange = () => {
-  //   setIsChecked(!isChecked);
-  // };
-
+const Sidebar = ({
+  open,
+  handleClick,
+  setOpen,
+  toggle,
+  setToggle,
+}: SidebarProps) => {
+ 
   // to prevent scrolling when navbar is open
-  useEffect(() => {
-    open
-      ? (document.body.style.overflowY = "hidden")
-      : (document.body.style.overflowY = "unset");
-  }, [open]);
+  usePreventScrolling(open);
 
   // to close navbar when pressed escape
   useEscapeClick(() => {
@@ -74,33 +75,14 @@ const Sidebar = ({ open, handleClick, setOpen, toggle,setToggle }: SidebarProps)
             <span className='mr-[18px] text-sm font-medium text-black lg:hidden '>
               Appearance
             </span>
-            {/* <label className='relative inline-flex cursor-pointer select-none items-center'>
-              <input
-                type='checkbox'
-                checked={isChecked}
-                onChange={handleCheckboxChange}
-                className='sr-only'
-              />
-
-              <span
-                className={`slider mx-4 flex h-8 w-[60px] items-center rounded-full p-1 duration-200 ${
-                  isChecked ? "bg-[#212b36]" : "bg-[#CCCCCE]"
-                }`}
-              >
-                <span
-                  className={`dot h-6 w-6 rounded-full bg-white duration-200 ${
-                    isChecked ? "translate-x-[28px]" : ""
-                  }`}
-                ></span>
-              </span>
-            </label> */}
+ 
             <label
               htmlFor='AcceptConditions'
               className='relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]'
             >
               <input
-              checked={toggle}
-              onChange={() => setToggle(!toggle)}
+                checked={toggle}
+                onChange={() => setToggle(!toggle)}
                 type='checkbox'
                 id='AcceptConditions'
                 className='peer sr-only [&:checked_+_span_svg[data-checked-icon]]:block [&:checked_+_span_svg[data-unchecked-icon]]:hidden'

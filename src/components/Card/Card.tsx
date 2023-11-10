@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { MitionAnimate, Modal } from "..";
 import { IProjects } from "../../interfaces";
+import { usePreventScrolling } from "../../hooks";
 
 interface CardProps {
   item: IProjects;
@@ -14,6 +15,9 @@ const Card = ({ item }: CardProps) => {
     setShowModal((prev) => !prev);
   };
 
+  // to prevent scrolling when navbar is open
+  usePreventScrolling(showModal);
+
   return (
     <MitionAnimate>
       <div className='rounded shadow-2xl flex flex-col items-center justify-center light_bg'>
@@ -23,12 +27,12 @@ const Card = ({ item }: CardProps) => {
           src={item?.image}
           alt='Placeholder'
         />
-        
+
         {/* Project Modal */}
         {showModal ? (
           <Modal
             showModal={showModal}
-            setShowModal={setShowModal}
+            handleShowModal={handleShowModal}
             item={item}
           />
         ) : null}
