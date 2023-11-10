@@ -13,8 +13,8 @@ export const HeroObj: IHomeMainObj<string> = {
     "I'm a software developer based in Finland specializing in building and designing websites, apps ( sometimes games 🎮), and everything in between.",
   firstLabel: "View on Github",
   secondLabel: "something else",
-  firstIcon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
-  secondIcon: GitHubSVG("w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"),
+  firstIcon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+  secondIcon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
   img: HeroImage,
 };
 

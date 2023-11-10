@@ -811,7 +811,7 @@ export const portfolioProjects: IProjects[] = [
 export const ProjectHeroObj: IProjectHero = {
   imgStart: true,
   firstLabel: "View on Github",
-  icon: GitHubSVG("w-4 h-4 mr-2"),
+  icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
   topLine: "Projects",
   firstHeadLine: "My",
   secondHeadLine: " Deployed Projects",
