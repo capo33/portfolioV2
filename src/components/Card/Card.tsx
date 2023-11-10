@@ -47,7 +47,7 @@ const Card = ({ item }: CardProps) => {
           />
         ) : null}
 
-        <button onClick={handleShowModal} className='btn outline-none w-full'>
+        <button onClick={handleShowModal} className='p-3 bg-[#bdbdbd] hover:bg-[#989898] outline-none w-full'>
           View Project
         </button>
       </div>
