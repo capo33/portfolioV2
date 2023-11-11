@@ -58,7 +58,11 @@ const Sidebar = ({
           {NavBarLinks.map((link) => (
             <Link
               to={link.to}
-              className='p-2.5 mt-2 flex items-center rounded-md duration-300 cursor-pointer hover:bg-cyan-600'
+              className={`p-2.5 mt-2 flex items-center rounded-md duration-300 cursor-pointer hover:bg-cyan-500 ${
+                theme === "light"
+                  ? "hover:light_text"
+                  : "hover:dark_text"
+              } }`}
               key={link.id()}
               onClick={handleClick}
             >
