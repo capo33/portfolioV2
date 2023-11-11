@@ -13,6 +13,10 @@ body {
 }
 
 @layer components {
+  .hide_icon {
+    @apply max-lg:hidden;
+  }
+  
   .btn {
     @apply inline-flex items-center cursor-pointer justify-center w-full px-5 py-3 text-sm font-medium text-center  rounded sm:w-auto  bg-[#dcdcdc] hover:bg-[#bdbdbd] transition duration-200 outline-none;
   }

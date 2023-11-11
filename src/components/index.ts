@@ -8,6 +8,7 @@ export { default as Marquee } from "./Marquee/Marquee";
 export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as TechCard } from "./TechCard/TechCard";
 export { default as Showcase } from "./Showcase/Showcase";
+export { default as LighMode } from "./LighMode/LighMode";
 export { default as TimeLine } from "./TimeLine/TimeLine";
 export { default as ProjectHero } from "./ProjectHero/ProjectHero";
 export { default as TimeLineData } from "./TimeLineData/TimeLineData";
