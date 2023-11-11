@@ -1,11 +1,11 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 type ThemeContextProviderProps = {
   children: React.ReactNode;
 };
 
 type ThemeContextProps = {
-   theme: string;
+  theme: string;
   setTheme: (theme: string) => void;
 };
 
@@ -17,7 +17,15 @@ export const ThemeContext = createContext<ThemeContextProps>({
 export const ThemeContextProvider = ({
   children,
 }: ThemeContextProviderProps) => {
-  const [theme, setTheme] = useState<string>("light");
+  const initialTheme = JSON.parse(
+    localStorage.getItem("theme") || JSON.stringify("light")
+  );
+  const [theme, setTheme] = useState<string>(initialTheme);
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
