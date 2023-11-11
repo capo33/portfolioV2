@@ -97,17 +97,26 @@ const Footer = () => {
                 © Copyright Mo {new Date().getFullYear()} - All rights reserved
               </p>
               <div className='flex items-center mt-4 space-x-4 sm:mt-0'>
+                {/* Github */}
                 <AnchorTag
-                  href='https://github.com/capo33'
-                  icon={GitHubSVG("h-6 w-6")}
+                  href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
+                  icon={GitHubSVG("w-7 h-7")}
                   aClass=''
-                  sClass=''
+                  sClass={`${
+                    theme === "light"
+                      ? "text-[#525252] hover:dark_text"
+                      : "text-[#dcdcdc] hover:light_text"
+                  } `}
                 />
+
+                {/* LinkedIn */}
                 <AnchorTag
-                  href='https://www.linkedin.com/in/mohamed-capo/'
-                  icon={LinkedInSVG("h-6 w-6")}
+                  href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
+                  icon={LinkedInSVG("w-7 h-7")}
                   aClass=''
-                  sClass='text-[#0077b5]'
+                  sClass={`${
+                    theme === "light" ? "dark_text" : "light_text"
+                  } hover:text-[#0077b5] hover:light_text`}
                 />
               </div>
             </div>

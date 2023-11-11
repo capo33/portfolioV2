@@ -43,7 +43,7 @@ const Sidebar = ({
     <div
       className={`fixed top-0 ${
         theme === "light" ? "light_bg " : "dark_bg"
-      } shadow-2xl shadow-slate-00 h-screen sm:w-80 md:w-1/2 transition-all duration-300
+      } shadow-2xl shadow-slate-100 h-screen sm:w-80 md:w-1/2 transition-all duration-300
             lg:hidden flex flex-col p-10  
             ${open ? "left-0 overflow-hidden" : "-left-full"}`}
     >
@@ -59,9 +59,7 @@ const Sidebar = ({
             <Link
               to={link.to}
               className={`p-2.5 mt-2 flex items-center rounded-md duration-300 cursor-pointer hover:bg-cyan-500 ${
-                theme === "light"
-                  ? "hover:light_text"
-                  : "hover:dark_text"
+                theme === "light" ? "hover:light_text" : "hover:dark_text"
               } }`}
               key={link.id()}
               onClick={handleClick}
@@ -132,8 +130,10 @@ const Sidebar = ({
             icon={GitHubSVG("w-7 h-7")}
             aClass=''
             sClass={`${
-              theme === "light" ? "text-light_text" : "text-dark_text"
-            } hover:text-black`}
+              theme === "light"
+                ? "text-[#525252] hover:dark_text"
+                : "text-[#dcdcdc] hover:light_text"
+            } `}
           />
 
           {/* LinkedIn */}
@@ -142,8 +142,8 @@ const Sidebar = ({
             icon={LinkedInSVG("w-7 h-7")}
             aClass=''
             sClass={`${
-              theme === "light" ? "text-light_text" : "text-dark_text"
-            } hover:text-[#0077b5]`}
+              theme === "light" ? "dark_text" : "light_text"
+            } hover:text-[#0077b5] hover:light_text`}
           />
         </div>
       </div>
