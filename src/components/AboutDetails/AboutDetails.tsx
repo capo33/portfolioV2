@@ -11,7 +11,7 @@ const AboutDetails = ({
   description,
   img,
 }: IAboutMainObj) => {
-  const { toggle } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <SharedSection
       topLine={topLine}
@@ -26,7 +26,7 @@ const AboutDetails = ({
             description.map((item) => (
               <li
                 className={`flex gap-3 lg:text-lg items-start p-1 transition duration-100 rounded ${
-                  toggle ? "hover:light_bg" : "hover:dark_bg"
+                  theme !== "light" ? "hover:light_bg" : "hover:dark_bg"
                 }`}
                 key={item.id}
               >

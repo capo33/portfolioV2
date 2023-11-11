@@ -21,7 +21,7 @@ const Header = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Context
-  const { toggle, setToggle } = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   // to handle navbar when clicked outside
   const handleClick = () => {
@@ -51,10 +51,12 @@ const Header = () => {
   return (
     <header
       className={`sticky top-0 ${
-        !toggle ? "light_bg" : "dark_bg"
+        theme === "light" ? "light_bg" : "dark_bg"
       }  bg-opacity-90 backdrop-blur-sm ${
         !top &&
-        `sticky top-0 ${!toggle ? "light_bg" : "dark_bg"} shadow-md z-50`
+        `sticky top-0 ${
+          theme === "light" ? "light_bg" : "dark_bg"
+        } shadow-md z-50`
       }`}
     >
       <nav className='container mx-auto px-10 py-4' ref={ref}>
@@ -71,8 +73,8 @@ const Header = () => {
               className='max-lg:hidden relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]'
             >
               <input
-                checked={toggle}
-                onChange={() => setToggle(!toggle)}
+                checked={theme === "dark"}
+                onChange={() => setTheme(theme === "light" ? "dark" : "light")}
                 type='checkbox'
                 id='AcceptConditions'
                 className='peer sr-only [&:checked_+_span_svg[data-checked-icon]]:block [&:checked_+_span_svg[data-unchecked-icon]]:hidden'
@@ -141,8 +143,8 @@ const Header = () => {
           handleClick={handleClick}
           setOpen={setOpen}
           menuRef={menuRef}
-          toggle={toggle}
-          setToggle={setToggle}
+          theme={theme}
+          setTheme={setTheme}
         />
       </nav>
     </header>

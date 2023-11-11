@@ -6,10 +6,10 @@ import { GitHubSVG, LinkedInSVG, SpiderSVG } from "../../assets/svg/NavSVG";
 import { ThemeContext } from "../../context/ThemeContext";
 
 const Footer = () => {
-  const { toggle } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <footer>
-      <div className={`${toggle ? "dark_footer" : "light_footer"}`}>
+      <div className={`${theme === "light" ? "light_footer" : "dark_footer"}`}>
         <div className='relative mt-16 pt-1 '>
           <div className='px-10 pt-12 container mx-auto'>
             <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
@@ -21,7 +21,11 @@ const Footer = () => {
                   </span>
                 </Link>
                 <div className='mt-4 lg:max-w-sm'>
-                  <p className={`${toggle ? "dark_footer" : "light_footer"} text-lg`}>
+                  <p
+                    className={`${
+                      theme === "light" ? "light_footer" : "dark_footer"
+                    } text-lg`}
+                  >
                     This Portfolio has been updated to the latest version of
                     ReactJS and TypeScript
                   </p>
@@ -32,9 +36,7 @@ const Footer = () => {
               </div>
               <div className='grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3'>
                 <div>
-                  <h6 className='text-lg font-medium'>
-                    Technologies
-                  </h6>
+                  <h6 className='text-lg font-medium'>Technologies</h6>
                   <ul className='mt-2 space-y-2'>
                     <li>
                       <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
@@ -59,9 +61,7 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div>
-                  <h6 className='text-lg font-medium'>
-                    Styles
-                  </h6>
+                  <h6 className='text-lg font-medium'>Styles</h6>
                   <ul className='mt-4 list-inside space-y-4'>
                     <li>
                       <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
@@ -76,9 +76,7 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div>
-                  <h6 className='text-lg font-medium'>
-                    Contact Me
-                  </h6>
+                  <h6 className='text-lg font-medium'>Contact Me</h6>
                   <ul className='mt-4 list-inside space-y-4'>
                     <li>
                       <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>

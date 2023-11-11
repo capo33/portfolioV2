@@ -20,7 +20,7 @@ const Section = ({
   img,
   imgStart,
 }: SectionProps) => {
-  const { toggle } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <section>
@@ -36,7 +36,7 @@ const Section = ({
             {firstHeadLine}
             <span className='text-cyan-500'>{secondHeadLine}</span>
           </h2>
-          <p className={`mb-8 lg:text-xl ${!toggle? 'sub_text_dark': 'sub_text_light'}`}>{description} </p>
+          <p className={`mb-8 lg:text-xl ${theme ==='light'? 'sub_text_dark': 'sub_text_light'}`}>{description} </p>
 
           <div className='items-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start'>
             {children}

@@ -5,21 +5,21 @@ type ThemeContextProviderProps = {
 };
 
 type ThemeContextProps = {
-  toggle: boolean;
-  setToggle: (toggle: boolean) => void;
+   theme: string;
+  setTheme: (theme: string) => void;
 };
 
 export const ThemeContext = createContext<ThemeContextProps>({
-  toggle: false,
-  setToggle: () => {},
+  theme: "light",
+  setTheme: () => {},
 });
 
 export const ThemeContextProvider = ({
   children,
 }: ThemeContextProviderProps) => {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [theme, setTheme] = useState<string>("light");
   return (
-    <ThemeContext.Provider value={{ toggle, setToggle }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );

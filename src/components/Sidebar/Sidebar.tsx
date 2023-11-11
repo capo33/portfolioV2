@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -8,13 +7,12 @@ import {
 } from "../../hooks";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
-import { ThemeContext } from "../../context/ThemeContext";
 
 // Props
 interface SidebarProps {
   open: boolean;
-  toggle: boolean;
-  setToggle: (toggle: boolean) => void;
+  theme: string;
+  setTheme: (theme: string) => void;
   handleClick: () => void;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   menuRef?: React.RefObject<HTMLDivElement>;
@@ -24,10 +22,9 @@ const Sidebar = ({
   open,
   handleClick,
   setOpen,
-  toggle,
-  setToggle,
+  theme,
+  setTheme,
 }: SidebarProps) => {
-  const { toggle:colorMode } = useContext(ThemeContext);
   // to prevent scrolling when navbar is open
   usePreventScrolling(open);
   // to close navbar when pressed escape
@@ -43,7 +40,9 @@ const Sidebar = ({
 
   return (
     <div
-      className={`fixed ${colorMode? 'dark_bg': 'light_bg'} shadow-2xl h-screen my-4 sm:w-80 md:w-1/2
+      className={`fixed ${
+        theme === "light" ? "dark_bg" : "light_bg"
+      } shadow-2xl h-screen my-4 sm:w-80 md:w-1/2
             lg:hidden flex flex-col gap-10 p-10 duration-500
             ${open ? "left-0 overflow-y-hidden" : "-left-full"}`}
     >
@@ -80,8 +79,8 @@ const Sidebar = ({
               className='relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]'
             >
               <input
-                checked={toggle}
-                onChange={() => setToggle(!toggle)}
+                checked={theme === "dark"}
+                onChange={() => setTheme(theme === "light" ? "dark" : "light")}
                 type='checkbox'
                 id='AcceptConditions'
                 className='peer sr-only [&:checked_+_span_svg[data-checked-icon]]:block [&:checked_+_span_svg[data-unchecked-icon]]:hidden'
