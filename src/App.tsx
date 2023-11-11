@@ -5,8 +5,13 @@ import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
   const { theme } = useContext(ThemeContext);
+
   return (
-    <main className={`${theme === "light"  ? "light_bg" : "dark_bg"} transition-colors duration-300`}>
+    <main
+      className={`${
+        theme === "light" ? "light_bg" : "dark_bg"
+      } transition-colors duration-300 `}
+    >
       <Header />
       <Outlet />
       <Footer />

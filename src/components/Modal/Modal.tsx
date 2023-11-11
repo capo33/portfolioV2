@@ -13,7 +13,7 @@ const Modal = ({ showModal, handleShowModal, item }: ModalPopupProps) => {
       {showModal ? (
         <>
           <div
-            className={`justify-center items-center flex   fixed inset-0 z-50 outline-none focus:outline-none`}
+            className={`justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none`}
           >
             <div className='relative w-full px-2 mx-auto max-w-3xl'>
               {/*content*/}

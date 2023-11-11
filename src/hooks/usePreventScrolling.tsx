@@ -8,5 +8,4 @@ const usePreventScrolling = (index: boolean) => {
       : (document.body.style.overflowY = "unset");
   }, [index]);
 };
-
 export default usePreventScrolling;

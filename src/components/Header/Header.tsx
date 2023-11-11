@@ -16,14 +16,12 @@ const Header = () => {
   // States
   const [top, setTop] = useState<boolean>(true);
   const [open, setOpen] = useState<boolean>(false);
-
-  // Ref
-  const menuRef = useRef<HTMLDivElement>(null);
-
   // Context
   const { theme, setTheme } = useContext(ThemeContext);
+  //  Ref
+  const menuRef = useRef<HTMLDivElement>(null);
 
-  // to handle navbar when clicked outside
+  // Click Handler
   const handleClick = () => {
     setOpen((open) => !open);
   };

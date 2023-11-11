@@ -7,10 +7,10 @@ import {
 } from "../../hooks";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
-
+ 
 // Props
 interface SidebarProps {
-  open: boolean;
+  open: boolean 
   theme: string;
   setTheme: (theme: string) => void;
   handleClick: () => void;
@@ -117,7 +117,6 @@ const Sidebar = ({
             </label>
           </div>
         </div>
-
         {/* Social icons */}
         <div className='flex items-center justify-evenly my-5'>
           {/* Github */}
