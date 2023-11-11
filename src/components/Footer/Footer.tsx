@@ -21,7 +21,7 @@ const Footer = () => {
                   </span>
                 </Link>
                 <div className='mt-4 lg:max-w-sm'>
-                  <p className={`${toggle ? "dark_footer" : "light_footer"}`}>
+                  <p className={`${toggle ? "dark_footer" : "light_footer"} text-lg`}>
                     This Portfolio has been updated to the latest version of
                     ReactJS and TypeScript
                   </p>
