@@ -36,7 +36,7 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
   return (
     <div
       className={`fixed top-0 ${
-        theme === "light" ? "light_bg " : "dark_bg"
+        theme === "light" ? "bg-[#fff] " : "dark_bg"
       } shadow-2xl shadow-slate-100 h-screen sm:w-80 md:w-1/2 transition-all duration-300
             lg:hidden flex flex-col p-10  
             ${open ? "left-0 overflow-hidden" : "-left-full"}`}

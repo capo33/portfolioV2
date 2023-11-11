@@ -21,23 +21,23 @@ body {
     @apply inline-flex items-center cursor-pointer justify-center w-full px-5 py-3 text-sm font-medium text-center  rounded sm:w-auto  bg-[#dcdcdc] hover:bg-[#bdbdbd] transition duration-200 outline-none;
   }
   .dark_text {
-    @apply text-[#252626];
+    @apply text-[#121212];
   }
   .light_text {
-    @apply text-[#FFFFFF];
+    @apply text-[#fffffa];
   }
 
   .dark_bg {
-    @apply bg-[#252626] text-[#FFFFFF];
+    @apply bg-[#121212] text-[#fffffa];
   }
   .light_bg {
-    @apply bg-[#FFFFFF] text-[#252626];
+    @apply bg-[#fffffa] text-[#121212];
   }
   .dark_footer {
-    @apply bg-[#525252] text-[#efefef];
+    @apply bg-[#18191a] text-[#efefef];
   }
   .light_footer {
-    @apply bg-[#efefef] text-[#292929];
+    @apply bg-[#eeeeee] text-[#292929];
   }
   .sub_text_dark {
     @apply text-[#292929];

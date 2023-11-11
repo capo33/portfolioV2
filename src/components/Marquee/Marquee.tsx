@@ -15,7 +15,7 @@ const Marquee = ({ link }: MarqueeProps) => {
     <div>
       <Link to={link}>
         <h2
-          className={`text-center text-xl font-semibold leading-8 pb-3 transition-colors duration-300${
+          className={`text-center text-xl font-semibold leading-8 pb-3 transition-colors duration-300 ${
             theme === "light" ? "dark_text" : "light_text"
           }`}
         >
@@ -24,7 +24,7 @@ const Marquee = ({ link }: MarqueeProps) => {
         <M
           pauseOnHover={true}
           speed={100}
-          className={`${theme === "dark" && "bg-[#3d3d3d] shadow-2xl rounded"}`}
+          className={`${theme !== "light" && "bg-[#181818]  shadow-2xl rounded"}`}
         >
           <div className='pt-5 grid grid-cols-12 gap-x-8'>
             {Icons.map((icon) => (
