@@ -1,24 +1,25 @@
-import { useContext,useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { ButtonScroll, Footer, Header, ScrollToTop } from "./components";
 import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
   const { theme } = useContext(ThemeContext);
-const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     const handleScrollBuuttonVisibility = () => {
       window.scrollY > 100 ? setShowButton(true) : setShowButton(false);
-    }
+    };
 
     window.addEventListener("scroll", handleScrollBuuttonVisibility);
-    return () => window.removeEventListener("scroll", handleScrollBuuttonVisibility);
+    return () =>
+      window.removeEventListener("scroll", handleScrollBuuttonVisibility);
   }, []);
 
   const handleScrollToTop = () => {
-    window.scrollTo({top: 0, left: 0, behavior: "smooth"});
-  }
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -31,10 +32,8 @@ const [showButton, setShowButton] = useState(false);
         <Header />
         <Outlet />
         <Footer />
-        {showButton && (
-           <ButtonScroll handleScrollToTop={handleScrollToTop}/>
-        )}
-       </main>
+        {showButton && <ButtonScroll theme={theme} handleScrollToTop={handleScrollToTop} />}
+      </main>
     </>
   );
 }
