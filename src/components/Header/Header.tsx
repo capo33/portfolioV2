@@ -48,11 +48,13 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 ${theme === "light" ? "light_bg" : "dark_bg"}  ${
+      className={`sticky top-0 ${
+        theme === "light" ? "light_bg" : "dark_bg"
+      } transition-colors duration-300 ${
         !top &&
         `sticky top-0 ${
           theme === "light" ? "light_bg" : "dark_bg"
-        } bg-opacity-90 backdrop-blur-sm shadow-md z-50 transition-colors duration-300`
+        } bg-opacity-90 backdrop-blur-sm shadow-md z-50 `
       }`}
     >
       <nav className='container mx-auto px-10 py-4' ref={ref}>
