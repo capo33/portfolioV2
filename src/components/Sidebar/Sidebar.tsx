@@ -7,6 +7,7 @@ import {
 } from "../../hooks";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
+import { AnchorTag } from "../../shared";
  
 // Props
 interface SidebarProps {
@@ -41,12 +42,14 @@ const Sidebar = ({
   return (
     <div
       className={`fixed ${
-        theme === "light" ? "dark_bg" : "light_bg"
-      } shadow-2xl h-screen my-4 sm:w-80 md:w-1/2
-            lg:hidden flex flex-col gap-10 p-10 duration-500
+        theme === "light" ? "light_bg " : "dark_bg"
+      } shadow-2xl shadow-slate-00 h-screen -my-14 sm:w-80 md:w-1/2
+            lg:hidden flex flex-col p-10 duration-500
             ${open ? "left-0 overflow-y-hidden" : "-left-full"}`}
     >
-      <div className='text-gray-100 text-xl'>
+      <div className={`${
+        theme === "light" ? "light_bg" : "dark_bg"
+      }  text-xl`}>
         <div className='py-2 flex items-center rounded-md'>
           <Link to='/'>Menu</Link>
         </div>
@@ -61,8 +64,8 @@ const Sidebar = ({
               key={link.id()}
             >
               <span>{link.icon}</span>
-              <span className='text-[15px] text-gray-200'>{link.text}</span>
-              <hr className='my-2 text-gray-600' />
+              <span className='text-[15px]'>{link.text}</span>
+              <hr className='my-2' />
             </Link>
           ))}
 
@@ -85,7 +88,7 @@ const Sidebar = ({
                 id='AcceptConditions'
                 className='peer sr-only [&:checked_+_span_svg[data-checked-icon]]:block [&:checked_+_span_svg[data-unchecked-icon]]:hidden'
               />
-              <span className='absolute inset-y-0 start-0 z-10 m-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-gray-400 transition-all peer-checked:start-6 peer-checked:text-green-600'>
+              <span className='absolute inset-y-0 start-0 z-10 m-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-gray-400 transition-all peer-checked:start-6 peer-checked:text-cyan-600'>
                 <svg
                   data-unchecked-icon
                   xmlns='http://www.w3.org/2000/svg'
@@ -113,30 +116,43 @@ const Sidebar = ({
                   />
                 </svg>
               </span>
-              <span className='absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500' />
+              <span className='absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-cyan-500' />
             </label>
           </div>
         </div>
+
         {/* Social icons */}
         <div className='flex items-center justify-evenly my-5'>
           {/* Github */}
-          <a
+          {/* <a
             href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
             target='_blank'
             rel='noreferrer'
             className='text-gray-200 hover:text-gray-300 '
           >
             {GitHubSVG("w-7 h-7")}
-          </a>
-          {/* LinkedIn */}
-          <a
+          </a> */}
+          <AnchorTag
+            href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
+            icon={GitHubSVG("w-7 h-7")}
+            aClass='text-gray-200 hover:text-gray-300'
+            sClass='text-gray-200 hover:text-gray-300'
+          />
+            {/* LinkedIn */}
+          {/* <a
             href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
             target='_blank'
             rel='noreferrer'
             className='text-gray-200 hover:text-gray-300'
           >
             {LinkedInSVG("w-7 h-7")}
-          </a>
+          </a> */}
+          <AnchorTag
+            href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
+            icon={LinkedInSVG("w-7 h-7")}
+            aClass=''
+            sClass=''
+          />
         </div>
       </div>
     </div>
