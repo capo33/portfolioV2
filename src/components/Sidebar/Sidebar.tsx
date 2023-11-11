@@ -43,22 +43,22 @@ const Sidebar = ({
     <div
       className={`fixed ${
         theme === "light" ? "light_bg " : "dark_bg"
-      } shadow-2xl shadow-slate-00 h-screen -my-14 sm:w-80 md:w-1/2
-            lg:hidden flex flex-col p-10 duration-500
+      } shadow-2xl shadow-slate-00 h-screen -mt-[3.2rem] sm:w-80 md:w-1/2 transition-all duration-300
+            lg:hidden flex flex-col p-10  
             ${open ? "left-0 overflow-y-hidden" : "-left-full"}`}
     >
-      <div className={`${theme === "light" ? "light_bg" : "dark_bg"}  text-xl`}>
+      <div className='text-xl'>
         <div className='py-2 flex items-center rounded-md'>
           <Link to='/'>Menu</Link>
         </div>
 
-        <hr className='my-2 text-gray-600' />
+        <hr className='my-2' />
 
-        <div >
+        <div>
           {NavBarLinks.map((link) => (
             <Link
               to={link.to}
-              className='p-2.5 mt-2 flex items-center rounded-md duration-300 cursor-pointer hover:bg-blue-600'
+              className='p-2.5 mt-2 flex items-center rounded-md duration-300 cursor-pointer hover:bg-cyan-600'
               key={link.id()}
               onClick={handleClick}
             >
