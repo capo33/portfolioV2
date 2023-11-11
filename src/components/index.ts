@@ -12,6 +12,7 @@ export { default as LighMode } from "./LighMode/LighMode";
 export { default as TimeLine } from "./TimeLine/TimeLine";
 export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
 export { default as ProjectHero } from "./ProjectHero/ProjectHero";
+export { default as ButtonScroll } from "./ButtonScroll/ButtonScroll";
 export { default as TimeLineData } from "./TimeLineData/TimeLineData";
 export { default as Technologies } from "./Technologies/Technologies";
 export { default as AboutDetails } from "./AboutDetails/AboutDetails";
