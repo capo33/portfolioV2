@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import { MitionAnimate, Modal } from "..";
 import { IProjects } from "../../interfaces";
@@ -10,8 +10,6 @@ interface CardProps {
 
 const Card = ({ item }: CardProps) => {
   const [showModal, setShowModal] = useState(false);
-
-  const menuRef = useRef<HTMLDivElement>(null);
 
   const handleShowModal = () => {
     setShowModal((prev) => !prev);
@@ -27,16 +25,13 @@ const Card = ({ item }: CardProps) => {
 
   return (
     <MitionAnimate>
-      <div
-        ref={menuRef}
-        className='rounded flex flex-col items-center justify-center light_bg'
-      >
+      <div className='rounded flex flex-col items-center justify-center light_bg'>
         <img
           className='w-full h-48 object-cover'
           src={item?.image}
           alt='Placeholder'
         />
-                
+
         {/* Project Modal */}
         {showModal ? (
           <Modal
