@@ -1,14 +1,17 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
 import { IFormData } from "../../interfaces";
+import { ThemeContext } from "../../context/ThemeContext";
 
 interface IEmailProps {
   line?: string;
 }
 
 const Email = ({ line }: IEmailProps) => {
+  const { theme } = useContext(ThemeContext);
+
   const [formData, setFormData] = useState<IFormData>({
     name: "",
     email: "",
@@ -53,18 +56,19 @@ const Email = ({ line }: IEmailProps) => {
       }
     );
     // reset the form
-    // e.target.reset();
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <form onSubmit={sendEmail} ref={form} className="w-full">
+    <form onSubmit={sendEmail} ref={form} className='w-full'>
       <div className='mb-6'>
         <h2 className='text-base text-gray-900'>{line}</h2>
       </div>
 
       <input
-        className='w-full px-3 py-2 mb-4 outline-none border rounded bg-gray-100'
+        className={`w-full px-3 py-2 mb-4 outline-none border border-cyan-500 rounded ${
+          theme === "light" ? "light_bg" : "dark_bg"
+        }`}
         type='text'
         name='name'
         id='name'
@@ -74,7 +78,9 @@ const Email = ({ line }: IEmailProps) => {
         autoComplete='nope'
       />
       <input
-        className='w-full px-3 py-2 mb-4 outline-none border rounded bg-gray-100'
+        className={`w-full px-3 py-2 mb-4 outline-none border border-cyan-500 rounded ${
+          theme === "light" ? "light_bg" : "dark_bg"
+        }`}
         type='email'
         name='email'
         id='email'
@@ -91,9 +97,16 @@ const Email = ({ line }: IEmailProps) => {
         value={formData.message}
         id='message'
         onChange={handleChanges}
-        className='block w-full px-4 mb-4 outline-none border rounded py-7 resize-none bg-gray-100'
+        className={`w-full px-3 py-2 mb-4 outline-none border border-cyan-500 rounded ${
+          theme === "light" ? "light_bg" : "dark_bg"
+        }`}
       />
-      <button type='submit' className='btn w-full px-5 py-3 text-base'>
+      <button
+        type='submit'
+        className={`btn w-full px-5 py-3 text-base ${
+          theme !== "light" ? "light_bg" : "dark_bg"
+        }`}
+      >
         Send Message
       </button>
     </form>
