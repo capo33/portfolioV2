@@ -32,7 +32,7 @@ const Marquee = ({ link }: MarqueeProps) => {
                 <img
                   src={icon.icon}
                   alt={icon.alt}
-                  className='w-10 hover:scale-125 transition-all duration-300 ease-in-out'
+                  className='w-10 light_bg rounded p-1 hover:scale-125 transition-all duration-300 ease-in-out'
                 />
               </div>
             ))}
