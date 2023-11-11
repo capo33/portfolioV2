@@ -8,10 +8,10 @@ import {
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
 import { AnchorTag } from "../../shared";
- 
+
 // Props
 interface SidebarProps {
-  open: boolean 
+  open: boolean;
   theme: string;
   setTheme: (theme: string) => void;
   handleClick: () => void;
@@ -47,21 +47,20 @@ const Sidebar = ({
             lg:hidden flex flex-col p-10 duration-500
             ${open ? "left-0 overflow-y-hidden" : "-left-full"}`}
     >
-      <div className={`${
-        theme === "light" ? "light_bg" : "dark_bg"
-      }  text-xl`}>
+      <div className={`${theme === "light" ? "light_bg" : "dark_bg"}  text-xl`}>
         <div className='py-2 flex items-center rounded-md'>
           <Link to='/'>Menu</Link>
         </div>
 
         <hr className='my-2 text-gray-600' />
 
-        <div onClick={handleClick}>
+        <div >
           {NavBarLinks.map((link) => (
             <Link
               to={link.to}
               className='p-2.5 mt-2 flex items-center rounded-md duration-300 cursor-pointer hover:bg-blue-600'
               key={link.id()}
+              onClick={handleClick}
             >
               <span>{link.icon}</span>
               <span className='text-[15px]'>{link.text}</span>
@@ -124,34 +123,23 @@ const Sidebar = ({
         {/* Social icons */}
         <div className='flex items-center justify-evenly my-5'>
           {/* Github */}
-          {/* <a
-            href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
-            target='_blank'
-            rel='noreferrer'
-            className='text-gray-200 hover:text-gray-300 '
-          >
-            {GitHubSVG("w-7 h-7")}
-          </a> */}
           <AnchorTag
             href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
             icon={GitHubSVG("w-7 h-7")}
-            aClass='text-gray-200 hover:text-gray-300'
-            sClass='text-gray-200 hover:text-gray-300'
+            aClass=''
+            sClass={`${
+              theme === "light" ? "text-light_text" : "text-dark_text"
+            } hover:text-black`}
           />
-            {/* LinkedIn */}
-          {/* <a
-            href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
-            target='_blank'
-            rel='noreferrer'
-            className='text-gray-200 hover:text-gray-300'
-          >
-            {LinkedInSVG("w-7 h-7")}
-          </a> */}
+
+          {/* LinkedIn */}
           <AnchorTag
             href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
             icon={LinkedInSVG("w-7 h-7")}
             aClass=''
-            sClass=''
+            sClass={`${
+              theme === "light" ? "text-light_text" : "text-dark_text"
+            } hover:text-[#0077b5]`}
           />
         </div>
       </div>
