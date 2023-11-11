@@ -6,7 +6,7 @@ type ThemeContextProviderProps = {
 
 type ThemeContextProps = {
   theme: string;
-  setTheme: (theme: string) => void;
+  setTheme: React.Dispatch<React.SetStateAction<string>>
 };
 
 export const ThemeContext = createContext<ThemeContextProps>({
