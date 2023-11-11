@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -8,6 +8,7 @@ import {
 } from "../../hooks";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
+import { ThemeContext } from "../../context/ThemeContext";
 
 // Props
 interface SidebarProps {
@@ -26,15 +27,13 @@ const Sidebar = ({
   toggle,
   setToggle,
 }: SidebarProps) => {
- 
+  const { toggle:colorMode } = useContext(ThemeContext);
   // to prevent scrolling when navbar is open
   usePreventScrolling(open);
-
   // to close navbar when pressed escape
   useEscapeClick(() => {
     setOpen(false);
   });
-
   // to close navbar when resized
   useWindowResize(() => {
     if (window.innerWidth > 1024) {
@@ -44,7 +43,7 @@ const Sidebar = ({
 
   return (
     <div
-      className={`fixed bg-gray-500 h-screen my-4 sm:w-80 md:w-1/2
+      className={`fixed ${colorMode? 'dark_bg': 'light_bg'} shadow-2xl h-screen my-4 sm:w-80 md:w-1/2
             lg:hidden flex flex-col gap-10 p-10 duration-500
             ${open ? "left-0 overflow-y-hidden" : "-left-full"}`}
     >
@@ -75,7 +74,7 @@ const Sidebar = ({
             <span className='mr-[18px] text-sm font-medium text-black lg:hidden '>
               Appearance
             </span>
- 
+
             <label
               htmlFor='AcceptConditions'
               className='relative h-8 w-14 cursor-pointer [-webkit-tap-highlight-color:_transparent]'
