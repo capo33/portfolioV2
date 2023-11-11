@@ -15,8 +15,8 @@ const Marquee = ({ link }: MarqueeProps) => {
     <div>
       <Link to={link}>
         <h2
-          className={`text-center text-xl font-semibold leading-8 pb-3 ${
-            theme === "light" ? "light_text" : "dark_text"
+          className={`text-center text-xl font-semibold leading-8 pb-3 transition-colors duration-300${
+            theme === "light" ? "dark_text" : "light_text"
           }`}
         >
           Technologies I been working with

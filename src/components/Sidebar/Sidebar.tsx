@@ -41,11 +41,11 @@ const Sidebar = ({
 
   return (
     <div
-      className={`fixed ${
+      className={`fixed top-0 ${
         theme === "light" ? "light_bg " : "dark_bg"
-      } shadow-2xl shadow-slate-00 h-screen -mt-[3.2rem] sm:w-80 md:w-1/2 transition-all duration-300
+      } shadow-2xl shadow-slate-00 h-screen sm:w-80 md:w-1/2 transition-all duration-300
             lg:hidden flex flex-col p-10  
-            ${open ? "left-0 overflow-y-hidden" : "-left-full"}`}
+            ${open ? "left-0 overflow-hidden" : "-left-full"}`}
     >
       <div className='text-xl'>
         <div className='py-2 flex items-center rounded-md'>
