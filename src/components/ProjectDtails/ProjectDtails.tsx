@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import { Card } from "../../components";
+import { Card, Pagination } from "../../components";
 import { IProjects } from "../../interfaces";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Tabs, portfolioProjects } from "../../data/ProjectData";
@@ -8,7 +8,7 @@ import { Tabs, portfolioProjects } from "../../data/ProjectData";
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [Items, setItems] = React.useState<IProjects[]>(portfolioProjects);
-
+  
   const { theme } = useContext(ThemeContext);
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
@@ -45,10 +45,10 @@ const ProjectDtails = () => {
                   : handleFilter
               }
               className={`inline-flex items-center justify-center px-2 lg:px-4 py-1 rounded transition duration-100 ${
-                theme ==='light' ? "hover:dark_bg" : "hover:light_bg"
+                theme === "light" ? "hover:dark_bg" : "hover:light_bg"
               } ${
                 activeTab === tab.name
-                  ? `${theme ==='dark' ? "light_bg" : "dark_bg"}`
+                  ? `${theme === "dark" ? "light_bg" : "dark_bg"}`
                   : ""
               }`}
             >
@@ -64,6 +64,9 @@ const ProjectDtails = () => {
         {Items.map((item) => {
           return <Card item={item} key={item.id()} />;
         })}
+      </div>
+      <div className='flex justify-center'>
+        <Pagination />
       </div>
     </section>
   );
