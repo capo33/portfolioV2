@@ -4,6 +4,7 @@ export { default as Modal } from "./Modal/Modal";
 export { default as Email } from "./Email/Email";
 export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/Header";
+export { default as Button } from "./Button/Button";
 export { default as Loader } from "./Loader/Loader";
 export { default as Marquee } from "./Marquee/Marquee";
 export { default as Sidebar } from "./Sidebar/Sidebar";

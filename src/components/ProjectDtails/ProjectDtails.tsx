@@ -1,10 +1,9 @@
 import React, { useState, useContext } from "react";
 
-import { Loader, Card } from "..";
+import { Loader, Card, Button } from "..";
 import { IProjects } from "../../interfaces";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Tabs, portfolioProjects } from "../../data/ProjectData";
-import Button from "../Button/Button";
 
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
@@ -43,7 +42,7 @@ const ProjectDtails = () => {
   if (loadings) {
     return <Loader />;
   }
-  
+
   clearInterval(timeLoader);
 
   return (
