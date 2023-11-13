@@ -8,8 +8,11 @@ import { Tabs, portfolioProjects } from "../../data/ProjectData";
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [items, setItems] = useState<IProjects[]>(portfolioProjects);
-  // const [currentPage, setCurrentPage] = useState(1);
+  const [numOfPages, setNumOfPages] = useState<number>(8);
 
+  const currentProjects = items.slice(0, numOfPages);
+
+ 
   const { theme } = useContext(ThemeContext);
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
@@ -62,7 +65,7 @@ const ProjectDtails = () => {
 
       {/* Projects */}
       <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 g:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
-        {items.map((item) => {
+        {currentProjects.map((item) => {
           return <Card item={item} key={item.id()} />;
         })}
       </div>
