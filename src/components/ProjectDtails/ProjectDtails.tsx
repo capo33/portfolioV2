@@ -4,6 +4,7 @@ import { Loader, Card } from "..";
 import { IProjects } from "../../interfaces";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Tabs, portfolioProjects } from "../../data/ProjectData";
+import Button from "../Button/Button";
 
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
@@ -40,12 +41,9 @@ const ProjectDtails = () => {
   }, 300);
 
   if (loadings) {
-    return (
-      <div className='flex justify-center'>
-        <Loader />
-      </div>
-    );
+    return <Loader />;
   }
+  
   clearInterval(timeLoader);
 
   return (
@@ -89,12 +87,7 @@ const ProjectDtails = () => {
       </div>
       <div className='flex justify-center'>
         {currentProjects.length !== items.length ? (
-          <button
-            className='py-2.5 px-5 me-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100  inline-flex items-center outline-none'
-            onClick={setLoadMore}
-          >
-            Load More
-          </button>
+          <Button onClick={setLoadMore}>Load More</Button>
         ) : null}
       </div>
     </section>
