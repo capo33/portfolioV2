@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import { Card } from "../../components";
+import { Loader, Card } from "..";
 import { IProjects } from "../../interfaces";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Tabs, portfolioProjects } from "../../data/ProjectData";
@@ -8,15 +8,12 @@ import { Tabs, portfolioProjects } from "../../data/ProjectData";
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [items, setItems] = useState<IProjects[]>(portfolioProjects);
+  const [loadings, setLoadings] = useState<boolean>(false);
   const [numOfPages, setNumOfPages] = useState<number>(8);
-  
+
   const { theme } = useContext(ThemeContext);
 
   const currentProjects = items.slice(0, numOfPages);
-
-  const setLoadMore = () => {
-    setNumOfPages(numOfPages + numOfPages);
-   };
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
     const target = e.target as HTMLSpanElement;
@@ -32,6 +29,24 @@ const ProjectDtails = () => {
     setItems(updatedItems);
     setActiveTab(value);
   };
+
+  const setLoadMore = () => {
+    setNumOfPages(numOfPages + numOfPages);
+    setLoadings(true);
+  };
+
+  const timeLoader = setTimeout(() => {
+    setLoadings(false);
+  }, 300);
+
+  if (loadings) {
+    return (
+      <div className='flex justify-center'>
+        <Loader />
+      </div>
+    );
+  }
+  clearInterval(timeLoader);
 
   return (
     <section className='space-y-12 lg:space-y-12 lg:pt-10'>
@@ -75,7 +90,7 @@ const ProjectDtails = () => {
       <div className='flex justify-center'>
         {currentProjects.length !== items.length ? (
           <button
-            className='bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded'
+            className='py-2.5 px-5 me-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100  inline-flex items-center outline-none'
             onClick={setLoadMore}
           >
             Load More
