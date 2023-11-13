@@ -1,14 +1,15 @@
 import React, { useState, useContext } from "react";
 
-import { Card, Pagination } from "../../components";
+import { Card } from "../../components";
 import { IProjects } from "../../interfaces";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Tabs, portfolioProjects } from "../../data/ProjectData";
 
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
-  const [Items, setItems] = React.useState<IProjects[]>(portfolioProjects);
-  
+  const [items, setItems] = useState<IProjects[]>(portfolioProjects);
+  // const [currentPage, setCurrentPage] = useState(1);
+
   const { theme } = useContext(ThemeContext);
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
@@ -61,12 +62,9 @@ const ProjectDtails = () => {
 
       {/* Projects */}
       <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 g:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
-        {Items.map((item) => {
+        {items.map((item) => {
           return <Card item={item} key={item.id()} />;
         })}
-      </div>
-      <div className='flex justify-center'>
-        <Pagination />
       </div>
     </section>
   );
