@@ -9,11 +9,14 @@ const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [items, setItems] = useState<IProjects[]>(portfolioProjects);
   const [numOfPages, setNumOfPages] = useState<number>(8);
+  
+  const { theme } = useContext(ThemeContext);
 
   const currentProjects = items.slice(0, numOfPages);
 
- 
-  const { theme } = useContext(ThemeContext);
+  const setLoadMore = () => {
+    setNumOfPages(numOfPages + numOfPages);
+   };
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
     const target = e.target as HTMLSpanElement;
@@ -68,6 +71,16 @@ const ProjectDtails = () => {
         {currentProjects.map((item) => {
           return <Card item={item} key={item.id()} />;
         })}
+      </div>
+      <div className='flex justify-center'>
+        {currentProjects.length !== items.length ? (
+          <button
+            className='bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded'
+            onClick={setLoadMore}
+          >
+            Load More
+          </button>
+        ) : null}
       </div>
     </section>
   );
