@@ -12,16 +12,16 @@ import {
 
 const About = () => {
   return (
-    <section className='container mx-auto px-10 space-y-12 md:space-y-16 lg:space-y-20 py-10'>
-      <MitionAnimate>
+    <MitionAnimate>
+      <section className='container mx-auto px-10 space-y-12 md:space-y-16 lg:space-y-20 py-10'>
         <AboutDetails {...AboutMainObj} />
         <TimeLine
           educaction={...EducactionData}
           workExperience={WorkExperienceData}
         />
         <Technologies />
-      </MitionAnimate>
-    </section>
+      </section>
+    </MitionAnimate>
   );
 };
 
