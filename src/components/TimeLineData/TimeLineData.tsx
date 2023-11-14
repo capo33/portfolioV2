@@ -10,6 +10,7 @@ interface TimeLineDataProps {
 
 const TimeLineData = ({ desc, time, what, where }: TimeLineDataProps) => {
   const { theme } = useContext(ThemeContext);
+
   return (
     <div className='px-3 py-1'>
       <div className='relative border-l border-gray-200 hover:border-cyan-500 transition duration-100'>
@@ -32,13 +33,13 @@ const TimeLineData = ({ desc, time, what, where }: TimeLineDataProps) => {
           <h3 className='flex items-center mb-1 text-lg font-semibold'>
             {where}
           </h3>
-          <h4 className='text-base font-normal'>{what}</h4>
+          <h4>{what}</h4>
           <time className='tracking-[2px] block mb-2 text-sm font-normal leading-none text-gray-400'>
             {time}
           </time>
           <p
-            className={`text-base font-normal ${
-              theme === "light"  ? "sub_text_dark" : "sub_text_light"
+            className={`${
+              theme === "light" ? "sub_text_dark" : "sub_text_light"
             } `}
           >
             {desc}
