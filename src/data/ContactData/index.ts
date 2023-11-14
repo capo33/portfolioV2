@@ -1,6 +1,6 @@
 import { IHomeMainObj } from "../../interfaces";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
-import GetINTouch from "../../assets/images/getInTouch.gif";
+import Contact from "../../assets/images/contact.png";
 
 export const ContactObj: IHomeMainObj<string> = {
   imgStart: false,
@@ -13,5 +13,5 @@ export const ContactObj: IHomeMainObj<string> = {
   secondLabel: "something else",
   firstIcon: GitHubSVG("w-4 h-4 mr-2"),
   secondIcon: GitHubSVG("w-4 h-4 mr-2"),
-  img: GetINTouch,
+  img: Contact,
 };

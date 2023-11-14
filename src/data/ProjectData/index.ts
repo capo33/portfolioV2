@@ -6,7 +6,7 @@ import {
 } from "../../assets/svg/TabsSVG";
 import { uuid } from "../../utils/uuid";
 import { IProjectHero, IProjects, ITab } from "../../interfaces";
-import ProjectHero from "../../assets/images/projectHero.png";
+import ProjectHero from "../../assets/svg/hero.svg";
 import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
 
 // Array of Projects
