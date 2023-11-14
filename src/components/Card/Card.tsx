@@ -42,7 +42,7 @@ const Card = ({ item }: CardProps) => {
 
       <button
         onClick={handleShowModal}
-        className='p-3 font-semibold bg-[#dcdcdc] hover:bg-[#bdbdbd] outline-none w-full'
+        className='p-3 font-semibold bg-cyan-500 hover:bg-cyan-600 outline-none w-full'
       >
         {item?.title}
       </button>
