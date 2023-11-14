@@ -23,7 +23,7 @@ const Marquee = ({ link }: MarqueeProps) => {
         </h2>
         <M
           pauseOnHover={true}
-          speed={100}
+          speed={50}
           className={`${theme !== "light" && "bg-[#181818]  shadow-2xl rounded"}`}
         >
           <div className='pt-5 grid grid-cols-12 gap-x-8'>
@@ -32,7 +32,7 @@ const Marquee = ({ link }: MarqueeProps) => {
                 <img
                   src={icon.icon}
                   alt={icon.alt}
-                  className='w-10 light_bg rounded p-1 hover:scale-125 transition-all duration-300 ease-in-out'
+                  className='w-12 light_bg rounded p-1 hover:scale-125 transition-all duration-300 ease-in-out'
                 />
               </div>
             ))}
