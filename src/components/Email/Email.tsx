@@ -66,7 +66,7 @@ const Email = ({ line }: IEmailProps) => {
       </div>
 
       <input
-        className={`w-full px-3 py-2 mb-4 outline-none border border-cyan-500 rounded ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
         type='text'
@@ -78,7 +78,7 @@ const Email = ({ line }: IEmailProps) => {
         autoComplete='nope'
       />
       <input
-        className={`w-full px-3 py-2 mb-4 outline-none border border-cyan-500 rounded ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
         type='email'
@@ -97,7 +97,7 @@ const Email = ({ line }: IEmailProps) => {
         value={formData.message}
         id='message'
         onChange={handleChanges}
-        className={`w-full px-3 py-2 mb-4 outline-none border border-cyan-500 rounded ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
       />
