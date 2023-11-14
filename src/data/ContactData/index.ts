@@ -1,6 +1,6 @@
+import { Send } from "../../assets/images";
 import { IHomeMainObj } from "../../interfaces";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
-import Contact from "../../assets/images/send.png";
 
 export const ContactObj: IHomeMainObj<string> = {
   imgStart: false,
@@ -13,5 +13,5 @@ export const ContactObj: IHomeMainObj<string> = {
   secondLabel: "something else",
   firstIcon: GitHubSVG("w-4 h-4 mr-2"),
   secondIcon: GitHubSVG("w-4 h-4 mr-2"),
-  img: Contact,
+  img: Send,
 };

@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { SharedSection } from "../../shared";
 import { IAboutMainObj } from "../../interfaces";
-import { SuccessSVG } from "../../assets/svg/AboutSVG";
 import { ThemeContext } from "../../context/ThemeContext";
 
 const AboutDetails = ({
@@ -20,8 +19,8 @@ const AboutDetails = ({
       img={img}
       imgStart
     >
-      <div className='  xl:text-lg md:text-base'>
-        <ul className=' md:space-y-1 lg:space-y-2 xl:space-y-4'>
+      <div className='xl:text-lg md:text-base'>
+        <ul className='md:space-y-1 lg:space-y-2 xl:space-y-4'>
           {description &&
             description.map((item) => (
               <li
@@ -30,7 +29,6 @@ const AboutDetails = ({
                 }`}
                 key={item.id}
               >
-                <span className='text-lg'>{SuccessSVG}</span>
                 {item.title}
               </li>
             ))}

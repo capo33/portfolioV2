@@ -1,6 +1,6 @@
+import CV from '../../assets/pdf/CV.pdf'
 import { SharedSection, AnchorTag } from "../../shared";
 import IHomeMainObj from "../../interfaces/HomeInterface";
-import CV from '../../assets/pdf/CV.pdf'
 
 const Hero = ({
   firstHeadLine,
