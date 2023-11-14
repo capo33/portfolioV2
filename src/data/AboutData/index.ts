@@ -1,4 +1,4 @@
-import Capo from "../../assets/images/coding.gif";
+import Capo from "../../assets/svg/hero.svg";
 import {
   JsSVG,
   AwsSVG,
@@ -68,11 +68,7 @@ const AboutMainObj: IAboutMainObj = {
     },
     {
       id: 7,
-      title: `Currently I'm learning AWS, Python and .NET`,
-    },
-    {
-      id: 8,
-      title: "For fun I use C# and Unity to develop games.",
+      title: `Currently I'm learning AWS, Python, for fun I use C# and Unity to develop games`,
     },
   ],
   img: Capo,

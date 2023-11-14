@@ -1,6 +1,6 @@
 import { IHomeMainObj } from "../../interfaces";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
-import Contact from "../../assets/images/contact.png";
+import Contact from "../../assets/images/send.png";
 
 export const ContactObj: IHomeMainObj<string> = {
   imgStart: false,

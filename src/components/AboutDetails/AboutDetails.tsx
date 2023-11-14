@@ -21,17 +21,17 @@ const AboutDetails = ({
       imgStart
     >
       <div className='  xl:text-lg md:text-base'>
-        <ul className='space-y-3'>
+        <ul className=' md:space-y-1 lg:space-y-2 xl:space-y-4'>
           {description &&
             description.map((item) => (
               <li
-                className={`flex gap-3 lg:text-lg items-start p-1 transition duration-100 rounded ${
+                className={`flex gap-2 p-1 transition duration-100 rounded ${
                   theme !== "light" ? "hover:light_bg" : "hover:dark_bg"
                 }`}
                 key={item.id}
               >
                 <span className='text-lg'>{SuccessSVG}</span>
-                <span className='text-base'>{item.title}</span>
+                {item.title}
               </li>
             ))}
         </ul>

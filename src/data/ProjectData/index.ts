@@ -5,9 +5,9 @@ import {
   TableSVG,
 } from "../../assets/svg/TabsSVG";
 import { uuid } from "../../utils/uuid";
-import { IProjectHero, IProjects, ITab } from "../../interfaces";
-import ProjectHero from "../../assets/svg/hero.svg";
+import ProjectHero from "../../assets/svg/task-management.svg";
 import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
+import { IProjectHero, IProjects, ITab } from "../../interfaces";
 
 // Array of Projects
 export const portfolioProjects: IProjects[] = [

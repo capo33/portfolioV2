@@ -1,4 +1,4 @@
-import HeroImage from "../../assets/svg/coding.svg";
+import HeroImage from "../../assets/images/coding.gif";
 import SHowcaseImage from "../../assets/images/hero.png";
 import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
 import { GitHubSVG, ResumeSVG } from "../../assets/svg/NavSVG";
