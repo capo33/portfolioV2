@@ -813,10 +813,10 @@ export const ProjectHeroObj: IProjectHero = {
   firstLabel: "View on Github",
   icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
   topLine: "Projects",
-  firstHeadLine: "My",
-  secondHeadLine: " Deployed Projects",
+  firstHeadLine: "Most Of My Deployed",
+  secondHeadLine: " Projects",
   description:
-    "Here are most of the deployed projects I've worked on such as Front-end & Full-Stack projects .. Want to see more? Check out my GitHub repository!",
+    "These projects will show you my web development skills and knowledge. It shows you how I got started and how my skills have improved over time. I used different technologies and tools to build these projects ...Want to see more? Check out my GitHub repository.",
   img: ProjectHero,
 };
 
