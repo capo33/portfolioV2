@@ -48,9 +48,9 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 ${
+      className={`sticky top-0 transition-colors duration-300 ${
         theme === "light" ? "light_bg" : "dark_bg"
-      } transition-colors duration-300 ${
+      }  ${
         !top &&
         `sticky top-0 ${
           theme === "light" ? "light_bg" : "dark_bg"
@@ -66,7 +66,17 @@ const Header = () => {
 
           <div className='flex md:order-2'>
             {/* Light Switch */}
-            <LighMode aclass='hide_icon' />
+
+            <div className='flex items-center justify-around  m-auto  rounded-lg p-2'>
+              <span
+                className={`mr-[18px] text-sm font-medium transition-colors duration-300 ${
+                  theme != "light" ? "light_text" : "dark_text"
+                } lg:block md:hidden`}
+              >
+                Theme
+              </span>
+              <LighMode aclass='hide_icon' />
+            </div>
 
             {/* Menu Icons */}
             <button type='button' className='lg:hidden' onClick={handleClick}>

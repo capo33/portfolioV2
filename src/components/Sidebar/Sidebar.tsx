@@ -5,10 +5,10 @@ import {
   usePreventScrolling,
   useWindowResize,
 } from "../../hooks";
+import { LighMode } from "..";
+import { AnchorTag } from "../../shared";
 import { NavBarLinks } from "../../data/NavbarLinks";
 import { GitHubSVG, LinkedInSVG } from "../../assets/svg/NavSVG";
-import { AnchorTag } from "../../shared";
-import { LighMode } from "..";
 
 // Props
 interface SidebarProps {
