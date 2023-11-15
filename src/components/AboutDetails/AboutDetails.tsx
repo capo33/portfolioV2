@@ -17,8 +17,7 @@ const AboutDetails = ({
       firstHeadLine={firstHeadLine}
       secondHeadLine={secondHeadLine}
       img={img}
-      // imgStart
-    >
+     >
       <div className='xl:text-lg md:text-base'>
         <div className='space-y-4'>
           {description &&
