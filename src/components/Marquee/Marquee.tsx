@@ -24,7 +24,7 @@ const Marquee = ({ link }: MarqueeProps) => {
         <M
           pauseOnHover={true}
           speed={50}
-          className={`${theme !== "light" && "bg-[#181818]  shadow-2xl rounded"}`}
+          className={`${theme !== "light" && "bg-[#121212]"}`}
         >
           <div className='pt-5 grid grid-cols-12 gap-x-8'>
             {Icons.map((icon) => (
