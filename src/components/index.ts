@@ -12,6 +12,7 @@ export { default as TechCard } from "./TechCard/TechCard";
 export { default as Showcase } from "./Showcase/Showcase";
 export { default as LighMode } from "./LighMode/LighMode";
 export { default as TimeLine } from "./TimeLine/TimeLine";
+export { default as ProjectTabs } from "./ProjectTabs/ProjectTabs";
 export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
 export { default as ProjectHero } from "./ProjectHero/ProjectHero";
 export { default as ButtonScroll } from "./ButtonScroll/ButtonScroll";

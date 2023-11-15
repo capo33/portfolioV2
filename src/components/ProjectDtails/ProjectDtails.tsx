@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 
-import { Loader, Card, Button } from "..";
 import { IProjects } from "../../interfaces";
+import { Loader, Card, Button, ProjectTabs } from "..";
 import { ThemeContext } from "../../context/ThemeContext";
-import { Tabs, portfolioProjects } from "../../data/ProjectData";
+import { portfolioProjects } from "../../data/ProjectData";
 
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
@@ -52,30 +52,16 @@ const ProjectDtails = () => {
           theme === "dark" ? "light_text" : "dark_text"
         }`}
       >
-        {Tabs.map((tab) => (
-          <li key={tab.id}>
-            <button
-              onClick={
-                tab.name === Tabs[0].name
-                  ? () => {
-                      setItems(portfolioProjects);
-                      setActiveTab("All");
-                    }
-                  : handleFilter
-              }
-              className={`inline-flex items-center justify-center px-2 lg:px-4 py-1 rounded transition duration-100 ${
-                theme === "light" ? "hover:dark_bg" : "hover:light_bg"
-              } ${
-                activeTab === tab.name
-                  ? `${theme === "dark" ? "light_bg" : "dark_bg"}`
-                  : ""
-              }`}
-            >
-              {tab.icon}
-              {tab.name}
-            </button>
-          </li>
-        ))}
+        <ProjectTabs
+          {...{
+            activeTab,
+            handleFilter,
+            setActiveTab,
+            setItems,
+            theme,
+            portfolioProjects,
+          }}
+        />
       </ul>
 
       {/* Projects */}
