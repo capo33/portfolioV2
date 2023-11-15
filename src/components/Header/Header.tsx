@@ -61,7 +61,7 @@ const Header = () => {
         <div className='flex flex-wrap items-center justify-between mx-auto'>
           <Link to='/' className='flex items-center gap-2'>
             {SpiderSVG("h-6 w-6 text-cyan-500")}
-            <span className='text-2xl font-semibold whitespace-nowrap'>Mo</span>
+            <span className='text-2xl font-bold whitespace-nowrap'>Mo</span>
           </Link>
 
           <div className='flex md:order-2'>

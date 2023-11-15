@@ -4,9 +4,9 @@ import { Hero, Marquee, MitionAnimate, Showcase } from "../../components";
 const Home = () => {
   return (
     <MitionAnimate>
-      <section className='container mx-auto px-10 space-y-12 md:space-y-16 lg:space-y-20 py-10'>
+      <section className='container mx-auto px-10'>
         <Hero {...HeroObj} />
-        <div className='py-12'>
+        <div className='md:py-12'>
           <Marquee link='/about' />
         </div>
         <Showcase {...ShowcaseObj} />
