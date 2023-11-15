@@ -28,7 +28,10 @@ const Modal = ({ showModal, handleShowModal, item }: ModalPopupProps) => {
                   <p className='my-4 dark_text text-lg font-semibold'>
                     <span className='block'>Tech Stack</span>
                     {item.description.map((desc) => (
-                      <span key={desc} className='bg-cyan-100 hover:bg-cyan-200 dark_text text-xs font-semibold me-2 px-2.5 py-0.5 rounded border border-cyan-400 inline-flex items-center justify-center'>
+                      <span
+                        key={desc}
+                        className='bg-cyan-100 hover:bg-cyan-200 dark_text text-xs font-semibold me-2 px-2.5 py-0.5 rounded border border-cyan-400 inline-flex items-center justify-center'
+                      >
                         {desc}
                       </span>
                     ))}
@@ -37,15 +40,12 @@ const Modal = ({ showModal, handleShowModal, item }: ModalPopupProps) => {
                     <div className=' '>
                       {item.links.map((link) => {
                         return (
-                          <div className='pt-2 flex flex-col'
-                            key={link.id()}
-                          >
+                          <div className='pt-2 flex flex-col' key={link.id()}>
                             <AnchorTag
                               href={link.link}
                               icon={link.icon}
                               label={link.title}
-                            
- />
+                            />
                           </div>
                         );
                       })}
