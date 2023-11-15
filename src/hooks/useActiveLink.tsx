@@ -5,8 +5,6 @@ const useActiveLink = () => {
 
   let subpage = pathname.split("/")[1];
 
-  console.log(subpage);
-
   const linkness = (type: string) => {
     if (subpage === "") {
       subpage = "";
