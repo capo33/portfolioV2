@@ -20,30 +20,32 @@ const Modal = ({ showModal, handleShowModal, item }: ModalPopupProps) => {
               <div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'>
                 {/*header*/}
                 <div className='flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t'>
-                  <h3 className='text-xl font-semibold'>Project Details</h3>
+                  <h3 className='text-xl font-semibold'>{item.title}</h3>
                 </div>
 
                 {/*body*/}
                 <div className='relative p-6 flex-auto'>
                   <p className='my-4 dark_text text-lg font-semibold'>
-                    Tech Stack:
-                    {item.description.map((desc) => {
-                      return <span>{desc}</span>;
-                    })}
+                    <span className='block'>Tech Stack</span>
+                    {item.description.map((desc) => (
+                      <span className='bg-cyan-100 hover:bg-cyan-200 dark_text text-xs font-semibold me-2 px-2.5 py-0.5 rounded border border-cyan-400 inline-flex items-center justify-center'>
+                        {desc}
+                      </span>
+                    ))}
                   </p>
                   <div className=''>
                     <div className=' '>
                       {item.links.map((link) => {
                         return (
-                          <div
-                            className={`flex flex-col justify-start py-1.5 duration-100`}
+                          <div className='pt-2 flex flex-col'
                             key={link.id()}
                           >
                             <AnchorTag
                               href={link.link}
                               icon={link.icon}
                               label={link.title}
-                            />
+                            
+ />
                           </div>
                         );
                       })}
