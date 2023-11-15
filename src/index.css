@@ -24,20 +24,20 @@ body {
     @apply text-[#121212];
   }
   .light_text {
-    @apply text-[#fffffa];
+    @apply text-[#FAFAFA];
   }
 
   .dark_bg {
-    @apply bg-[#121212] text-[#fffffa];
+    @apply bg-[#1e1e1e] text-[#FAFAFA];
   }
   .light_bg {
-    @apply bg-[#fffffa] text-[#121212];
+    @apply bg-[#FAFAFA] text-[#1e1e1e];
   }
   .dark_footer {
-    @apply bg-[#18191a] text-[#efefef];
+    @apply bg-[#121212] text-[#FAFAFA];
   }
   .light_footer {
-    @apply bg-[#eeeeee] text-[#292929];
+    @apply bg-[#eeeeee] text-[#121212];
   }
   .sub_text_dark {
     @apply text-[#292929];

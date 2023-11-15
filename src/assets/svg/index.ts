@@ -1,4 +1,4 @@
-// should be imported like this: import { JsSVG } from "../../../public/icons/js.svg"; but it recommends to use the absolute path, so I did it like this: 
+// should be imported like this: import { JsSVG } from "../../../public/icons/js.svg"; but it recommends to use the absolute path, so I did it like this:
 import JsSVG from "/icons/js.svg";
 import GitSVG from "/icons/git.svg";
 import AwsSVG from "/icons/aws.svg";
@@ -25,6 +25,11 @@ import PostgresqlSVG from "/icons/postgresql.svg";
 import MaterialUISVG from "/icons/material-ui.svg";
 import GitHubActionsSVG from "/icons/githubactions.svg";
 import StyledComponentSVG from "/icons/styled-components.svg";
+
+import Hero from "./hero.svg";
+import MailSent from "./mail_sent.svg";
+import Working from "./working.svg";
+import TaskManager from "./task-management.svg";
 
 export {
   JsSVG,
@@ -53,4 +58,9 @@ export {
   PostgresqlSVG,
   GitHubActionsSVG,
   StyledComponentSVG,
+  // Pages Images
+  Hero,
+  Working,
+  MailSent,
+  TaskManager,
 };

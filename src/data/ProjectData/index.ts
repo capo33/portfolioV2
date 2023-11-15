@@ -5,7 +5,7 @@ import {
   TableSVG,
 } from "../../assets/svg/TabsSVG";
 import { uuid } from "../../utils/uuid";
-import ProjectHero from "../../assets/svg/task-management.svg";
+import { TaskManager } from "../../assets/svg";
 import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
 import { IProjectHero, IProjects, ITab } from "../../interfaces";
 
@@ -817,7 +817,7 @@ export const ProjectHeroObj: IProjectHero = {
   secondHeadLine: " Projects",
   description:
     "These projects will show you my web development skills and knowledge. It shows you how I got started and how my skills have improved over time. I used different technologies and tools to build these projects ...Want to see more? Check out my GitHub repository.",
-  img: ProjectHero,
+  img: TaskManager,
 };
 
 export const Tabs: ITab[] = [

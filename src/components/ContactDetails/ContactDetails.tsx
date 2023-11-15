@@ -16,7 +16,7 @@ const ContactDetails = ({
       secondHeadLine={secondHeadLine}
       img={img}
       description={description}
-      imgStart={true}
+      // imgStart={true}
     >
       <Email line='Please send message for futher information!' />
     </SharedSection>

@@ -1,9 +1,10 @@
-import Capo from "../../assets/svg/hero.svg";
 import {
   JsSVG,
   AwsSVG,
+  GitSVG,
   NetSVG,
   SassSVG,
+  Working,
   NodeSVG,
   ReactSVG,
   UnitySVG,
@@ -25,7 +26,6 @@ import {
   PostgresqlSVG,
   GitHubActionsSVG,
   StyledComponentSVG,
-  GitSVG,
 } from "../../assets/svg";
 import { IAboutMainObj, IQualification, ITechIcons } from "../../interfaces";
 
@@ -71,7 +71,7 @@ const AboutMainObj: IAboutMainObj = {
       title: `Currently I'm learning AWS, Python, for fun I use C# and Unity to develop games`,
     },
   ],
-  img: Capo,
+  img: Working,
 };
 
 // Qualification

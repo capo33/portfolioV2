@@ -25,7 +25,7 @@ const Section = ({
   return (
     <section>
       <div
-        className={`items-center lg:flex pb-10 ${imgStart && "flex-row-reverse"} `}
+        className={`items-center lg:flex pb-10 ${imgStart && "flex-row-reverse"} gap-5`}
       >
         <div className='flex-1'>
           <span className='font-semibold text-lg'>
@@ -36,14 +36,14 @@ const Section = ({
             {firstHeadLine}
             <span className='text-cyan-500'>{secondHeadLine}</span>
           </h2>
-          <p className={`mb-8 lg:text-xl ${theme ==='light'? 'sub_text_dark': 'sub_text_light'}`}>{description} </p>
+          <p className={`mb-8 lg:text-lg ${theme ==='light'? 'sub_text_dark': 'sub_text_light'}`}>{description} </p>
 
           <div className='items-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start'>
             {children}
           </div>
         </div>
         <div className='flex-1 text-center flex justify-center py-10 lg:py-0'>
-          <img src={img} className='object-cover' />
+          <img src={img} className='object-cover w-full' />
         </div>
       </div>
     </section>
