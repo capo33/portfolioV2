@@ -1,19 +1,15 @@
 import React, { useState, useContext } from "react";
 
+import { Card, ProjectTabs } from "..";
 import { IProjects } from "../../interfaces";
-import { Loader, Card, Button, ProjectTabs } from "..";
 import { ThemeContext } from "../../context/ThemeContext";
 import { portfolioProjects } from "../../data/ProjectData";
 
 const ProjectDtails = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
   const [items, setItems] = useState<IProjects[]>(portfolioProjects);
-  const [loadings, setLoadings] = useState<boolean>(false);
-  const [numOfPages, setNumOfPages] = useState<number>(8);
 
   const { theme } = useContext(ThemeContext);
-
-  const currentProjects = items.slice(0, numOfPages);
 
   const handleFilter = (e: React.MouseEvent<HTMLSpanElement>) => {
     const target = e.target as HTMLSpanElement;
@@ -29,21 +25,6 @@ const ProjectDtails = () => {
     setItems(updatedItems);
     setActiveTab(value);
   };
-
-  const setLoadMore = () => {
-    setNumOfPages(numOfPages + numOfPages);
-    setLoadings(true);
-  };
-
-  const timeLoader = setTimeout(() => {
-    setLoadings(false);
-  }, 300);
-
-  if (loadings) {
-    return <Loader />;
-  }
-
-  clearInterval(timeLoader);
 
   return (
     <section className='space-y-12 lg:space-y-12 lg:pt-10'>
@@ -67,14 +48,9 @@ const ProjectDtails = () => {
 
       {/* Projects */}
       <div className='mx-auto grid container grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 g:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
-        {currentProjects.map((item) => {
+        {items.map((item) => {
           return <Card item={item} key={item.id()} />;
         })}
-      </div>
-      <div className='flex justify-center'>
-        {currentProjects.length !== items.length ? (
-          <Button onClick={setLoadMore}>Load More</Button>
-        ) : null}
       </div>
     </section>
   );
