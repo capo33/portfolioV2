@@ -1,6 +1,6 @@
 interface ButtonScrollProps {
-  handleScrollToTop: () => void;
   theme: string;
+  handleScrollToTop: () => void;
 }
 const ButtonScroll = ({ handleScrollToTop ,theme}: ButtonScrollProps) => {
   return (

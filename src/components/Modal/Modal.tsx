@@ -26,8 +26,10 @@ const Modal = ({ showModal, handleShowModal, item }: ModalPopupProps) => {
                 {/*body*/}
                 <div className='relative p-6 flex-auto'>
                   <p className='my-4 dark_text text-lg font-semibold'>
-                    Tech Stack:{" "}
-                    <span className='font-normal'>{item.description}</span>
+                    Tech Stack:
+                    {item.description.map((desc) => {
+                      return <span>{desc}</span>;
+                    })}
                   </p>
                   <div className=''>
                     <div className=' '>

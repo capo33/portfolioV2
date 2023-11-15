@@ -10,6 +10,6 @@ export default interface IProject {
   tag: string;
   image: string;
   title: string;
-  description: string;
+  description: string[];
   links: IIProjectLinks[];
 }

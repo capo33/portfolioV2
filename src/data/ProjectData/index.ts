@@ -16,7 +16,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/crypto.png",
     title: "Crypto Tracker",
-    description: "React - Redux-toolkit - Typescript - MUI",
+    description: ["React", "Redux-toolkit", "Typescript", "MUI"],
     links: [
       {
         id: uuid,
@@ -37,7 +37,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/data-company.png",
     title: "Data Company",
-    description: "React - Styled-components - Javascript",
+    description: ["React", "Styled-components", "Javascript"],
     links: [
       {
         id: uuid,
@@ -58,7 +58,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/country-api.png",
     title: "Country API",
-    description: "React - Redux - TypeScript - Rest API",
+    description: ["React", "Redux", "TypeScript", "Rest API"],
     links: [
       {
         id: uuid,
@@ -79,7 +79,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/delta.png",
     title: "Delta Company",
-    description: "React - Styled-components - Javascript",
+    description: ["React", "Styled-components", "Javascript"],
     links: [
       {
         id: uuid,
@@ -100,7 +100,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/fakeshop.png",
     title: "Fake Shop",
-    description: "React - Redux - Javascript - Rest API",
+    description: ["React", "Redux", "Javascript", "Rest API"],
     links: [
       {
         id: uuid,
@@ -121,7 +121,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/ultra.png",
     title: "Ultra Company",
-    description: "React - Styled-components - Javascript",
+    description: ["React", "Styled-components", "Javascript"],
     links: [
       {
         id: uuid,
@@ -142,7 +142,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/pokemon2.png",
     title: "Pokemon Evolution",
-    description: "React - TypeScript - Rest API",
+    description: ["React", "TypeScript", "Rest API"],
     links: [
       {
         id: uuid,
@@ -158,33 +158,12 @@ export const portfolioProjects: IProjects[] = [
       },
     ],
   },
-  // {
-  //   id: uuid,
-  //   tag: "Fullstack",
-  //   image: "image/corner_blog.png",
-  //   title: "Corner Blog",
-  //   description: "React - NodeJS - MongoDB - TypeScript - TailwindCSS",
-  //   links: [
-  //     {
-  //       id: uuid,
-  //       link: "https://corner-blog.onrender.com/",
-  //       icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Live Demo",
-  //     },
-  //     {
-  //       id: uuid,
-  //       link: "https://github.com/capo33/blog-backend",
-  //       icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Source Code"
-  //     },
-  //   ],
-  // },
   {
     id: uuid,
     tag: "Fullstack",
     image: "image/socialnetwork.png",
     title: "Social Network",
-    description: "React - NodeJS - MongoDB - TypeScript - MUI",
+    description: ["React", "NodeJS", "MongoDB", "TypeScript", "MUI"],
     links: [
       {
         id: uuid,
@@ -205,7 +184,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/yupfood.png",
     title: "Yupfood",
-    description: "React - NodeJS - MongoDB - TypeScript - Bootstrap",
+    description: ["React", "NodeJS", "MongoDB", "TypeScript", "Bootstrap"],
     links: [
       {
         id: uuid,
@@ -226,7 +205,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/Q-Shop.png",
     title: "Q-Shop",
-    description: "React - NodeJS - MongoDB - Bootstrap - Paypal",
+    description: ["React", "NodeJS", "MongoDB", "Bootstrap", "Paypal"],
     links: [
       {
         id: uuid,
@@ -247,7 +226,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/secondhandstore.png",
     title: "Second Hand Store",
-    description: "React - GrapghQL - Apollo-Client",
+    description: ["React", "GrapghQL", "Apollo-Client"],
     links: [
       {
         id: uuid,
@@ -268,7 +247,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/social-media.png",
     title: "Social Media",
-    description: "React - NodeJS - MongoDB - TypeScript - MUI",
+    description: ["React", "NodeJS", "MongoDB", "TypeScript", "MUI"],
     links: [
       {
         id: uuid,
@@ -289,7 +268,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/yelpclone.png",
     title: "Restaurant Finder - Yelp Clone",
-    description: "React - NodeJS - PostgreSQL - TypeScript - Redux",
+    description: ["React", "NodeJS", "PostgreSQL", "TypeScript", "Redux"],
     links: [
       {
         id: uuid,
@@ -304,7 +283,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Fullstack",
     image: "image/main.png",
     title: "Rental Car",
-    description: "React - NodeJS - MongoDB - TypeScript - Stripe",
+    description: ["React", "NodeJS", "MongoDB", "TypeScript", "Stripe"],
     links: [
       {
         id: uuid,
@@ -320,34 +299,12 @@ export const portfolioProjects: IProjects[] = [
       },
     ],
   },
-  // {
-  //   id: uuid,
-  //   tag: "Fullstack",
-  //   image: "image/tour-app.png",
-  //   title: "Tour App",
-  //   description: "React - ReduxToolkit - NodeJS - MongoDB",
-  //   links: [
-  //     {
-  //       id: uuid,
-  //       link: "https://mern-tour-app.netlify.app/",
-  //       icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Live Demo",
-  //     },
-  //     {
-  //       id: uuid,
-  //       link: "https://github.com/capo33/tour-app-client",
-  //       icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Source Code"
-  //     },
-  //   ],
-  // },
-
   {
     id: uuid,
     tag: "Frontend",
     image: "image/rick-and-morty.png",
     title: "Rick and Morty",
-    description: "React - UseQuery - Rest API",
+    description: ["React", "UseQuery", "Rest API"],
     links: [
       {
         id: uuid,
@@ -368,7 +325,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/rick-and-morty2.png",
     title: "Rick and Morty",
-    description: "React - Apollo-Client - TypeScript",
+    description: ["React", "Apollo-Client", "TypeScript"],
     links: [
       {
         id: uuid,
@@ -389,7 +346,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/star-wars.png",
     title: "Star Wars",
-    description: "React - UseQuery - Rest API",
+    description: ["React", " UseQuery", "Rest API"],
     links: [
       {
         id: uuid,
@@ -410,7 +367,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/search-user.png",
     title: "Search Users",
-    description: "React - TypeScript - Rest API",
+    description: ["React", "TypeScript", "Rest API"],
     links: [
       {
         id: uuid,
@@ -431,7 +388,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Frontend",
     image: "image/kahvila.png",
     title: "Caffee Counter",
-    description: "Angular - TypeScript",
+    description: ["Angular", "TypeScript"],
     links: [
       {
         id: uuid,
@@ -447,97 +404,12 @@ export const portfolioProjects: IProjects[] = [
       },
     ],
   },
-  // {
-  //   id: uuid,
-  //   tag: "Javascript",
-  //   image: "/image/speaker.png",
-  //   title: "Text Speaker",
-  //   description: "JavaScript",
-  //   links: [
-  //     {
-  //       id: uuid,
-  //       link: "https://capo33.github.io/Text-to-Speech/",
-  //       icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Live Demo",
-  //     },
-  //     {
-  //       id: uuid,
-  //       link: "https://github.com/capo33/Text-to-Speech",
-  //       icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Source Code"
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: uuid,
-  //   tag: "Javascript",
-  //   image: "/image/guss-my-number.png",
-  //   title: "Guess My Number",
-  //   description: "JavaScript - HTML - CSS - AWS S3",
-  //   links: [
-  //     {
-  //       id: uuid,
-  //       link: "https://test-capo-first-bucket.s3.eu-north-1.amazonaws.com/guess-my-number/index.html",
-  //       icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Live Demo",
-  //     },
-  //     {
-  //       id: uuid,
-  //       link: "hthttps://github.com/capo33/Guss-my-number",
-  //       icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Source Code"
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: uuid,
-  //   tag: "Javascript",
-  //   image: "image/dice-game.jpg",
-  //   title: "Dice Game",
-  //   description: "Javascript",
-  //   links: [
-  //     {
-  //       id: uuid,
-  //       link: "https://capo33.github.io/dice-game/",
-  //       icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Live Demo",
-  //     },
-  //     {
-  //       id: uuid,
-  //       link: "https://github.com/capo33/dice-game.git",
-  //       icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Source Code"
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: uuid,
-  //   tag: "Javascript",
-  //   image: "image/memory.png",
-  //   title: "Memory Game",
-  //   description: "Javascript",
-  //   links: [
-  //     {
-  //       id: uuid,
-  //       link: "https://capo33.github.io/memory-game/",
-  //       icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Live Demo",
-  //     },
-  //     {
-  //       id: uuid,
-  //       link: "https://github.com/capo33/memory-game",
-  //       icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Source Code"
-  //     },
-  //   ],
-  // },
-
   {
     id: uuid,
     tag: "Experimental",
     image: "image/school-projects.jpg",
     title: "School Projects",
-    description: "HTML - CSS - Angular - Javascript",
+    description: ["HTML", "CSS", "Angular", "Javascript"],
     links: [
       {
         id: uuid,
@@ -558,7 +430,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/blitz.png",
     title: "Blitz",
-    description: "HTML - CSS",
+    description: ["HTML", "CSS"],
     links: [
       {
         id: uuid,
@@ -579,7 +451,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/splitting.jpg",
     title: "Split Server",
-    description: "Angular - TypeScript",
+    description: ["Angular", "TypeScript"],
     links: [
       {
         id: uuid,
@@ -600,7 +472,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/joke-list2.jpg",
     title: "Jokes",
-    description: "Angular - TypeScript",
+    description: ["Angular", "TypeScript"],
     links: [
       {
         id: uuid,
@@ -621,7 +493,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/warning-et-success.jpg",
     title: "Success and warning",
-    description: "Angular - TypeScript",
+    description: ["Angular", "TypeScript"],
     links: [
       {
         id: uuid,
@@ -637,33 +509,13 @@ export const portfolioProjects: IProjects[] = [
       },
     ],
   },
-  // {
-  //   id: uuid,
-  //   tag: "Experimental",
-  //   image: "image/crazy-button.jpg",
-  //   title: "Crazy Buttons",
-  //   description: "JavaScript",
-  //   links: [
-  //     {
-  //       id: uuid,
-  //       link: "https://capo33.github.io/crazy-button/",
-  //       icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Live Demo",
-  //     },
-  //     {
-  //       id: uuid,
-  //       link: "https://github.com/capo33/crazy-button.git",
-  //       icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-  // title: "Source Code"
-  //     },
-  //   ],
-  // },
+
   {
     id: uuid,
     tag: "Experimental",
     image: "image/keeper.png",
     title: "Note Keeper",
-    description: "React - TypeScript",
+    description: ["React", "TypeScript"],
     links: [
       {
         id: uuid,
@@ -684,7 +536,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/todo.png",
     title: "Todo App",
-    description: "React - JavaScript",
+    description: ["React", "JavaScript"],
     links: [
       {
         id: uuid,
@@ -705,7 +557,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/egyption-gods.jpg",
     title: "Egyption Deities",
-    description: "React - JavaScript",
+    description: ["React", "JavaScript"],
     links: [
       {
         id: uuid,
@@ -726,7 +578,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/emojipedia.jpg",
     title: "Emojipedia",
-    description: "React - JavaScript",
+    description: ["React", "JavaScript"],
     links: [
       {
         id: uuid,
@@ -747,7 +599,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/Digital-Marketing.jpg",
     title: "Digital Marketing",
-    description: "HTML - CSS",
+    description: ["HTML", " CSS"],
     links: [
       {
         id: uuid,
@@ -768,7 +620,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/tindog.jpg",
     title: "Tindog",
-    description: "HTML - CSS - Bootstrap",
+    description: ["HTML", "CSS", "Bootstrap"],
     links: [
       {
         id: uuid,
@@ -789,7 +641,7 @@ export const portfolioProjects: IProjects[] = [
     tag: "Experimental",
     image: "image/travel-agency.jpg",
     title: "Css Project",
-    description: "HTML - CSS - Materialize",
+    description: ["HTML", "CSS", "Materialize"],
     links: [
       {
         id: uuid,

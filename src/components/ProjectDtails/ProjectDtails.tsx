@@ -52,6 +52,7 @@ const ProjectDtails = () => {
           theme === "dark" ? "light_text" : "dark_text"
         }`}
       >
+        {/* Tabs */}
         <ProjectTabs
           {...{
             activeTab,
