@@ -47,7 +47,7 @@ const AboutMainObj: IAboutMainObj = {
       title:
         "My journey into programming ignited in 2019, prompting my decision to embark on the path of web development through studies at BUSINESS COLLEGE HELSINKI.",
     },
-     {
+    {
       id: 3,
       title:
         "Throughout my programming odyssey, I've worked with various technologies integral to web development, including JavaScript, React, TypeScript, NodeJS, and more",
@@ -69,6 +69,14 @@ const AboutMainObj: IAboutMainObj = {
 const WorkExperienceData: IQualification[] = [
   {
     id: 1,
+    date: "11/2023 - Present",
+    title: "Software Developer",
+    company: "Bitwards, Helsinki",
+    description:
+      "Developing and maintaining the company's software products and services",
+  },
+  {
+    id: 2,
     date: "09/2022 - 02/2023",
     title: "Software Developer",
     company: "Nordcloud IBM Company, Helsinki",
@@ -76,7 +84,7 @@ const WorkExperienceData: IQualification[] = [
       "Designed reusable and reliable code for use within distributed cloud environments",
   },
   {
-    id: 2,
+    id: 3,
     date: "04/2022 - 08/20220",
     title: "Full Stack Developer Intern",
     company: "Integrify, Helsinki",
@@ -84,7 +92,7 @@ const WorkExperienceData: IQualification[] = [
       "Designed and built book library management system application using TypeScript, ReactJS, Redux, and Material‑UI.",
   },
   {
-    id: 3,
+    id: 4,
     date: "04/2019 - 07/2020",
     title: "The restaurateur - an entrepreneur",
     company: "Capo33, Helsinki",
