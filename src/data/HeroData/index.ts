@@ -1,5 +1,5 @@
 import { Hero } from "../../assets/svg";
-import { Coding } from "../../assets/images";
+import { Coding2 } from "../../assets/images";
 import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
 import { IDescription, IHomeMainObj } from "../../interfaces";
 import { GitHubSVG, ResumeSVG } from "../../assets/svg/NavSVG";
@@ -15,7 +15,7 @@ export const HeroObj: IHomeMainObj<string> = {
   secondLabel: "Download Resume",
   firstIcon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
   secondIcon: ResumeSVG("w-4 h-4 mr-2 dark_text"),
-  img: Coding,
+  img: Coding2,
 };
 
 export const ShowcaseObj: IHomeMainObj<IDescription[]> = {

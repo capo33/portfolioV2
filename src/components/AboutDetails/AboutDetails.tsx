@@ -17,13 +17,14 @@ const AboutDetails = ({
       firstHeadLine={firstHeadLine}
       secondHeadLine={secondHeadLine}
       img={img}
+      // imgStart
      >
       <div className='xl:text-lg md:text-base'>
         <div className='space-y-4'>
           {description &&
             description.map((item) => (
               <p
-                className={`lg:text-lg flex gap-2 p-1 transition duration-100 rounded items-start ${
+                className={`lg:text-lg flex gap-2 p-1 transition-colors duration-100 rounded items-start ${
                   theme !== "light" ? "hover:light_bg" : "hover:dark_bg"
                 }`}
                 key={item.id}

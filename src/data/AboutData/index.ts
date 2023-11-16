@@ -26,8 +26,7 @@ import {
   GitHubActionsSVG,
   StyledComponentSVG,
 } from "../../assets/svg";
-import { Rocket } from "../../assets/images";
-
+import { Rocket2 } from "../../assets/images";
 import { IAboutMainObj, IQualification, ITechIcons } from "../../interfaces";
 
 // Main
@@ -63,7 +62,7 @@ const AboutMainObj: IAboutMainObj = {
       title: `Currently, I am learning AWS and Python, while also indulging my creative side by exploring C# and Unity for game development`,
     },
   ],
-  img: Rocket,
+  img: Rocket2,
 };
 
 // Qualification

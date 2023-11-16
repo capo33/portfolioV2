@@ -17,7 +17,7 @@ const ProjectHero = ({
       secondHeadLine={secondHeadLine}
       description={description}
       img={img}
-      imgStart
+      // imgStart
     >
       <div className='pt-10 items-center justify-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start'>
         <AnchorTag

@@ -29,7 +29,7 @@ import StyledComponentSVG from "/icons/styled-components.svg";
 import Hero from "./hero.svg";
 import MailSent from "./mail_sent.svg";
 import Working from "./working.svg";
-import TaskManager from "./task-management.svg";
+import TaskManager from "./task-management2.svg";
 
 export {
   JsSVG,
