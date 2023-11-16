@@ -1,27 +1,26 @@
-# React + TypeScript + Vite
+# Responsive React Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+<img src="./portfolio-mockup.jpeg">
+ 
+```
+⭐ This Portfolio is written using TypeScript and the latest version of ReactJS 
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## :crown: Features
+
+<img src="https://img.shields.io/badge/-hooks-blue" alt="hooks"/> &nbsp; <img src="https://img.shields.io/badge/-context-blue" alt="context"/> &nbsp; <img src="https://img.shields.io/badge/-light/dark mode-blue" alt="light/dark mode"/> &nbsp; <img src="https://img.shields.io/badge/-smooth scrolling-blue" alt="smooth scrolling"/> &nbsp; <img src="https://img.shields.io/badge/-scroll to top-blue" alt="scroll to top"/> &nbsp; <img src="https://img.shields.io/badge/-Marquee-blue" alt="Marquee"/> &nbsp; <img src="https://img.shields.io/badge/-Dynamic Tabs-blue" alt="Dynamic Tabs"/> nbsp; <img src="https://img.shields.io/badge/-Send Message-blue" alt="Send Message"/>
+
+
+## Tech
+
+- [React]
+- [Typescript]
+
+
+## :gear: Contribution
+
+If you have any suggestions on what to improve in <em>portfolioV2</em> and would like to share them, feel free to leave an issue or fork project to implement your own ideas :slightly_smiling_face:
+
+[React]: https://react.dev/
+[Typescript]: https://www.typescriptlang.org/

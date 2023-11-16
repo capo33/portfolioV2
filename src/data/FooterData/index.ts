@@ -4,7 +4,7 @@ import { ReactSVG, TailwindSVG, TypescriptSVG } from "../../assets/svg";
 
 const footerLogoName: string = "Mo";
 const footerTitle: string =
-  "This Portfolio has been updated to the latest version of ReactJS and TypeScript";
+  "This Portfolio is written using TypeScript and the latest version of ReactJS";
 const footerSubtitle: string = "Made with ❤ by Mohamed";
 
 const teckStack: IFooterData[] = [
@@ -13,7 +13,7 @@ const teckStack: IFooterData[] = [
 ];
 
 const style: IFooterData[] = [
-  { id: 1, name: "Tailwind-CSS", icon: TailwindSVG },
+  { id: 1, name: "Tailwind CSS", icon: TailwindSVG },
 ];
 
 const contact: IFooterData[] = [
