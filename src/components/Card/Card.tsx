@@ -24,9 +24,9 @@ const Card = ({ item }: CardProps) => {
   });
 
   return (
-    <div className='rounded flex flex-col items-center justify-center light_bg'>
+    <div className='rounded flex flex-col items-center justify-center light_bg '>
       <img
-        className='w-full h-48 object-cover'
+        className='w-full h-full object-cover'
         src={item?.image}
         alt='Placeholder'
       />

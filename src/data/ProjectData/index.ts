@@ -14,6 +14,33 @@ export const portfolioProjects: IProjects[] = [
   {
     id: uuid,
     tag: "Frontend",
+    image: "image/ecommerce.png",
+    title: "Ecommerce Store",
+    description: [
+      "React",
+      "Redux-toolkit",
+      "Typescript",
+      "GitHub-Actions",
+      "Tailwind-CSS",
+    ],
+    links: [
+      {
+        id: uuid,
+        link: "https://ecommerce-shop-v1.netlify.app/",
+        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Live Demo",
+      },
+      {
+        id: uuid,
+        link: "https://github.com/capo33/ecommerecV1",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Frontend",
     image: "image/crypto.png",
     title: "Crypto Tracker",
     description: ["React", "Redux-toolkit", "Typescript", "MUI"],
@@ -27,27 +54,6 @@ export const portfolioProjects: IProjects[] = [
       {
         id: uuid,
         link: "https://github.com/capo33/react-crypto-tracker",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Frontend",
-    image: "image/data-company.png",
-    title: "Data Company",
-    description: ["React", "Styled-components", "Javascript"],
-    links: [
-      {
-        id: uuid,
-        link: "https://data-company.netlify.app/",
-        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Live Demo",
-      },
-      {
-        id: uuid,
-        link: "https://github.com/capo33/data-company",
         icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
         title: "Source Code",
       },
@@ -77,6 +83,27 @@ export const portfolioProjects: IProjects[] = [
   {
     id: uuid,
     tag: "Frontend",
+    image: "image/data-company.png",
+    title: "Data Company",
+    description: ["React", "Styled-components", "Javascript"],
+    links: [
+      {
+        id: uuid,
+        link: "https://data-company.netlify.app/",
+        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Live Demo",
+      },
+      {
+        id: uuid,
+        link: "https://github.com/capo33/data-company",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Frontend",
     image: "image/delta.png",
     title: "Delta Company",
     description: ["React", "Styled-components", "Javascript"],
@@ -90,27 +117,6 @@ export const portfolioProjects: IProjects[] = [
       {
         id: uuid,
         link: "https://github.com/capo33/react-smooth-scroll",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Frontend",
-    image: "image/fakeshop.png",
-    title: "Fake Shop",
-    description: ["React", "Redux", "Javascript", "Rest API"],
-    links: [
-      {
-        id: uuid,
-        link: "https://capo33.github.io/fakeshop/",
-        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Live Demo",
-      },
-      {
-        id: uuid,
-        link: "https://github.com/capo33/fakeshop",
         icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
         title: "Source Code",
       },
@@ -140,6 +146,27 @@ export const portfolioProjects: IProjects[] = [
   {
     id: uuid,
     tag: "Frontend",
+    image: "image/fakeshop.png",
+    title: "Fake Shop",
+    description: ["React", "Redux", "Javascript", "Rest API"],
+    links: [
+      {
+        id: uuid,
+        link: "https://capo33.github.io/fakeshop/",
+        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Live Demo",
+      },
+      {
+        id: uuid,
+        link: "https://github.com/capo33/fakeshop",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Frontend",
     image: "image/pokemon2.png",
     title: "Pokemon Evolution",
     description: ["React", "TypeScript", "Rest API"],
@@ -153,147 +180,6 @@ export const portfolioProjects: IProjects[] = [
       {
         id: uuid,
         link: "https://github.com/capo33/react-pokemon-ts",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Fullstack",
-    image: "image/socialnetwork.png",
-    title: "Social Network",
-    description: ["React", "NodeJS", "MongoDB", "TypeScript", "MUI"],
-    links: [
-      {
-        id: uuid,
-        link: "https://social-network-t5pv.onrender.com/",
-        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Live Demo",
-      },
-      {
-        id: uuid,
-        link: "https://github.com/capo33/social-app-v2",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Fullstack",
-    image: "image/yupfood.png",
-    title: "Yupfood",
-    description: ["React", "NodeJS", "MongoDB", "TypeScript", "Bootstrap"],
-    links: [
-      {
-        id: uuid,
-        link: "https://yupfood.onrender.com/",
-        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Live Demo",
-      },
-      {
-        id: uuid,
-        link: "https://github.com/capo33/recipes-blog",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Fullstack",
-    image: "image/Q-Shop.png",
-    title: "Q-Shop",
-    description: ["React", "NodeJS", "MongoDB", "Bootstrap", "Paypal"],
-    links: [
-      {
-        id: uuid,
-        link: "https://q-shop.onrender.com/",
-        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Live Demo",
-      },
-      {
-        id: uuid,
-        link: "https://github.com/capo33/Q_shop",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Fullstack",
-    image: "image/secondhandstore.png",
-    title: "Second Hand Store",
-    description: ["React", "GrapghQL", "Apollo-Client"],
-    links: [
-      {
-        id: uuid,
-        link: "https://second-hand-store.netlify.app/",
-        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Live Demo",
-      },
-      {
-        id: uuid,
-        link: "https://github.com/capo33/second_hand-frontend",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Fullstack",
-    image: "image/social-media.png",
-    title: "Social Media",
-    description: ["React", "NodeJS", "MongoDB", "TypeScript", "MUI"],
-    links: [
-      {
-        id: uuid,
-        link: "https://github.com/capo33/social-media-backend",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-      {
-        id: uuid,
-        link: "https://github.com/capo33/social-media-frontend",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Fullstack",
-    image: "image/yelpclone.png",
-    title: "Restaurant Finder - Yelp Clone",
-    description: ["React", "NodeJS", "PostgreSQL", "TypeScript", "Redux"],
-    links: [
-      {
-        id: uuid,
-        link: "https://github.com/capo33/restaurant-finder",
-        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Source Code",
-      },
-    ],
-  },
-  {
-    id: uuid,
-    tag: "Fullstack",
-    image: "image/main.png",
-    title: "Rental Car",
-    description: ["React", "NodeJS", "MongoDB", "TypeScript", "Stripe"],
-    links: [
-      {
-        id: uuid,
-        link: "https://car-rental-mern-stack.netlify.app",
-        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
-        title: "Live Demo",
-      },
-      {
-        id: uuid,
-        link: "https://github.com/capo33/rental-car-backend",
         icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
         title: "Source Code",
       },
@@ -366,7 +252,7 @@ export const portfolioProjects: IProjects[] = [
     id: uuid,
     tag: "Frontend",
     image: "image/search-user.png",
-    title: "Search Users",
+    title: "Filter Users",
     description: ["React", "TypeScript", "Rest API"],
     links: [
       {
@@ -399,6 +285,126 @@ export const portfolioProjects: IProjects[] = [
       {
         id: uuid,
         link: "https://github.com/capo33/kahvila.git",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Fullstack",
+    image: "image/yupfood.png",
+    title: "Yupfood",
+    description: ["React", "NodeJS", "MongoDB", "TypeScript", "Bootstrap"],
+    links: [
+      {
+        id: uuid,
+        link: "https://yupfood.onrender.com/",
+        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Live Demo",
+      },
+      {
+        id: uuid,
+        link: "https://github.com/capo33/recipes-blog",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Fullstack",
+    image: "image/socialnetwork.png",
+    title: "Social Network",
+    description: ["React", "NodeJS", "MongoDB", "TypeScript", "MUI"],
+    links: [
+      {
+        id: uuid,
+        link: "https://social-network-t5pv.onrender.com/",
+        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Live Demo",
+      },
+      {
+        id: uuid,
+        link: "https://github.com/capo33/social-app-v2",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Fullstack",
+    image: "image/Q-Shop.png",
+    title: "Q-Shop",
+    description: ["React", "NodeJS", "MongoDB", "Bootstrap", "Paypal"],
+    links: [
+      {
+        id: uuid,
+        link: "https://q-shop.onrender.com/",
+        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Live Demo",
+      },
+      {
+        id: uuid,
+        link: "https://github.com/capo33/Q_shop",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Fullstack",
+    image: "image/secondhandstore.png",
+    title: "Second Hand Store",
+    description: ["React", "GrapghQL", "Apollo-Client"],
+    links: [
+      {
+        id: uuid,
+        link: "https://second-hand-store.netlify.app/",
+        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Live Demo",
+      },
+      {
+        id: uuid,
+        link: "https://github.com/capo33/second_hand-frontend",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Fullstack",
+    image: "image/yelpclone.png",
+    title: "Restaurant Finder - Yelp Clone",
+    description: ["React", "NodeJS", "PostgreSQL", "TypeScript", "Redux"],
+    links: [
+      {
+        id: uuid,
+        link: "https://github.com/capo33/restaurant-finder",
+        icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Source Code",
+      },
+    ],
+  },
+  {
+    id: uuid,
+    tag: "Fullstack",
+    image: "image/main.png",
+    title: "Rental Car",
+    description: ["React", "NodeJS", "MongoDB", "TypeScript", "Stripe"],
+    links: [
+      {
+        id: uuid,
+        link: "https://car-rental-mern-stack.netlify.app",
+        icon: GlobalSVG("w-4 h-4 mr-2 dark_text"),
+        title: "Live Demo",
+      },
+      {
+        id: uuid,
+        link: "https://github.com/capo33/rental-car-backend",
         icon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
         title: "Source Code",
       },

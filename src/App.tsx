@@ -23,23 +23,21 @@ function App() {
   };
 
   return (
-    <>
+    <main
+      className={`${
+        theme === "light" ? "light_bg" : "dark_bg"
+      } transition-colors duration-300 `}
+    >
       <ScrollToTop />
-      <main
-        className={`${
-          theme === "light" ? "light_bg" : "dark_bg"
-        } transition-colors duration-300 `}
-      >
-        <Header />
-        <AnimatePresence>
-          <Outlet />
-        </AnimatePresence>
-        <Footer />
-      </main>
+      <Header />
+      <AnimatePresence>
+        <Outlet />
+      </AnimatePresence>
+      <Footer />
       {showButton && (
         <ButtonScroll theme={theme} handleScrollToTop={handleScrollToTop} />
       )}
-    </>
+    </main>
   );
 }
 
