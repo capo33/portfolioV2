@@ -16,7 +16,7 @@ const About = () => {
       <MitionAnimate>
         <AboutDetails {...AboutMainObj} />
         <TimeLine
-          educaction={...EducactionData}
+          educaction={EducactionData}
           workExperience={WorkExperienceData}
         />
         <Technologies />
