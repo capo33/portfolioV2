@@ -4,7 +4,7 @@ import {
   StackSVG,
   TableSVG,
 } from "../../assets/svg/TabsSVG";
-import { uuid } from "../../utils/uuid";
+import { uuid } from "../../utils";
 import { TaskManager } from "../../assets/svg";
 import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
 import { IProjectHero, IProjects, ITab } from "../../interfaces";

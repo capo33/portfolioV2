@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+
 import { AnchorTag } from "../../shared";
+import { ThemeContext } from "../../context/ThemeContext";
 import { ReactSVG, TailwindSVG, TypescriptSVG } from "../../assets/svg";
 import { GitHubSVG, LinkedInSVG, SpiderSVG } from "../../assets/svg/NavSVG";
-import { ThemeContext } from "../../context/ThemeContext";
+import { currentYear } from "../../utils";
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
+
   return (
     <footer>
       <div className={`${theme === "light" ? "light_footer" : "dark_footer"}`}>
@@ -94,7 +97,7 @@ const Footer = () => {
             </div>
             <div className='flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row'>
               <p className='text-sm'>
-                © Copyright Mo {new Date().getFullYear()} - All rights reserved
+                © Copyright Mo {currentYear} - All rights reserved
               </p>
               <div className='flex items-center mt-4 space-x-4 sm:mt-0'>
                 {/* Github */}
