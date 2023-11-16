@@ -23,7 +23,7 @@ const Section = ({
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section>
+    <section className="space-y-12 md:space-y-16 lg:space-y-20 py-10">
       <div
         className={`items-center lg:flex pb-10 ${imgStart && "flex-row-reverse"} gap-5`}
       >
