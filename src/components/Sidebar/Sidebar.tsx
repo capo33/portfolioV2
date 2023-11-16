@@ -35,11 +35,11 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
 
   return (
     <div
-      className={`fixed top-0 transition-all duration-75 ${
-        theme === "light" ? "bg-[#fff] " : "dark_bg"
-      } shadow-2xl shadow-slate-100 h-screen sm:w-80 md:w-1/2 
+      className={`fixed top-0  ${
+        theme === "light" ? "light_bg" : "dark_bg"
+      } shadow-2xl shadow-slate-500 h-screen sm:w-80 md:w-1/2 
             lg:hidden flex flex-col p-10  
-            ${open ? "left-0 overflow-hidden" : "-left-full"}`}
+            ${open ? "left-0 overflow-hidden" : "-left-full"} transition-colors duration-300`}
     >
       <div className='text-xl'>
         <div className='py-2 flex items-center rounded-md'>
@@ -52,7 +52,7 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
           {NavBarLinks.map((link) => (
             <Link
               to={link.to}
-              className={`p-2.5 mt-2 flex items-center rounded-md   cursor-pointer hover:bg-cyan-500 transition-colors duration-75 ${
+              className={`p-2.5 mt-2 flex items-center rounded-md cursor-pointer hover:bg-cyan-500 ${
                 theme === "light" ? "hover:light_text" : "hover:dark_text"
               } }`}
               key={link.id()}
