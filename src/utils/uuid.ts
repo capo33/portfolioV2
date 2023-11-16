@@ -1,4 +1,4 @@
-export const uuid = () => {
+ const uuid = () => {
   return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) => {
     const r =
       Number(c) ^
@@ -6,3 +6,5 @@ export const uuid = () => {
     return r.toString(16);
   });
 };
+
+export default uuid;
