@@ -62,11 +62,17 @@ const Email = ({ line }: IEmailProps) => {
   return (
     <form onSubmit={sendEmail} ref={form} className='w-full'>
       <div className='mb-6'>
-        <h2 className={`${theme === "light" ? "dark_text" : "light_text"}`}>{line}</h2>
+        <h2
+          className={`transition-colors duration-300 ${
+            theme === "light" ? "dark_text" : "light_text"
+          }`}
+        >
+          {line}
+        </h2>
       </div>
 
       <input
-        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded transition-colors duration-300 ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
         type='text'
@@ -78,7 +84,7 @@ const Email = ({ line }: IEmailProps) => {
         autoComplete='nope'
       />
       <input
-        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded transition-colors duration-300 ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
         type='email'
@@ -97,7 +103,7 @@ const Email = ({ line }: IEmailProps) => {
         value={formData.message}
         id='message'
         onChange={handleChanges}
-        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded transition-colors duration-300 ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
       />

@@ -37,7 +37,7 @@ const Section = ({
             <span className='text-cyan-500'>{secondHeadLine}</span>
           </h2>
           <p
-            className={`mb-8 lg:text-lg ${
+            className={`transition-colors duration-300 mb-8 lg:text-lg ${
               theme === "light" ? "sub_text_dark" : "sub_text_light"
             }`}
           >
