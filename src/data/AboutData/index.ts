@@ -39,36 +39,27 @@ const AboutMainObj: IAboutMainObj = {
     {
       id: 1,
       title:
-        "A Software Developer with a passion for building beautiful and functional websites.",
+        "A dedicated Software Developer driven by a fervor for crafting visually appealing and seamlessly functional websites.",
     },
 
     {
       id: 2,
       title:
-        "My coding journey started in 2020 when I decided to become a developer.",
+        "My journey into programming ignited in 2019, prompting my decision to embark on the path of web development through studies at BUSINESS COLLEGE HELSINKI.",
     },
-    {
+     {
       id: 3,
-      title: "I studied web-development at Business Collage School.",
+      title:
+        "Throughout my programming odyssey, I've worked with various technologies integral to web development, including JavaScript, React, TypeScript, NodeJS, and more",
     },
     {
       id: 4,
       title:
-        "During my programming journey, I have learned technologies related to web development, such as JavaScript, React, TypeScript, NodeJS, etc.",
+        "Having garnered experience in both collaborative team settings and independent endeavors, I bring versatility to my professional repertoire.",
     },
     {
       id: 5,
-      title:
-        "I motivate myself by looking for new challenges and new ways to improve my skills and knowledge.",
-    },
-    {
-      id: 6,
-      title:
-        "I now have experience working as part of a team and individually.",
-    },
-    {
-      id: 7,
-      title: `Currently I'm learning AWS, Python, for fun I use C# and Unity to develop games`,
+      title: `Currently, I am learning AWS and Python, while also indulging my creative side by exploring C# and Unity for game development`,
     },
   ],
   img: Working,
