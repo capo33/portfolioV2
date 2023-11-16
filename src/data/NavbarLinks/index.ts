@@ -4,8 +4,8 @@ import {
   AboutSVG,
   ContactSVG,
 } from "../../assets/svg/NavSVG";
-import { INavLink } from "../../interfaces";
 import { uuid } from "../../utils";
+import { INavLink } from "../../interfaces";
 
 export const NavBarLinks: INavLink[] = [
   {

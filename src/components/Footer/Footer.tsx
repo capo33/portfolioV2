@@ -3,16 +3,27 @@ import { Link } from "react-router-dom";
 
 import { AnchorTag } from "../../shared";
 import { ThemeContext } from "../../context/ThemeContext";
-import { ReactSVG, TailwindSVG, TypescriptSVG } from "../../assets/svg";
 import { GitHubSVG, LinkedInSVG, SpiderSVG } from "../../assets/svg/NavSVG";
-import { currentYear } from "../../utils";
-
+import {
+  contact,
+  footerCopyRight,
+  footerLogoName,
+  footerSubtitle,
+  footerTitle,
+  style,
+  teckStack,
+} from "../../data/FooterData";
+ 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
     <footer>
-      <div className={`${theme === "light" ? "light_footer" : "dark_footer"}`}>
+      <div
+        className={`transition-colors duration-300 ${
+          theme === "light" ? "light_footer" : "dark_footer"
+        }`}
+      >
         <div className='relative mt-16 pt-1 '>
           <div className='px-10 pt-12 container mx-auto'>
             <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
@@ -20,85 +31,65 @@ const Footer = () => {
                 <Link to='/' className='flex items-center gap-2'>
                   {SpiderSVG("h-6 w-6 text-cyan-600")}
                   <span className='text-2xl font-semibold whitespace-nowrap'>
-                    Mo
+                    {footerLogoName}
                   </span>
                 </Link>
                 <div className='mt-4 lg:max-w-sm'>
-                  <p
-                    className={`${
-                      theme === "light" ? "light_footer" : "dark_footer"
-                    } text-lg`}
-                  >
-                    This Portfolio has been updated to the latest version of
-                    ReactJS and TypeScript
-                  </p>
-                  <p className='mt-4  text-deep-purple-50'>
-                    Made with <span>❤ </span>by Mohamed
-                  </p>
+                  <p>{footerTitle}</p>
+                  <p className='mt-4'>{footerSubtitle}</p>
                 </div>
               </div>
               <div className='grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-3'>
                 <div>
                   <h6 className='text-lg font-medium'>Technologies</h6>
                   <ul className='mt-2 space-y-2'>
-                    <li>
-                      <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
-                        React{" "}
+                    {teckStack.map((item) => (
+                      <li key={item.id}>
+                        <span className='hover:text-cyan-600 px-1 border-l border-cyan-500 gap-2'>
+                          {item.name}
+                        </span>
                         <img
-                          src={ReactSVG}
-                          alt='React'
+                          src={item.icon}
+                          alt={item.name}
                           className='w-4 inline'
                         />
-                      </span>
-                    </li>
-                    <li>
-                      <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
-                        Typescript{" "}
-                        <img
-                          src={TypescriptSVG}
-                          alt='Typescript'
-                          className='w-4 inline'
-                        />
-                      </span>
-                    </li>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div>
                   <h6 className='text-lg font-medium'>Styles</h6>
                   <ul className='mt-4 list-inside space-y-4'>
-                    <li>
-                      <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
-                        TailwindCSS{" "}
+                    {style.map((item) => (
+                      <li key={item.id}>
+                        <span className='hover:text-cyan-600 px-1 border-l border-cyan-500 gap-2'>
+                          {item.name}
+                        </span>
                         <img
-                          src={TailwindSVG}
-                          alt='TailwindCSS'
+                          src={item.icon}
+                          alt={item.name}
                           className='w-4 inline'
                         />
-                      </span>
-                    </li>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div>
                   <h6 className='text-lg font-medium'>Contact Me</h6>
                   <ul className='mt-4 list-inside space-y-4'>
-                    <li>
-                      <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
-                        Email: madel413@gmail.com
-                      </span>
-                    </li>
-                    <li>
-                      <span className='transition hover:text-cyan-600 px-1 border-l border-cyan-500'>
-                        Phone : +358 44 208 0939
-                      </span>
-                    </li>
+                    {contact.map((item) => (
+                      <li key={item.id}>
+                        <span className='hover:text-cyan-600 px-1 border-l border-cyan-500 gap-2'>
+                          {item.name} {item.title}
+                        </span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </div>
             <div className='flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row'>
-              <p className='text-sm'>
-                © Copyright Mo {currentYear} - All rights reserved
-              </p>
+              <p className='text-sm'>{footerCopyRight}</p>
               <div className='flex items-center mt-4 space-x-4 sm:mt-0'>
                 {/* Github */}
                 <AnchorTag

@@ -1,6 +1,8 @@
+import { currentYear } from "../../utils";
 import { IFooterData } from "../../interfaces";
 import { ReactSVG, TailwindSVG, TypescriptSVG } from "../../assets/svg";
 
+const footerLogoName: string = "Mo";
 const footerTitle: string =
   "This Portfolio has been updated to the latest version of ReactJS and TypeScript";
 const footerSubtitle: string = "Made with ❤ by Mohamed";
@@ -15,8 +17,17 @@ const style: IFooterData[] = [
 ];
 
 const contact: IFooterData[] = [
-  { id: 1, name: "Email", titel: "madel413@gmail.com" },
-  { id: 2, name: "Phone", titel: "+358 44 208 0939" },
+  { id: 1, name: "Email", title: "madel413@gmail.com" },
+  { id: 2, name: "Phone", title: "+358 44 208 0939" },
 ];
 
-export { footerTitle, footerSubtitle, teckStack, style, contact };
+const footerCopyRight: string = ` © Copyright ${footerLogoName} ${currentYear} - All rights reserved`;
+export {
+  footerCopyRight,
+  footerLogoName,
+  footerTitle,
+  footerSubtitle,
+  teckStack,
+  style,
+  contact,
+};
