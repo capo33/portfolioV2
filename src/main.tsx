@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
 
 import routes from "./routes/routes";
 
 import "./index.css";
 import { ThemeContextProvider } from "./context/ThemeContext";
 
+Amplify.configure(awsExports);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeContextProvider>
