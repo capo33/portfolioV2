@@ -73,7 +73,7 @@ const Header = () => {
                   theme != "light" ? "light_text" : "dark_text"
                 } lg:block hidden`}
               >
-                Light Mode
+                {theme === "light" ? "Light Theme" : "Dark Theme"}
               </span>
               <LighMode aclass='hide_icon' />
             </div>
