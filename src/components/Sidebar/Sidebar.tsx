@@ -69,7 +69,7 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
           {/* Light Switch */}
           <div className='flex items-center justify-around  m-auto bg-gray-600 rounded-lg p-2'>
             <span className='mr-[18px] text-sm font-medium light_text lg:hidden '>
-              Appearance
+              Light Mode
             </span>
 
             <LighMode />
