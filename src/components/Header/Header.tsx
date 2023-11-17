@@ -71,7 +71,7 @@ const Header = () => {
               <span
                 className={`mr-[18px] text-sm font-medium transition-colors duration-300 ${
                   theme != "light" ? "light_text" : "dark_text"
-                } lg:block md:hidden`}
+                } lg:block hidden`}
               >
                 Theme
               </span>
