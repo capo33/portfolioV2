@@ -39,7 +39,9 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
         theme === "light" ? "light_bg" : "dark_bg"
       } shadow-2xl shadow-slate-500 h-screen sm:w-80 md:w-1/2 
             lg:hidden flex flex-col p-10  
-            ${open ? "left-0 overflow-hidden" : "-left-full"} transition-all duration-300`}
+            ${
+              open ? "left-0 overflow-hidden" : "-left-full"
+            } transition-all duration-300`}
     >
       <div className='text-xl'>
         <div className='py-2 flex items-center rounded-md'>
@@ -68,8 +70,8 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
 
           {/* Light Switch */}
           <div className='flex items-center justify-around  m-auto bg-gray-600 rounded-lg p-2'>
-            <span className='mr-[18px] text-sm font-medium light_text lg:hidden '>
-              Light Mode
+            <span className='mr-[18px] w-18 text-sm font-medium light_text lg:hidden '>
+              Appearance
             </span>
 
             <LighMode />
