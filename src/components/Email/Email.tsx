@@ -77,11 +77,10 @@ const Email = ({ line }: IEmailProps) => {
         }`}
         type='text'
         name='name'
-        id='name'
+        autoComplete='off'
         value={formData.name}
         onChange={handleChanges}
         placeholder='Name'
-        autoComplete='nope'
       />
       <input
         className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded transition-colors duration-300 ${
@@ -89,11 +88,10 @@ const Email = ({ line }: IEmailProps) => {
         }`}
         type='email'
         name='email'
-        id='email'
         onChange={handleChanges}
         value={formData.email}
         placeholder='Email'
-        autoComplete='nope'
+        autoComplete='off'
       />
       <textarea
         rows={4}
@@ -101,7 +99,7 @@ const Email = ({ line }: IEmailProps) => {
         placeholder='Write a message...'
         name='message'
         value={formData.message}
-        id='message'
+        autoComplete='off'
         onChange={handleChanges}
         className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded transition-colors duration-300 ${
           theme === "light" ? "light_bg" : "dark_bg"
