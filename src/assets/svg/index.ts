@@ -27,7 +27,7 @@ import GitHubActionsSVG from "/icons/githubactions.svg";
 import StyledComponentSVG from "/icons/styled-components.svg";
 
 import Hero from "./hero.svg";
-import MailSent from "./mail_sent.svg";
+import Mailbox from "./mailbox.svg";
 import Working from "./working.svg";
 import TaskManager from "./task-management2.svg";
 
@@ -58,9 +58,10 @@ export {
   PostgresqlSVG,
   GitHubActionsSVG,
   StyledComponentSVG,
+
   // Pages Images
   Hero,
   Working,
-  MailSent,
+  Mailbox,
   TaskManager,
 };
