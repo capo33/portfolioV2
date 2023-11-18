@@ -13,7 +13,7 @@ import {
   style,
   teckStack,
 } from "../../data/FooterData";
- 
+
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
 
@@ -79,8 +79,9 @@ const Footer = () => {
                   <ul className='mt-4 list-inside space-y-4'>
                     {contact.map((item) => (
                       <li key={item.id}>
-                        <span className='hover:text-cyan-600 px-1 border-l border-cyan-500 gap-2'>
-                          {item.name} {item.title}
+                        <span className='hover:text-cyan-600 flex   px-1 border-l border-cyan-500 gap-2'>
+                          <span>{item.name}</span>
+                          <span>{item.title}</span>
                         </span>
                       </li>
                     ))}

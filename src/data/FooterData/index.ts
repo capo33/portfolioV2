@@ -18,7 +18,7 @@ const style: IFooterData[] = [
 
 const contact: IFooterData[] = [
   { id: 1, name: "Email", title: "madel413@gmail.com" },
-  { id: 2, name: "Phone", title: "+358 44 208 0939" },
+  { id: 2, name: "Phone", title: "+358442080939" },
 ];
 
 const footerCopyRight: string = ` © Copyright ${footerLogoName} ${currentYear} - All rights reserved`;
