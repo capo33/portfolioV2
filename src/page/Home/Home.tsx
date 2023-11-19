@@ -7,7 +7,7 @@ const Home = () => {
       <MitionAnimate>
         <Hero {...HeroObj} />
         <div className='md:py-12'>
-          <Marquee link='/about' />
+          <Marquee link='/tech-stack' />
         </div>
         <Showcase {...ShowcaseObj} />
       </MitionAnimate>

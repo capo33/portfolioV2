@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 
 import App from "../App";
-import { About, Contact, Home, Projects } from "../page";
+import { About, Contact, Home, Projects, Tech } from "../page";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +13,7 @@ const routes = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='tech-stack' element={<Tech />} />
       <Route path='projects' element={<Projects />} />
     </Route>
   )
