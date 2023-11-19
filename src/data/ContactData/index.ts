@@ -1,4 +1,4 @@
-import { Mailbox } from "../../assets/svg";
+ import ContactMe from "../../assets/images/contactme.gif";
 import { IHomeMainObj } from "../../interfaces";
 import { GitHubSVG } from "../../assets/svg/NavSVG";
 
@@ -13,5 +13,5 @@ export const ContactObj: IHomeMainObj<string> = {
   secondLabel: "something else",
   firstIcon: GitHubSVG("w-4 h-4 mr-2"),
   secondIcon: GitHubSVG("w-4 h-4 mr-2"),
-  img: Mailbox,
+  img: ContactMe,
 };

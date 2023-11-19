@@ -4,6 +4,7 @@ export default interface IDescription {
   icon?: React.JSX.Element;
   iconColor?: string;
   bg?: string;
+  hoverBg?: string;
   text?: string;
 }
 [];

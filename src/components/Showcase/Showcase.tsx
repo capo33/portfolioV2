@@ -22,7 +22,7 @@ const Showcase: React.FC<IHomeMainObj<IDescription[]>> = ({
         {description &&
           description.map((item) => (
             <div
-              className={`flex ${item.bg} rounded p-5 transition duration-200 ease-in-out sub_text_dark`}
+              className={`flex ${item.bg} ${item.hoverBg} rounded p-5 transition duration-200 ease-in-out sub_text_dark`}
               key={item.id}
             >
               <span className={item.iconColor}>{item.icon}</span>
