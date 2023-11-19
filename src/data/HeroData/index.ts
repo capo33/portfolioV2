@@ -39,6 +39,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       icon: ShowcaseSVG.bracketSVG,
       iconColor: "text-green-700",
       bg: "bg-gray-200",
+      hoverBg: "hover:bg-green-500",
       text: "Developing scalable API and integration",
     },
     {
@@ -47,6 +48,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       icon: ShowcaseSVG.handSVG,
       iconColor: "text-cyan-700",
       bg: "bg-gray-200",
+      hoverBg: "hover:bg-cyan-500",
       text: "Creating responsive and friendly user interfaces",
     },
     {
@@ -55,6 +57,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       icon: ShowcaseSVG.databaseSVG,
       iconColor: "text-purple-700",
       bg: "bg-gray-200",
+      hoverBg: "hover:bg-purple-500",
       text: "Design and implementation of database schema",
     },
   ],
