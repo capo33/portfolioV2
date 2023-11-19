@@ -3,7 +3,9 @@ import {
   ProjectsSVG,
   AboutSVG,
   ContactSVG,
+  TechBracketSVG,
 } from "../../assets/svg/NavSVG";
+
 import { uuid } from "../../utils";
 import { INavLink } from "../../interfaces";
 
@@ -19,6 +21,12 @@ export const NavBarLinks: INavLink[] = [
     to: "/about",
     text: "About",
     icon: AboutSVG,
+  },
+  {
+    id: uuid,
+    to: "/tech-stack",
+    text: "Tech Stack",
+    icon: TechBracketSVG,
   },
   {
     id: uuid,
