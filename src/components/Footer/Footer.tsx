@@ -45,9 +45,7 @@ const Footer = () => {
                   <ul className='mt-2 space-y-2'>
                     {teckStack.map((item) => (
                       <li key={item.id}>
-                        <span className='pr-2'>
-                          {item.name}
-                        </span>
+                        <span className='pr-2'>{item.name}</span>
                         <img
                           src={item.icon}
                           alt={item.name}
@@ -62,9 +60,7 @@ const Footer = () => {
                   <ul className='mt-4 list-inside space-y-4'>
                     {style.map((item) => (
                       <li key={item.id}>
-                        <span className='pr-2'>
-                          {item.name}
-                        </span>
+                        <span className='pr-2'>{item.name}</span>
                         <img
                           src={item.icon}
                           alt={item.name}
@@ -89,7 +85,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className='flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row'>
+            <div className='flex flex-col justify-between pt-5 pb-10 border-t border-[#4ECCA3] sm:flex-row'>
               <p className='text-sm'>{footerCopyRight}</p>
               <div className='flex items-center mt-4 space-x-4 sm:mt-0'>
                 {/* Github */}
@@ -97,11 +93,6 @@ const Footer = () => {
                   href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
                   icon={GitHubSVG("w-7 h-7")}
                   aClass=''
-                  sClass={`${
-                    theme === "light"
-                      ? "text-[#525252] hover:dark_text"
-                      : "text-[#dcdcdc] hover:light_text"
-                  } `}
                 />
 
                 {/* LinkedIn */}
@@ -109,9 +100,6 @@ const Footer = () => {
                   href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
                   icon={LinkedInSVG("w-7 h-7")}
                   aClass=''
-                  sClass={`${
-                    theme === "light" ? "dark_text" : "light_text"
-                  } hover:text-[#0077b5] hover:light_text`}
                 />
               </div>
             </div>
