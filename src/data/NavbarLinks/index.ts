@@ -24,15 +24,15 @@ export const NavBarLinks: INavLink[] = [
   },
   {
     id: uuid,
-    to: "/tech-stack",
-    text: "Tech Stack",
-    icon: TechBracketSVG,
-  },
-  {
-    id: uuid,
     to: "/projects",
     text: "Projects",
     icon: ProjectsSVG,
+  },
+  {
+    id: uuid,
+    to: "/tech-stack",
+    text: "Tech Stack",
+    icon: TechBracketSVG,
   },
   {
     id: uuid,

@@ -5,8 +5,8 @@ import {
   TableSVG,
 } from "../../assets/svg/TabsSVG";
 import { uuid } from "../../utils";
-import { ProjectApi } from "../../assets/images";
- import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
+import { Programming } from "../../assets/svg";
+import { GitHubSVG, GlobalSVG } from "../../assets/svg/NavSVG";
 import { IProjectHero, IProjects, ITab } from "../../interfaces";
 
 // Array of Projects
@@ -675,7 +675,7 @@ export const ProjectHeroObj: IProjectHero = {
   secondHeadLine: " Projects",
   description:
     "These projects will show you my web development skills and knowledge. It shows you how I got started and how my skills have improved over time. I used different technologies and tools to build these projects ...Want to see more? Check out my GitHub repository.",
-  img: ProjectApi,
+  img: Programming,
 };
 
 export const Tabs: ITab[] = [

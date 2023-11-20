@@ -1,6 +1,5 @@
-import { Hero } from "../../assets/svg";
-import { Coding2 } from "../../assets/images";
- import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
+import { RealTime, Version } from "../../assets/svg";
+import { ShowcaseSVG } from "../../assets/svg/ShowcaseSVG";
 import { IDescription, IHomeMainObj } from "../../interfaces";
 import { GitHubSVG, ResumeSVG } from "../../assets/svg/NavSVG";
 
@@ -15,7 +14,7 @@ export const HeroObj: IHomeMainObj<string> = {
   secondLabel: "Download Resume",
   firstIcon: GitHubSVG("w-4 h-4 mr-2 dark_text"),
   secondIcon: ResumeSVG("w-4 h-4 mr-2 dark_text"),
-  img: Coding2,
+  img: RealTime,
 };
 
 export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
@@ -30,7 +29,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       icon: ShowcaseSVG.lightSVG,
       iconColor: "text-yellow-700",
       bg: "bg-gray-200",
-      hoverBg: "hover:bg-yellow-500",
+      hoverBg: "hover:green_bg",
       text: "Building custom web applications from scratch",
     },
     {
@@ -39,7 +38,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       icon: ShowcaseSVG.bracketSVG,
       iconColor: "text-green-700",
       bg: "bg-gray-200",
-      hoverBg: "hover:bg-green-500",
+      hoverBg: "hover:green_bg",
       text: "Developing scalable API and integration",
     },
     {
@@ -48,7 +47,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       icon: ShowcaseSVG.handSVG,
       iconColor: "text-cyan-700",
       bg: "bg-gray-200",
-      hoverBg: "hover:bg-cyan-500",
+      hoverBg: "hover:green_bg",
       text: "Creating responsive and friendly user interfaces",
     },
     {
@@ -57,11 +56,11 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
       icon: ShowcaseSVG.databaseSVG,
       iconColor: "text-purple-700",
       bg: "bg-gray-200",
-      hoverBg: "hover:bg-purple-500",
+      hoverBg: "hover:green_bg",
       text: "Design and implementation of database schema",
     },
   ],
   firstLabel: "View on Github",
   secondLabel: "something else",
-  img: Hero,
+  img: Version,
 };

@@ -27,9 +27,11 @@ import GitHubActionsSVG from "/icons/githubactions.svg";
 import StyledComponentSVG from "/icons/styled-components.svg";
 
 import Hero from "./hero.svg";
-import Mailbox from "./mailbox.svg";
-import Working from "./working.svg";
-import TaskManager from "./task-management2.svg";
+import Mail from "./mail.svg";
+import RealTime from "./real_time.svg";
+import BugFixing from "./bug_fixing.svg";
+import Version from "./version_control.svg";
+import Programming from "./programming.svg";
 
 export {
   JsSVG,
@@ -61,7 +63,9 @@ export {
 
   // Pages Images
   Hero,
-  Working,
-  Mailbox,
-  TaskManager,
+  Mail,
+  Version,
+  RealTime,
+  BugFixing,
+  Programming,
 };

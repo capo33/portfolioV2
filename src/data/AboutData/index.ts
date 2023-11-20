@@ -12,6 +12,7 @@ import {
   CSharpSVG,
   ApolloSVG,
   PythonSVG,
+  BugFixing,
   RestAPISVG,
   ExpressSVG,
   AngularSVG,
@@ -26,8 +27,7 @@ import {
   GitHubActionsSVG,
   StyledComponentSVG,
 } from "../../assets/svg";
-import { WhoIam } from "../../assets/images";
- import { IAboutMainObj, IQualification, ITechIcons } from "../../interfaces";
+import { IAboutMainObj, IQualification, ITechIcons } from "../../interfaces";
 
 // Main
 const AboutMainObj: IAboutMainObj = {
@@ -62,7 +62,7 @@ const AboutMainObj: IAboutMainObj = {
       title: `Currently, I am learning AWS and Python, while also indulging my creative side by exploring C# and Unity for game development`,
     },
   ],
-  img: WhoIam,
+  img: BugFixing,
 };
 
 // Qualification
