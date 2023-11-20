@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
-import { Amplify } from 'aws-amplify';
-import awsExports from './aws-exports';
+import { Amplify } from "aws-amplify";
+import awsExports from "../aws-exports";
 
 import routes from "./routes/routes";
 
