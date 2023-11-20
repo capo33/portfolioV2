@@ -1,8 +1,7 @@
 interface ButtonScrollProps {
-  theme: string;
   handleScrollToTop: () => void;
 }
-const ButtonScroll = ({ handleScrollToTop ,theme}: ButtonScrollProps) => {
+const ButtonScroll = ({ handleScrollToTop }: ButtonScrollProps) => {
   return (
     <button onClick={handleScrollToTop} className='fixed bottom-5 right-2 z-50'>
       <svg
@@ -11,8 +10,7 @@ const ButtonScroll = ({ handleScrollToTop ,theme}: ButtonScrollProps) => {
         viewBox='0 0 24 24'
         strokeWidth={1.5}
         stroke='currentColor'
-        className={`${theme === "light" ? "dark_bg" : "light_bg"
-          } h-10 w-10 rounded p-1`}
+        className='green_bg h-10 w-10 rounded p-1'
       >
         <path
           strokeLinecap='round'
