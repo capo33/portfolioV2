@@ -10,34 +10,42 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   scroll-behavior: smooth;
- }
+}
 
 @layer components {
   .hide_icon {
     @apply max-lg:hidden;
   }
-  
+
   .btn {
     @apply inline-flex items-center cursor-pointer justify-center w-full px-5 py-3 text-sm font-medium text-center  rounded sm:w-auto  bg-[#dcdcdc] hover:bg-[#bdbdbd] transition duration-200 outline-none;
   }
   .dark_text {
-    @apply text-[#121212];
+    @apply text-[#232931];
   }
   .light_text {
-    @apply text-[#FAFAFA];
+    @apply text-[#EEEEEE];
   }
-
+  .orange_text {
+    @apply text-[#4ECCA3];
+  }
+  .orange_bg {
+    @apply bg-[#4ECCA3];
+  }
+  .marquee_dark_bg {
+    @apply bg-[#393E46]
+  }
   .dark_bg {
-    @apply bg-[#1e1e1e] text-[#FAFAFA];
+    @apply bg-[#232931] text-[#EEEEEE];
   }
   .light_bg {
-    @apply bg-[#FAFAFA] text-[#1e1e1e];
+    @apply bg-[#EEEEEE] text-[#232931];
   }
   .dark_footer {
-    @apply bg-[#121212] text-[#FAFAFA];
+    @apply bg-[#393E46] text-[#EEEEEE];
   }
   .light_footer {
-    @apply bg-[#eeeeee] text-[#121212];
+    @apply bg-[#393E46] text-[#EEEEEE];
   }
   .sub_text_dark {
     @apply text-[#292929];

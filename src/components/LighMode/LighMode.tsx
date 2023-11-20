@@ -46,7 +46,7 @@ const LighMode = ({ aclass }: LighModeProps) => {
           />
         </svg>
       </span>
-      <span className='absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-cyan-500' />
+      <span className='absolute inset-0 rounded-full orange_bg 0 transition peer-checked:bg-gray-500' />
     </label>
   );
 };

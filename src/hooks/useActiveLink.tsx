@@ -10,9 +10,9 @@ const useActiveLink = () => {
       subpage = "";
     }
     let classes =
-      "px-2 text-lg font-semibold flex items-center space-x-2 cursor-pointer hover:text-cyan-500";
+      "px-2 text-lg font-semibold flex items-center space-x-2 cursor-pointer hover:orange_text";
     if (type === subpage) {
-      classes += " text-cyan-500";
+      classes += " orange_text";
     } else {
       classes += " ";
     }

@@ -29,7 +29,7 @@ const Footer = () => {
             <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
               <div className='md:max-w-md lg:col-span-2'>
                 <Link to='/' className='flex items-center gap-2'>
-                  {SpiderSVG("h-6 w-6 text-cyan-600")}
+                  {SpiderSVG("h-6 w-6 orange_text")}
                   <span className='text-2xl font-semibold whitespace-nowrap'>
                     {footerLogoName}
                   </span>
@@ -45,7 +45,7 @@ const Footer = () => {
                   <ul className='mt-2 space-y-2'>
                     {teckStack.map((item) => (
                       <li key={item.id}>
-                        <span className='hover:text-cyan-600 px-1 border-l border-cyan-500 gap-2'>
+                        <span className='pr-2'>
                           {item.name}
                         </span>
                         <img
@@ -62,7 +62,7 @@ const Footer = () => {
                   <ul className='mt-4 list-inside space-y-4'>
                     {style.map((item) => (
                       <li key={item.id}>
-                        <span className='hover:text-cyan-600 px-1 border-l border-cyan-500 gap-2'>
+                        <span className='pr-2'>
                           {item.name}
                         </span>
                         <img
@@ -79,7 +79,7 @@ const Footer = () => {
                   <ul className='mt-4 list-inside space-y-4'>
                     {contact.map((item) => (
                       <li key={item.id}>
-                        <span className='hover:text-cyan-600 flex   px-1 border-l border-cyan-500 gap-2'>
+                        <span className='flex gap-2'>
                           <span>{item.name}</span>
                           <span>{item.title}</span>
                         </span>
