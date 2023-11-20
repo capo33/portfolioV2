@@ -10,7 +10,14 @@ interface IAnchor {
 }
 const Anchor = ({ icon, label, aClass = "btn", sClass, href }: IAnchor) => {
   return (
-    <a href={href} className={aClass} target='_blank' rel='noreferrer' download>
+    <a
+      href={href}
+      className={aClass}
+      target='_blank'
+      rel='noreferrer'
+      download
+      aria-label='download'
+    >
       <span className={sClass}>{icon}</span>
       <span className='dark_text text-sm bg-clip-text'>{label}</span>
     </a>
