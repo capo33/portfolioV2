@@ -52,9 +52,8 @@ const Section = ({
           <img
             src={img}
             className='object-cover w-full h-full max-w-[500px] max-h-[500px]'
-            alt='hero'
-            loading='lazy'
-          />
+            alt='image'
+           />
         </div>
       </div>
     </section>

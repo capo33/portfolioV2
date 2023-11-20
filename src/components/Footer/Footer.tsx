@@ -90,14 +90,14 @@ const Footer = () => {
               <div className='flex items-center mt-4 space-x-4 sm:mt-0'>
                 {/* Github */}
                 <AnchorTag
-                  href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
+                  href='https://github.com/capo33'
                   icon={GitHubSVG("w-7 h-7")}
                   aClass=''
                 />
 
                 {/* LinkedIn */}
                 <AnchorTag
-                  href='https://www.linkedin.com/in/mohammad-ali-abbasi-1a2a1a1a1/'
+                  href='https://www.linkedin.com/in/mohamed-capo/'
                   icon={LinkedInSVG("w-7 h-7")}
                   aClass=''
                 />
