@@ -60,7 +60,7 @@ const Header = () => {
       <nav className='container mx-auto px-10 py-4' ref={ref}>
         <div className='flex flex-wrap items-center justify-between mx-auto'>
           <Link to='/' className='flex items-center gap-2'>
-            {SpiderSVG("h-6 w-6 orange_text")}
+            {SpiderSVG("h-6 w-6 green_text")}
             <span className='text-2xl font-bold whitespace-nowrap'>Mo</span>
           </Link>
 

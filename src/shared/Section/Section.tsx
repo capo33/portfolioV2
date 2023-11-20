@@ -31,10 +31,10 @@ const Section = ({
       >
         <div className='flex-1'>
           <span className='font-semibold text-lg'>{topLine}</span>
-          <span className='ml-2 inline-block h-[1px] w-8 orange_bg'></span>
+          <span className='ml-2 inline-block h-[1px] w-8 green_bg'></span>
           <h2 className='max-w-5xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl'>
             {firstHeadLine}
-            <span className='orange_text'>{secondHeadLine}</span>
+            <span className='green_text'>{secondHeadLine}</span>
           </h2>
           <p
             className={`transition-colors duration-300 mb-8 lg:text-lg ${

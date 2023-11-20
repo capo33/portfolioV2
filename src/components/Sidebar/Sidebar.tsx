@@ -54,7 +54,7 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
           {NavBarLinks.map((link) => (
             <Link
               to={link.to}
-              className={`p-2.5 mt-2 flex items-center rounded-md cursor-pointer hover:orange_bg ${
+              className={`p-2.5 mt-2 flex items-center rounded-md cursor-pointer hover:green_bg ${
                 theme === "light" ? "hover:light_text" : "hover:dark_text"
               } }`}
               key={link.id()}

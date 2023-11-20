@@ -29,7 +29,7 @@ const Footer = () => {
             <div className='grid gap-16 row-gap-10 mb-8 lg:grid-cols-6'>
               <div className='md:max-w-md lg:col-span-2'>
                 <Link to='/' className='flex items-center gap-2'>
-                  {SpiderSVG("h-6 w-6 orange_text")}
+                  {SpiderSVG("h-6 w-6 green_text")}
                   <span className='text-2xl font-semibold whitespace-nowrap'>
                     {footerLogoName}
                   </span>

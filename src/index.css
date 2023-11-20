@@ -26,10 +26,10 @@ body {
   .light_text {
     @apply text-[#EEEEEE];
   }
-  .orange_text {
+  .green_text {
     @apply text-[#4ECCA3];
   }
-  .orange_bg {
+  .green_bg {
     @apply bg-[#4ECCA3];
   }
   .marquee_dark_bg {
