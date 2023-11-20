@@ -48,7 +48,7 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
           <Link to='/'>Menu</Link>
         </div>
 
-        <hr className='my-2' />
+        <hr className='my-4 green_bg h-[1px] border-none' />
 
         <div>
           {NavBarLinks.map((link) => (
@@ -62,11 +62,10 @@ const Sidebar = ({ open, handleClick, setOpen, theme }: SidebarProps) => {
             >
               <span>{link.icon}</span>
               <span className='text-[15px]'>{link.text}</span>
-              <hr className='my-2' />
             </Link>
           ))}
 
-          <hr className='my-4 text-gray-600' />
+          <hr className='my-4 green_bg h-[1px] border-none' />
 
           {/* Light Switch */}
           <div className='flex items-center justify-around  m-auto bg-gray-600 rounded-lg p-2'>
