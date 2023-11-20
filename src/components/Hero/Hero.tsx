@@ -31,7 +31,7 @@ const Hero = ({
           icon={secondIcon}
           label={secondLabel}
           href={CV}
-          aClass='btn green_bg hover:bg-[#49bd96]'
+          aClass='btn green_bg hover:bg-[#46b792]'
         />
       </div>
     </SharedSection>

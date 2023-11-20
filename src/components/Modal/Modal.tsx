@@ -30,27 +30,23 @@ const Modal = ({ showModal, handleShowModal, item }: ModalPopupProps) => {
                     {item.description.map((desc) => (
                       <span
                         key={desc}
-                        className='bg-cyan-100 hover:bg-cyan-200 dark_text text-xs font-semibold me-2 px-2.5 py-0.5 rounded border border-cyan-400 inline-flex items-center justify-center'
+                        className='green_bg hover:bg-[#46b792] dark_text text-sm font-semibold me-2 px-2.5 py-0.5 rounded border border-[#46b792] inline-flex items-center justify-center'
                       >
                         {desc}
                       </span>
                     ))}
                   </p>
-                  <div className=''>
-                    <div className=' '>
-                      {item.links.map((link) => {
-                        return (
-                          <div className='pt-2 flex flex-col' key={link.id()}>
-                            <AnchorTag
-                              href={link.link}
-                              icon={link.icon}
-                              label={link.title}
-                            />
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
+                  {item.links.map((link) => {
+                    return (
+                      <div className='pt-2 flex flex-col' key={link.id()}>
+                        <AnchorTag
+                          href={link.link}
+                          icon={link.icon}
+                          label={link.title}
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
                 {/*footer*/}
                 <div className='flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b'>

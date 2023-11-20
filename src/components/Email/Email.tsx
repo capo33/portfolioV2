@@ -72,7 +72,7 @@ const Email = ({ line }: IEmailProps) => {
       </div>
 
       <input
-        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded transition-colors duration-300 ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-[#4ecca3] rounded transition-colors duration-300 ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
         type='text'
@@ -83,7 +83,7 @@ const Email = ({ line }: IEmailProps) => {
         placeholder='Name'
       />
       <input
-        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded transition-colors duration-300 ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-[#4ecca3] rounded transition-colors duration-300 ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
         type='email'
@@ -101,15 +101,13 @@ const Email = ({ line }: IEmailProps) => {
         value={formData.message}
         autoComplete='off'
         onChange={handleChanges}
-        className={`w-full px-3 py-2 mb-4 outline-none border border-gray-500 rounded transition-colors duration-300 ${
+        className={`w-full px-3 py-2 mb-4 outline-none border border-[#4ecca3] rounded transition-colors duration-300 ${
           theme === "light" ? "light_bg" : "dark_bg"
         }`}
       />
       <button
         type='submit'
-        className={`btn w-full px-5 py-3 text-base ${
-          theme !== "light" ? "light_bg" : "dark_bg"
-        }`}
+        className='w-full px-5 py-3 text-base rounded green_bg hover:bg-[#46b792]'
       >
         Send Message
       </button>
