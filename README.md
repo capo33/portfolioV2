@@ -1,6 +1,6 @@
 # Responsive React Portfolio
 
-<img src="./portfolio-mockup.jpeg">
+<img src="./portfolio-mockupv2.jpeg">
  
 ```
 ⭐ This Portfolio is written using TypeScript and the latest version of ReactJS 
