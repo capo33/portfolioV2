@@ -1,8 +1,9 @@
 import { useContext, useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import { ButtonScroll, Footer, Header, ScrollToTop } from "./components";
-import { ThemeContext } from "./context/ThemeContext";
 import { AnimatePresence } from "framer-motion";
+
+import { ThemeContext } from "./context/ThemeContext";
+import { ButtonScroll, Footer, Header, ScrollToTop } from "./components";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -34,9 +35,7 @@ function App() {
         <Outlet />
       </AnimatePresence>
       <Footer />
-      {showButton && (
-        <ButtonScroll theme={theme} handleScrollToTop={handleScrollToTop} />
-      )}
+      {showButton && <ButtonScroll handleScrollToTop={handleScrollToTop} />}
     </main>
   );
 }
