@@ -34,7 +34,7 @@ export const ShowcaseObj: IHomeMainObj<IDescription[]> = {
     },
     {
       id: 2,
-      title: "Web developemnt",
+      title: "Web Development",
       icon: ShowcaseSVG.bracketSVG,
       iconColor: "text-green-700",
       bg: "bg-gray-200",
