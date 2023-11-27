@@ -39,7 +39,7 @@ const AboutMainObj: IAboutMainObj = {
     {
       id: 1,
       title:
-        "A dedicated Software Developer driven by a fervor for crafting visually appealing and seamlessly functional websites.",
+        "A dedicated software developer driven by a variety of interests, including web development, game development, and cloud computing.",
     },
 
     {
